@@ -1,0 +1,7 @@
+<Drs_GoldenRealm>
+
+	<!-- Sets the input limit and width of the quatity input -->
+	<set xpath="/controls/count_control_input/panel[@controller='TextInput' and @character_limit='3']/@character_limit">4</set>
+	<set xpath="/controls/count_control_input/panel[@controller='TextInput' and @width='30']/@width">35</set>
+
+</Drs_GoldenRealm>

@@ -1,0 +1,116 @@
+<Drs_GoldenRealm>
+<!-- Set max level to 999 -->
+	<set xpath="/progression/level/@max_level">999</set>
+	
+<!-- PERK CHANGES -->
+	<!-- Perk Cost per level changed to 1-->
+		<set xpath="/progression/attributes/@cost_multiplier_per_level">1</set>		
+	<!-- Perk level gates removed from all perks (hopefully this works on any added perks)-->
+		<set xpath="/progression/attributes/attribute[contains(@name, 'att')]/level_requirements/requirement/@desc_key">reqGenericPoints01</set>		
+		<set xpath="/progression/perks/perk[contains(@name, 'perk')]/level_requirements/requirement/@value">1</set>		
+		<!-- Might need to add this
+		[contains(@name, 'perk')]
+		-->		
+	<!-- Motherlode Perk Increase -->
+		<set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@value">.33,2</set>	
+		<set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@level">0,5</set>
+<!-- toolBeaker	-->
+<!--  Science Progression  -->
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group">
+<!--		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5"
+			tags=""/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5"
+			tags=""/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5"
+			tags=""/> 
+-->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="toolBeaker"/>
+	</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~Auto Turret System~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ENGINEERING PROGRESSION	-->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="autoTurret_Arrow_Stone,autoTurret_Arrow_Iron,autoTurret_Arrow_Steel,autoTurret_Bolt_Stone,autoTurret_Bolt_Iron,autoTurret_Bolt_Steel,autoTurret_Steel_44mag,autoTurret_Steel_9mm,autoTurret_Steel_762mm,autoTurret_44Mag,autoTurret_762mm,autoTurret_Dart,autoTurret_SnowBall,autoTurret_Stone,Calibration_Kit,Generic_Turret"/>
+	</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~OIL EXTRACTOR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ENGINEERING PROGRESSION	-->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="Oil Extractor"/>
+	</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~POWER TOOLS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!--  SCIENCE PROGRESSION  -->
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5"
+			tags="modBetterHandles,modDiamondTip1,modMotorToolExtension1,modGasTank1"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5"
+			tags="modDiamondTip2,modMotorToolExtension2,modGasTank2,modReserveGasTank1,modEngineTurbo1,modChainsawTemperedFrame1"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5"
+			tags="modEngineTurbo2,modReserveGasTank2,modChainsawTemperedFrame2"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="modMotorToolSilencer,modDiamondTip3,modMotorToolExtension3,modGasTank3,modEngineTurbo3,modReserveGasTank3,modChainsawTemperedFrame3,Quicker Fixer Upper"/>
+	</append>	
+<!-- Engineering Progression	-->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="Impact Wrench,mayicDrillGun,mayicDrillBattery"/>
+	</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~POWER SOURCES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- SCIENCE PROGRESSION -->
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group">
+	<!-- science 1 -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1,5"
+			tags="battery_small_single,batterybank_mini"/>
+	<!-- science 2 -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5"
+			tags="carBattery"/>
+	<!-- science 3 -->		
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5"
+			tags="battery_SuperDurable,batterybank_enhanced,solarCell_mini,purifiedSilicone"/>
+	<!-- science 4 -->		
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5"
+			tags="solarCell"/>
+	<!-- science 5 -->		
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="solarCell_SuperDurable"/>				
+	</append>
+	
+<!-- ENGINEERING PROGRESSION -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group">
+	<!-- engineering 2 -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5"
+			tags="generatorbank_MaxFuel_1"/>
+	<!-- engineering 3 -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5"
+			tags="generatorbank_MaxFuel_2,smallEngine,solarbank_mini"/>
+	<!-- engineering 3 -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5"
+			tags="solarbank"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="solarbank_Enhanced"/>	
+
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~OTHER MODDERS ADDITIONS~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~MANUX QUAD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Quad From manux_CustomVehicles_A17_modlet -->
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='3,5']/@tags">manux_vehicleQuadPlaceable</append>
+
+</Drs_GoldenRealm>

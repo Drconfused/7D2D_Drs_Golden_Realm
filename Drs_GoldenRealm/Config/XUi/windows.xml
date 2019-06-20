@@ -1,0 +1,21 @@
+<Drs_GoldenRealm>
+<!-- CHANGES SLOT AMOUNTS 
+		CRAFTING QUEUE
+		FORGE INPUT
+		ITEM MOD SLOTS
+-->
+<set xpath="/windows/window[@name='windowAssemble']/panel[@name='content']/rect[@depth='1']/rect[@depth='1']/grid[@name='parts']/@rows">8</set>
+
+<set xpath='/windows/window[@name="windowCraftingQueue"]/rect/@pos'>18,0</set>
+<set xpath='/windows/window[@name="windowCraftingQueue"]/rect/@width'>378</set>
+<set xpath='/windows/window[@name="windowCraftingQueue"]/rect/grid/@rows'>2</set>
+<set xpath='/windows/window[@name="windowCraftingQueue"]/rect/grid/@cols'>5</set>
+
+<set xpath='/windows/window[@name="windowForgeInput"]/@height'>279</set>
+<set xpath='/windows/window[@name="windowForgeInput"]/sprite/@height'>228</set>
+<set xpath='/windows/window[@name="windowForgeInput"]/rect[@name="content"]/@height'>228</set>
+<set xpath='/windows/window[@name="windowForgeInput"]/rect[@name="content"]/grid/@rows'>3</set>
+<set xpath='/windows/window[@name="windowForgeInput"]/rect[@name="content2"]/@height'>228</set>
+<set xpath='/windows/window[@name="windowForgeInput"]/rect[@name="content2"]/grid/@height'>34</set>
+
+</Drs_GoldenRealm>

@@ -1,0 +1,1489 @@
+<Drs_GoldenRealm>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~Auto Turret System~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!--Generic_Turret = in electrical an military containers?
+	Calibration_Kit = military containers
+	TurretStone		-->
+	<append xpath="/lootcontainers" >
+<lootgroup name="autoTurret_Generic">
+	<item name="Calibration_Kit" count="1,3"/>
+	<item name="Generic_Turret" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_Arrow">
+	<item name="autoTurret_Arrow_Stone" count="1,3"/>
+	<item name="autoTurret_Arrow_Iron" count="1,3"/>
+	<item name="autoTurret_Arrow_Steel" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_Bolt">
+	<item name="autoTurret_Bolt_Stone" count="1,3"/>
+	<item name="autoTurret_Bolt_Iron" count="1,3"/>
+	<item name="autoTurret_Bolt_Steel" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_Steel">
+	<item name="autoTurret_Steel_44mag" count="1,3"/>
+	<item name="autoTurret_Steel_9mm" count="1,3"/>
+	<item name="autoTurret_Steel_762mm" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_44">
+	<item name="autoTurret_44Mag" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_762">
+	<item name="autoTurret_762mm" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_Dart">
+	<item name="autoTurret_Dart" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_Snowball">
+	<item name="autoTurret_SnowBall" count="1,3"/>
+</lootgroup>
+<lootgroup name="autoTurret_Stone">
+	<item name="autoTurret_Stone" count="1,3"/>
+	<item name="TurretStone" count="500,1000"/>
+</lootgroup>
+<lootgroup name="autoTurret_loot">
+	<item group="autoTurret_Generic" count="1"/>
+	<item group="autoTurret_Arrow" count="1"/>
+	<item group="autoTurret_Bolt" count="1"/>
+	<item group="autoTurret_Steel" count="1"/>
+	<item group="autoTurret_44" count="1"/>
+	<item group="autoTurret_762" count="1"/>
+	<item group="autoTurret_Dart" count="1"/>
+	<item group="autoTurret_Snowball" count="1"/>
+	<item group="autoTurret_Stone" count="1"/>
+</lootgroup>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~BASE CONSTRUCTOR~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<append xpath="/lootcontainers" >
+<!-- Base Constructor Loot for Main -->
+	<!-- Appliances -->
+<lootgroup name="questConstructionAppliances">
+	<item name="cntBeerCooler" count="1,5"/>
+	<item name="cntFridgeStainlessSteel" count="1,5"/>
+	<item name="cntRetroFridgeVer1Closed" count="1,5"/>
+	<item name="cntMicrowaveOvenVer1Closed" count="1,5"/>
+	<item name="cntStoveOldVer1Closed" count="1,5"/>
+	<item name="cntTrashCompactor" count="1,5"/>
+	<item name="cntWallOven" count="1,5"/>
+	<item name="cntWaterCoolerFull" count="1,5"/>
+	<item name="cntCharcoalGrillClosed" count="1,5"/>
+	<item name="cntGasGrillClosed" count="1,5"/>
+	<item name="cntWashingMachine" count="1,5"/>
+</lootgroup>
+	<!-- Bars -->
+<lootgroup name="questConstructionBars_wood">
+	<item name="woodBars" count="50,300"/>
+	<item name="woodBarsCentered" count="50,300"/>
+	<item name="WoodDowelBars" count="50,300"/>
+	<item name="WoodDowelBarsCentered" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionBars_iron">
+	<item name="ironBars" count="50,300"/>
+	<item name="ironBarsCentered" count="50,300"/>
+	<item name="jailBars" count="50,300"/>
+	<item name="scrapIronBars" count="50,300"/>
+	<item name="scrapIronBarsCentered" count="50,300"/>
+	<item name="WroughtIronBars" count="50,300"/>
+	<item name="WroughtIronBarsCentered" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionBars_steel">
+	<item name="steelBars" count="50,300"/>
+	<item name="steelBarsCentered" count="50,300"/>
+	<item name="steelLootBars" count="50,300"/>
+	<item name="steelLootBarsCentered" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionBars" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionBars_wood" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionBars_iron" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionBars_steel" count="1" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+	<!-- Cabinets -->
+<lootgroup name="questConstructionCabinets">
+	<item name="cntCabinetBottom" count="5,30"/>
+	<item name="cntCabinetBottomFiller" count="5,30"/>
+	<item name="cntCabinetOldBottom" count="5,30"/>
+	<item name="cntCabinetOldCNRRoundFiller" count="5,30"/>
+	<item name="cntCabinetOldSink" count="5,30"/>
+	<item name="cntCabinetOldTop" count="5,30"/>
+	<item name="cntCupboardCabinetFullOldTopClosed" count="5,30"/>
+	<item name="cntCupboardCabinetFullRedTopClosed" count="5,30"/>
+	<item name="cntCupboardCabinetOldTopClosed" count="5,30"/>
+	<item name="cntCupboardCabinetRedTopClosed" count="5,30"/>
+	<item name="cntCupboardCornerCNROld" count="5,30"/>
+	<item name="cntCupboardCornerCNRRed" count="5,30"/>
+</lootgroup>
+	<!-- Cars -->
+<lootgroup name="questConstructionCrushedCars">
+	<item name="crushedCars" count="15,30"/>
+</lootgroup>
+	<!-- Defenses -->
+<lootgroup name="questConstructionBasicDefense">
+	<item name="barbedWireSheet" count="15,30" loot_prob_template="GradeALoot"/>
+	<item name="trapSpikesWoodDmg0" count="15,30" loot_prob_template="GradeALoot"/>
+	<item name="woodLogSpike1" count="15,30" loot_prob_template="GradeBLoot"/>
+	<item name="trapSpikesIronDmg0" count="15,30" loot_prob_template="GradeCLoot"/>
+	<item name="steelLogSpike6" count="10,25" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+	<!-- Doors -->
+<lootgroup name="questConstructionDoor_Other">
+	<item name="commercialDoor1_v1" count="5,30"/>
+	<item name="commercialDoor2_v1" count="5,30"/>
+	<item name="commercialDoor4_v1" count="5,30"/>
+	<item name="houseFrontDoor1_v1" count="5,30"/>
+	<item name="houseFrontDoor2_v1" count="5,30"/>
+	<item name="jailDoorStatic" count="5,30" loot_prob_template="GradeBLoot"/>
+	<item name="jailDoorStaticCentered" count="5,30" loot_prob_template="GradeBLoot"/>	
+</lootgroup>	
+<lootgroup name="questConstructionDoor_Garage">
+	<item name="garageDoorHouse" count="5,30"/>
+	<item name="garageDoorMetal_v1" count="5,30"/>
+</lootgroup>	
+<lootgroup name="questConstructionDoor_Iron">
+	<item name="ironDoor1_v1" count="5,30"/>
+</lootgroup>
+<lootgroup name="questConstructionDoor_Wood">
+	<item name="secureDoorWooden" count="5,30"/>
+	<item name="metalReinforcedDoorWooden" count="5,30"/>
+</lootgroup>
+<lootgroup name="questConstructionDoor_Steel">
+	<item name="vaultDoor01" count="5,30"/>
+</lootgroup>
+<lootgroup name="questConstructionDoors" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionDoor_Other" count="1"/>
+	<item group="questConstructionDoor_Garage" count="1"/>
+	<item group="questConstructionDoor_Wood" count="1"/>
+	<item group="questConstructionDoor_Iron" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionDoor_Steel" count="1" loot_prob_template="GradeCLoot"/>
+</lootgroup>	
+	<!-- Electrical -->
+<lootgroup name="questConstructionElectrical_Power_Broken">
+	<item name="cntCollapsedBatterybank" count="1,5"/>
+	<item name="cntCollapsedGeneratorbank" count="1,5"/>
+	<item name="cntCollapsedSolarbank" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionElectrical_Power">
+	<item name="batterybank" count="1,2"/>
+	<item name="generatorbank" count="1,2"/>
+	<item name="solarbank" count="1,2" loot_prob_template="GradeCLoot"/>
+	<item name="batterybank_mini" count="1,2"/>
+	<item name="batterybank_enhanced" count="1,2" loot_prob_template="GradeBLoot"/>
+	<item name="generatorbank_MaxFuel_1" count="1,2" loot_prob_template="GradeBLoot"/>
+	<item name="generatorbank_MaxFuel_2" count="1,2" loot_prob_template="GradeCLoot"/>
+	<item name="solarbank_mini" count="1,2" loot_prob_template="GradeBLoot"/>
+	<item name="solarbank_Enhanced" count="1,2" loot_prob_template="GradeCLoot"/>
+	<item name="battery_small_single" count="1,15"/>
+	<item name="battery_SuperDurable" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="solarCell_mini" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="solarCell_SuperDurable" count="1,5" loot_prob_template="GradeCLoot"/>
+	<item name="solarCell" count="1,5" loot_prob_template="GradeCLoot"/>
+	<item name="carBattery" count="1,5"/>
+	<item name="smallEngine" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionElectrical_Lights">
+	<item name="electricwirerelay" count="1,5"/>
+	<item name="Drs_porchLight01" count="1,5"/>
+	<item name="Drs_porchLight04" count="1,5"/>
+	<item name="Drs_porchLight04Brass" count="1,5"/>
+	<item name="Drs_ceilingLight01" count="1,5"/>
+	<item name="Drs_ceilingLight02" count="1,5"/>
+	<item name="Drs_ceilingLight02Brass" count="1,5"/>
+	<item name="Drs_ceilingLight04" count="1,5"/>
+	<item name="Drs_ceilingLight05" count="1,5"/>
+	<item name="Drs_ceilingLight05Brass" count="1,5"/>
+	<item name="Drs_wallLight01" count="1,5"/>
+	<item name="Drs_ceilingLight07" count="1,5"/>
+	<item name="Drs_streetLight01" count="1,5"/>
+	<item name="Drs_streetLightClassic" count="1,5"/>
+	<item name="Drs_industrialLight01" count="1,5"/>
+	<item name="Drs_sconce1Light" count="1,5"/>
+	<item name="Drs_sconce1LightShadow" count="1,5"/>
+	<item name="Drs_lanternDecorLight" count="1,5"/>
+	<item name="Drs_flashlightDecor" count="1,5"/>
+	<item name="Drs_industrialLight02" count="1,5"/>
+	<item name="Drs_industrialLight02Red" count="1,5"/>
+	<item name="Drs_ceilingFanLight" count="1,5"/>
+	<item name="Drs_endTableLamp" count="1,5"/>
+	<item name="Drs_signExitLight" count="1,5"/>
+	<item name="Drs_roadBarricadeLight" count="1,5"/>
+	<item name="Drs_deskLampLight" count="1,5"/>
+	<item name="Drs_tableLampLight" count="1,5"/>
+	<item name="Drs_tableLampTippedOverLight" count="1,5"/>
+	<item name="Drs_workLightPOI" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionElectrical_Stuff">
+	<item group="questConstructionElectrical_Lights" count="1"/>
+	<item name="electricwirerelay" count="2,5" prob="0.5"/>
+	<item name="electrictimerrelay" count="2,5" prob="0.5"/>
+	<item name="motionsensor" count="1,5" loot_prob_template="GradeBLoot"/>
+	<item name="switch" count="2,5"/>
+</lootgroup>	
+<lootgroup name="questConstructionElectrical_Defense">	
+	<item name="pressureplate" count="2,5"/>
+	<item name="pressureplateLong" count="2,5"/>
+	<item name="tripwirepost" count="2,5"/>
+	<item name="electricfencepost" count="2,5"/>
+	<item name="dartTrap" count="1,3"/>
+	<item name="bladeTrap" count="1,3"/>
+	<item name="autoTurret" count="1,3"/>
+	<item name="shotgunTurret" count="1,3"/>
+	<item group="questConstructionElectrical_Stuff" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionElectrical">
+	<item group="questConstructionElectrical_Power_Broken" count="1"/>
+	<item group="questConstructionElectrical_Power" count="1"/>
+	<item group="questConstructionElectrical_Lights" count="1"/>
+	<item group="questConstructionElectrical_Stuff" count="1"/>
+	<item group="questConstructionElectrical_Defense" count="1"/>
+</lootgroup>
+	<!-- Frames -->
+<lootgroup name="questConstructionFrames_Rebar">
+	<item name="rebarFrameBlock" count="50,300"/>
+	<item name="rebarFramePillar100" count="50,300"/>
+	<item name="rebarFrameCNRInside" count="50,300"/>
+	<item name="rebarFrameRamp" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionFrames_Wood">
+	<item name="woodFrameArch" count="50,300"/>
+	<item name="woodFrameCNRRampFiller" count="50,300"/>
+	<item name="woodFrameGableInvertedSteep" count="50,300"/>
+	<item name="woodFrameGableQuarter" count="50,300"/>
+	<item name="woodFrameQuarterCNR" count="50,300"/>
+	<item name="woodFrameStairs25CornerCNR" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideBottom" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideTop" count="50,300"/>
+	<item name="woodFrameWedgeIncline" count="50,300"/>
+	<item name="woodFrameWedgeStairs" count="50,300"/>
+	<item name="woodFrameWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="woodFrameWedgeTipCNRFullTop" count="50,300"/>
+	<item name="woodFrameWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionFrames_Iron">
+	<item name="scrapIronFrameArch" count="50,300"/>
+	<item name="scrapIronFrameBlock" count="50,300"/>
+	<item name="scrapIronFrameCNRFull" count="50,300"/>
+	<item name="scrapIronFrameCNRInside" count="50,300"/>
+	<item name="scrapIronFrameCNRRampFiller" count="50,300"/>
+	<item name="scrapIronFrameGableInvertedHalf" count="50,300"/>
+	<item name="scrapIronFrameGableInvertedQuarter" count="50,300"/>
+	<item name="scrapIronFrameGableInvertedSteep" count="50,300"/>
+	<item name="scrapIronFrameGableQuarter" count="50,300"/>
+	<item name="scrapIronFrameHalf" count="50,300"/>
+	<item name="scrapIronFrameMaster" count="50,300"/>
+	<item name="scrapIronFramePillar100Cap" count="50,300"/>
+	<item name="scrapIronFramePlateOffset" count="50,300"/>
+	<item name="scrapIronFrameQuarterCNR" count="50,300"/>
+	<item name="scrapIronFrameQuarterCNR3Way" count="50,300"/>
+	<item name="scrapIronFrameQuarterSCtr" count="50,300"/>
+	<item name="scrapIronFrameQuarterTeeSCtr" count="50,300"/>
+	<item name="scrapIronFrameRamp" count="50,300"/>
+	<item name="scrapIronFrameStairs25CornerCNR" count="50,300"/>
+	<item name="scrapIronFrameWedge" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideBottom" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRSteepBase" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRSteepTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeIncline" count="50,300"/>
+	<item name="scrapIronFrameWedgeStairs" count="50,300"/>
+	<item name="scrapIronFrameWedgeTip" count="50,300"/>
+	<item name="scrapIronFrameWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="scrapIronFrameWedgeTipCNRFullTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionFrames">
+	<item group="questConstructionFrames_Rebar" count="1"/>
+	<item group="questConstructionFrames_Wood" count="1"/>
+	<item group="questConstructionFrames_Iron" count="1"/>
+</lootgroup>
+	<!-- Hatches -->
+<lootgroup name="questConstructionHatch_Wood">
+	<item name="woodHatch1_v1" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionHatch_Iron">
+	<item name="scrapHatch_v1" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionHatch_Steel">
+	<item name="vaultHatch_v1" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionHatchs" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionHatch_Wood" count="5"/>
+	<item group="questConstructionHatch_Iron" count="5" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionHatch_Steel" count="5" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+	<!-- Ladders -->
+<lootgroup name="questConstructionLadders_wood">
+	<item name="ladderWood" count="5,30"/>
+</lootgroup>
+<lootgroup name="questConstructionLadders_metal">
+	<item name="ladderMetal" count="5,30"/>
+</lootgroup>
+<lootgroup name="questConstructionLadders_steel">
+	<item name="ladderSteel" count="5,30"/>
+</lootgroup>
+<lootgroup name="questConstructionLadders" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionLadders_wood" count="1"/>
+	<item group="questConstructionLadders_metal" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionLadders_steel" count="1" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+	<!-- Ramps -->
+<lootgroup name="questConstructionRamp_brick">
+	<item name="brickRamp" count="50,300"/>
+	<item name="brickCNRFull" count="50,300"/>
+	<item name="brickCNRInside" count="50,300"/>
+	<item name="brickCNRRamp" count="50,300"/>
+	<item name="brickCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_cobble">
+	<item name="cobblestoneRamp" count="50,300"/>
+	<item name="cobblestoneCNRFull" count="50,300"/>
+	<item name="cobblestoneCNRInside" count="50,300"/>
+	<item name="cobblestoneCNRRamp" count="50,300"/>
+	<item name="cobblestoneCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_concrete">
+	<item name="concreteRamp" count="50,300"/>
+	<item name="concreteCNRFull" count="50,300"/>
+	<item name="concreteCNRInside" count="50,300"/>
+	<item name="concreteCNRRamp" count="50,300"/>
+	<item name="concreteCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_flag">
+	<item name="flagstoneRamp" count="50,300"/>
+	<item name="flagstoneCNRFull" count="50,300"/>
+	<item name="flagstoneCNRInside" count="50,300"/>
+	<item name="flagstoneCNRRamp" count="50,300"/>
+	<item name="flagstoneCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_rConcrete">
+	<item name="rConcreteRamp" count="50,300"/>
+	<item name="rConcreteCNRFull" count="50,300"/>
+	<item name="rConcreteCNRInside" count="50,300"/>
+	<item name="rConcreteCNRRamp" count="50,300"/>
+	<item name="rConcreteCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_rScrap">
+	<item name="rScrapIronRamp" count="50,300"/>
+	<item name="rScrapIronCNRFull" count="50,300"/>
+	<item name="rScrapIronCNRInside" count="50,300"/>
+	<item name="rScrapIronCNRRamp" count="50,300"/>
+	<item name="rScrapIronCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_rWoodMetal">
+	<item name="rWoodMetalRamp" count="50,300"/>
+	<item name="rWoodMetalCNRFull" count="50,300"/>
+	<item name="rWoodMetalCNRInside" count="50,300"/>
+	<item name="rWoodMetalCNRRampFiller" count="50,300"/>	
+</lootgroup>
+<lootgroup name="questConstructionRamp_rWood">
+	<item name="rWoodRamp" count="50,300"/>
+	<item name="rWoodCNRFull" count="50,300"/>
+	<item name="rWoodCNRInside" count="50,300"/>
+	<item name="rWoodCNRRampFiller" count="50,300"/>	
+</lootgroup>
+<lootgroup name="questConstructionRamp_scrap_frame">
+	<item name="scrapIronFrameCNRRampFiller" count="50,300"/>
+	<item name="scrapIronFrameCNRFull" count="50,300"/>
+	<item name="scrapIronFrameCNRInside" count="50,300"/>
+	<item name="scrapIronFrameRamp" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_scrap">
+	<item name="scrapIronRamp" count="50,300"/>
+	<item name="scrapIronCNRRampFiller" count="50,300"/>
+	<item name="scrapIronCNRFull" count="50,300"/>
+	<item name="scrapIronCNRInside" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_stainless">
+	<item name="stainlessSteelRamp" count="50,300"/>
+	<item name="stainlessSteelCNRRampFiller" count="50,300"/>
+	<item name="stainlessSteelCNRFull" count="50,300"/>
+	<item name="stainlessSteelCNRInside" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_steel">
+	<item name="steelRamp" count="50,300"/>
+	<item name="steelCNRRampFiller" count="50,300"/>
+	<item name="steelCNRFull" count="50,300"/>
+	<item name="steelCNRInside" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_wood_frame">
+	<item name="woodFrameCNRRampFiller" count="50,300"/>
+	<item name="woodFrameCNRFull" count="50,300"/>
+	<item name="woodFrameCNRInside" count="50,300"/>
+	<item name="woodFrameRamp" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp_wood">
+	<item name="woodCNRFull" count="50,300"/>
+	<item name="woodCNRIncline" count="50,300"/>
+	<item name="woodCNRInside" count="50,300"/>
+	<item name="woodCNRRamp" count="50,300"/>
+	<item name="woodCNRRampFiller" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionRamp" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionRamp_brick" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_cobble" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_concrete" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_flag" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionRamp_rConcrete" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_rScrap" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_rWoodMetal" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionRamp_rWood" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionRamp_scrap_frame" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_scrap" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionRamp_stainless" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionRamp_steel" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionRamp_wood_frame" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionRamp_wood" count="1" loot_prob_template="GradeALoot"/>
+</lootgroup>
+	<!-- Sheets -->
+<lootgroup name="questConstructionSheet_rWood">
+	<item name="rWoodSheet" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionSheet_scrap">
+	<item name="scrapIronSheet" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionSheet_wood">
+	<item name="whitePicketFenceSheet" count="50,300"/>
+	<item name="woodFenceFarmSheet" count="50,300"/>
+	<item name="woodFenceSheet" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionSheet_metal">
+	<item name="corrugatedMetalRampSheet" count="50,300"/>
+	<item name="corrugatedMetalSheet" count="50,300"/>
+	<item name="metalTrussingSheet" count="50,300"/>
+	<item name="railingBlackSheet" count="50,300"/>
+	<item name="wroughtIronFenceSheet" count="50,300"/>
+	<item name="metalRivetSheet" count="50,300" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+<lootgroup name="questConstructionSheet_glass">
+	<item name="glassBusinessCTRSheet" count="50,300"/>
+	<item name="glassBusinessSheet" count="50,300"/>
+	<item name="glassCTRSheet" count="50,300"/>
+	<item name="glassRampSheet" count="50,300"/>
+	<item name="glassRampSheetCap" count="50,300"/>
+	<item name="glassRampSheetCap2" count="50,300"/>
+	<item name="glassBulletproofRampSheet" count="50,300" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+<lootgroup name="questConstructionSheet">
+	<item group="questConstructionSheet_rWood" count="1"/>
+	<item group="questConstructionSheet_scrap" count="1"/>
+	<item group="questConstructionSheet_wood" count="1"/>
+	<item group="questConstructionSheet_metal" count="1"/>
+	<item group="questConstructionSheet_glass" count="1"/>
+</lootgroup>
+	<!-- Stairs -->
+<lootgroup name="questConstructionStairs25_brick">
+	<item name="brickStairs25" count="50,300"/>
+	<item name="brickStairs25CornerCNR" count="50,300"/>
+	<item name="brickStairsFilledRailingRight" count="50,300"/>
+	<item name="brickStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_cobble">
+	<item name="cobblestoneStairs25" count="50,300"/>
+	<item name="cobblestoneStairs25CornerCNR" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_concrete">
+	<item name="concreteStairs25" count="50,300"/>
+	<item name="concreteStairs25CornerCNR" count="50,300"/>
+	<item name="concreteStairsFilledRailingRight" count="50,300"/>
+	<item name="concreteStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_flag">
+	<item name="flagstoneStairs25" count="50,300"/>
+	<item name="flagstoneStairs25CornerCNR" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_rConcrete">
+	<item name="rConcreteStairs25" count="50,300"/>
+	<item name="rConcreteStairs25CornerCNR" count="50,300"/>
+	<item name="rConcreteStairsFilledRailingRight" count="50,300"/>
+	<item name="rConcreteStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_rScrap">
+	<item name="rScrapIronStairs25" count="50,300"/>
+	<item name="rScrapIronStairs25CornerCNR" count="50,300"/>
+	<item name="rScrapIronStairsFilledRailingRight" count="50,300"/>
+	<item name="rScrapIronStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_rWoodMetal">
+	<item name="corrugatedMetalStairs25" count="50,300"/>
+	<item name="rWoodMetalStairs25CornerCNR" count="50,300"/>
+	<item name="rWoodMetalStairsFilledRailingRight" count="50,300"/>
+	<item name="rWoodMetalStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_rWood">
+	<item name="rWoodStairs25" count="50,300"/>
+	<item name="rWoodStairs25CornerCNR" count="50,300"/>
+	<item name="rWoodStairsFilledRailingRight" count="50,300"/>
+	<item name="rWoodStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_scrap_frame">
+	<item name="scrapIronFrameStairs25CornerCNR" count="50,300"/>
+	<item name="scrapIronFrameWedgeStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_scrap">
+	<item name="scrapIronStairs25" count="50,300"/>
+	<item name="scrapIronStairs25CornerCNR" count="50,300"/>
+	<item name="scrapIronStairsFilledRailingRight" count="50,300"/>
+	<item name="scrapIronStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_stainless">
+	<item name="stainlessSteelStairs25" count="50,300"/>
+	<item name="stainlessSteelStairs25CornerCNR" count="50,300"/>
+	<item name="stainlessSteelStairsFilledRailingRight" count="50,300"/>
+	<item name="stainlessSteelStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_steel">
+	<item name="steelStairs25" count="50,300"/>
+	<item name="steelStairs25CornerCNR" count="50,300"/>
+	<item name="steelStairsFilledRailingRight" count="50,300"/>
+	<item name="steelStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_wood_frame">
+	<item name="woodFrameStairs25CornerCNR" count="50,300"/>
+	<item name="woodFrameWedgeStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25_wood">
+	<item name="woodStairs25" count="50,300"/>
+	<item name="woodStairsBoard" count="50,300"/>
+	<item name="woodStairsBoardRailing" count="50,300"/>
+	<item name="woodStairs25CornerCNR" count="50,300"/>
+	<item name="woodStairsFilledRailingRight" count="50,300"/>
+	<item name="woodStairsFilledRailingLeft" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionStairs25" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionStairs25_brick" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_cobble" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_concrete" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_flag" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionStairs25_rConcrete" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_rScrap" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_rWoodMetal" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionStairs25_rWood" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionStairs25_scrap_frame" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_scrap" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionStairs25_stainless" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionStairs25_steel" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionStairs25_wood_frame" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionStairs25_wood" count="1" loot_prob_template="GradeALoot"/>
+</lootgroup>
+	<!-- Storage -->
+<lootgroup name="questConstructionStorage">
+	<item name="cntBin" count="5,30"/>
+	<item name="cntCoolerClosed" count="5,30"/>
+	<item name="cntBookcaseFull" count="5,30"/>
+	<item name="cntDeskSafe" count="5,30"/>
+	<item name="cntWoodDesk01Closed" count="5,30"/>
+	<item name="cntMetalDesk02Closed" count="5,30"/>
+	<item name="cntFileCabinetShortClosed" count="5,30"/>
+	<item name="cntFileCabinetTallClosed" count="5,30"/>
+	<item name="cntCoffin" count="5,30"/>
+	<item name="cntFurnaceDrawer" count="5,30"/>
+	<item name="cntGreenDrawerSecure" count="5,30"/>
+	<item name="cntGunSafe" count="5,30"/>
+	<item name="cntHardenedChestSecure" count="5,30"/>
+	<item name="cntLaundryBasketVer1Empty" count="5,30"/>
+	<item name="cntGraniteSink" count="5,30"/>
+	<item name="cntLockersShortClosed" count="5,30"/>
+	<item name="cntLockersTallClosed" count="5,30"/>
+	<item name="cntLockersTallDoubleClosed" count="5,30"/>
+	<item name="cntLockersTallMixClosed" count="5,30"/>
+	<item name="cntLockersTallMixLinkClosed" count="5,30"/>
+	<item name="cntMedicineCabinetClosed" count="5,30"/>
+	<item name="cntMedicineCabinetFaucetClosed" count="5,30"/>
+	<item name="cntNightstandClosed" count="5,30"/>
+	<item name="cntPillCase" count="5,30"/>
+</lootgroup>
+	<!-- Wedges -->
+<lootgroup name="questConstructionWedge_brick">
+	<item name="brickWedge" count="50,300"/>
+	<item name="brickWedgeCNRInsideBottom" count="50,300"/>
+	<item name="brickWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="brickWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="brickWedgeCNRInsideTop" count="50,300"/>
+	<item name="brickWedgeCNRSteepBase" count="50,300"/>
+	<item name="brickWedgeCNRSteepTop" count="50,300"/>
+	<item name="brickWedgeIncline" count="50,300"/>
+	<item name="brickWedgeStairs" count="50,300"/>
+	<item name="brickWedgeTip" count="50,300"/>
+	<item name="brickWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="brickWedgeTipCNRFullTop" count="50,300"/>
+	<item name="brickWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_cobble">
+	<item name="cobblestoneWedge" count="50,300"/>
+	<item name="cobblestoneWedgeCNRInsideBottom" count="50,300"/>
+	<item name="cobblestoneWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="cobblestoneWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="cobblestoneWedgeCNRInsideTop" count="50,300"/>
+	<item name="cobblestoneWedgeCNRSteepBase" count="50,300"/>
+	<item name="cobblestoneWedgeCNRSteepTop" count="50,300"/>
+	<item name="cobblestoneWedgeIncline" count="50,300"/>
+	<item name="cobblestoneWedgeStairs" count="50,300"/>
+	<item name="cobblestoneWedgeTip" count="50,300"/>
+	<item name="cobblestoneWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="cobblestoneWedgeTipCNRFullTop" count="50,300"/>
+	<item name="cobblestoneWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_concrete">
+	<item name="concreteWedge" count="50,300"/>
+	<item name="concreteWedgeCNRInsideBottom" count="50,300"/>
+	<item name="concreteWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="concreteWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="concreteWedgeCNRInsideTop" count="50,300"/>
+	<item name="concreteWedgeCNRSteepBase" count="50,300"/>
+	<item name="concreteWedgeCNRSteepTop" count="50,300"/>
+	<item name="concreteWedgeIncline" count="50,300"/>
+	<item name="concreteWedgeStairs" count="50,300"/>
+	<item name="concreteWedgeTip" count="50,300"/>
+	<item name="concreteWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="concreteWedgeTipCNRFullTop" count="50,300"/>
+	<item name="concreteWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_flag">
+	<item name="flagstoneWedge" count="50,300"/>
+	<item name="flagstoneWedgeCNRInsideBottom" count="50,300"/>
+	<item name="flagstoneWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="flagstoneWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="flagstoneWedgeCNRInsideTop" count="50,300"/>
+	<item name="flagstoneWedgeCNRSteepBase" count="50,300"/>
+	<item name="flagstoneWedgeCNRSteepTop" count="50,300"/>
+	<item name="flagstoneWedgeIncline" count="50,300"/>
+	<item name="flagstoneWedgeStairs" count="50,300"/>
+	<item name="flagstoneWedgeTip" count="50,300"/>
+	<item name="flagstoneWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="flagstoneWedgeTipCNRFullTop" count="50,300"/>
+	<item name="flagstoneWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_rConcrete">
+	<item name="rConcreteWedge" count="50,300"/>
+	<item name="rConcreteWedgeCNRInsideBottom" count="50,300"/>
+	<item name="rConcreteWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="rConcreteWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="rConcreteWedgeCNRInsideTop" count="50,300"/>
+	<item name="rConcreteWedgeCNRSteepBase" count="50,300"/>
+	<item name="rConcreteWedgeCNRSteepTop" count="50,300"/>
+	<item name="rConcreteWedgeIncline" count="50,300"/>
+	<item name="rConcreteWedgeStairs" count="50,300"/>
+	<item name="rConcreteWedgeTip" count="50,300"/>
+	<item name="rConcreteWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="rConcreteWedgeTipCNRFullTop" count="50,300"/>
+	<item name="rConcreteWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_rScrap">
+	<item name="rScrapIronWedge" count="50,300"/>
+	<item name="rScrapIronWedgeCNRInsideBottom" count="50,300"/>
+	<item name="rScrapIronWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="rScrapIronWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="rScrapIronWedgeCNRInsideTop" count="50,300"/>
+	<item name="rScrapIronWedgeCNRSteepBase" count="50,300"/>
+	<item name="rScrapIronWedgeCNRSteepTop" count="50,300"/>
+	<item name="rScrapIronWedgeIncline" count="50,300"/>
+	<item name="rScrapIronWedgeStairs" count="50,300"/>
+	<item name="rScrapIronWedgeTip" count="50,300"/>
+	<item name="rScrapIronWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="rScrapIronWedgeTipCNRFullTop" count="50,300"/>
+	<item name="rScrapIronWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_rWoodMetal">
+	<item name="rWoodMetalWedge" count="50,300"/>
+	<item name="rWoodMetalWedgeCNRInsideBottom" count="50,300"/>
+	<item name="rWoodMetalWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="rWoodMetalWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="rWoodMetalWedgeCNRInsideTop" count="50,300"/>
+	<item name="rWoodMetalWedgeCNRSteepBase" count="50,300"/>
+	<item name="rWoodMetalWedgeCNRSteepTop" count="50,300"/>
+	<item name="rWoodMetalWedgeIncline" count="50,300"/>
+	<item name="rWoodMetalWedgeStairs" count="50,300"/>
+	<item name="rWoodMetalWedgeTip" count="50,300"/>
+	<item name="rWoodMetalWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="rWoodMetalWedgeTipCNRFullTop" count="50,300"/>
+	<item name="rWoodMetalWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_rWood">
+	<item name="rWoodWedge" count="50,300"/>
+	<item name="rWoodWedgeCNRInsideBottom" count="50,300"/>
+	<item name="rWoodWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="rWoodWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="rWoodWedgeCNRInsideTop" count="50,300"/>
+	<item name="rWoodWedgeCNRSteepBase" count="50,300"/>
+	<item name="rWoodWedgeCNRSteepTop" count="50,300"/>
+	<item name="rWoodWedgeIncline" count="50,300"/>
+	<item name="rWoodWedgeStairs" count="50,300"/>
+	<item name="rWoodWedgeTip" count="50,300"/>
+	<item name="rWoodWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="rWoodWedgeTipCNRFullTop" count="50,300"/>
+	<item name="rWoodWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_scrap_frame">
+	<item name="scrapIronFrameWedge" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideBottom" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRInsideTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRSteepBase" count="50,300"/>
+	<item name="scrapIronFrameWedgeCNRSteepTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeIncline" count="50,300"/>
+	<item name="scrapIronFrameWedgeStairs" count="50,300"/>
+	<item name="scrapIronFrameWedgeTip" count="50,300"/>
+	<item name="scrapIronFrameWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="scrapIronFrameWedgeTipCNRFullTop" count="50,300"/>
+	<item name="scrapIronFrameWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_scrap">
+	<item name="scrapIronWedge" count="50,300"/>
+	<item name="scrapIronWedgeCNRInsideBottom" count="50,300"/>
+	<item name="scrapIronWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="scrapIronWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="scrapIronWedgeCNRInsideTop" count="50,300"/>
+	<item name="scrapIronWedgeCNRSteepBase" count="50,300"/>
+	<item name="scrapIronWedgeCNRSteepTop" count="50,300"/>
+	<item name="scrapIronWedgeIncline" count="50,300"/>
+	<item name="scrapIronWedgeStairs" count="50,300"/>
+	<item name="scrapIronWedgeTip" count="50,300"/>
+	<item name="scrapIronWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="scrapIronWedgeTipCNRFullTop" count="50,300"/>
+	<item name="scrapIronWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_stainless">
+	<item name="stainlessSteelWedge" count="50,300"/>
+	<item name="stainlessSteelWedgeCNRInsideBottom" count="50,300"/>
+	<item name="stainlessSteelWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="stainlessSteelWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="stainlessSteelWedgeCNRInsideTop" count="50,300"/>
+	<item name="stainlessSteelWedgeCNRSteepBase" count="50,300"/>
+	<item name="stainlessSteelWedgeCNRSteepTop" count="50,300"/>
+	<item name="stainlessSteelWedgeIncline" count="50,300"/>
+	<item name="stainlessSteelWedgeStairs" count="50,300"/>
+	<item name="stainlessSteelWedgeTip" count="50,300"/>
+	<item name="stainlessSteelWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="stainlessSteelWedgeTipCNRFullTop" count="50,300"/>
+	<item name="stainlessSteelWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_steel">
+	<item name="steelWedge" count="50,300"/>
+	<item name="steelWedgeCNRInsideBottom" count="50,300"/>
+	<item name="steelWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="steelWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="steelWedgeCNRInsideTop" count="50,300"/>
+	<item name="steelWedgeCNRSteepBase" count="50,300"/>
+	<item name="steelWedgeCNRSteepTop" count="50,300"/>
+	<item name="steelWedgeIncline" count="50,300"/>
+	<item name="steelWedgeStairs" count="50,300"/>
+	<item name="steelWedgeTip" count="50,300"/>
+	<item name="steelWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="steelWedgeTipCNRFullTop" count="50,300"/>
+	<item name="steelWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_wood_frame">
+	<item name="woodFrameWedge" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideBottom" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="woodFrameWedgeCNRInsideTop" count="50,300"/>
+	<item name="woodFrameWedgeCNRSteepBase" count="50,300"/>
+	<item name="woodFrameWedgeCNRSteepTop" count="50,300"/>
+	<item name="woodFrameWedgeIncline" count="50,300"/>
+	<item name="woodFrameWedgeStairs" count="50,300"/>
+	<item name="woodFrameWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="woodFrameWedgeTipCNRFullTop" count="50,300"/>
+	<item name="woodFrameWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge_wood">
+	<item name="woodWedge" count="50,300"/>
+	<item name="woodWedgeCNRInsideBottom" count="50,300"/>
+	<item name="woodWedgeCNRInsideSteepBase" count="50,300"/>
+	<item name="woodWedgeCNRInsideSteepTop" count="50,300"/>
+	<item name="woodWedgeCNRInsideTop" count="50,300"/>
+	<item name="woodWedgeCNRSteepBase" count="50,300"/>
+	<item name="woodWedgeCNRSteepTop" count="50,300"/>
+	<item name="woodWedgeIncline" count="50,300"/>
+	<item name="woodWedgeStairs" count="50,300"/>
+	<item name="woodWedgeTip" count="50,300"/>
+	<item name="woodWedgeTipCNRFullBottom" count="50,300"/>
+	<item name="woodWedgeTipCNRFullTop" count="50,300"/>
+	<item name="woodWedgeTipStairs" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionWedge" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questConstructionWedge_brick" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_cobble" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_concrete" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_flag" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionWedge_rConcrete" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_rScrap" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_rWoodMetal" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionWedge_rWood" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionWedge_scrap_frame" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_scrap" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionWedge_stainless" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionWedge_steel" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionWedge_wood_frame" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionWedge_wood" count="1" loot_prob_template="GradeALoot"/>
+</lootgroup>
+	<!-- Work Stations -->
+<lootgroup name="questConstructionWorkStation_Broken">
+	<item name="cntCollapsedCementMixer" count="1,5"/>
+	<item name="cntCollapsedChemistryStation" count="1,5"/>
+	<item name="cntCollapsedForge" count="1,5"/>
+	<item name="cntCollapsedWorkbench" count="1,5"/>
+</lootgroup>
+<lootgroup name="questConstructionWorkStation">
+	<item name="cementMixer" count="1,2" prob="1"/>
+	<item name="chemistryStation" count="1,2" prob="0.5"/>
+	<item name="forge" count="1,2" prob="1"/>
+	<item name="workbench" count="1,2" prob="1"/>
+	<item name="tableSaw" count="1,2" prob="0.5"/>
+</lootgroup>
+<lootgroup name="questConstructionWorkStations">
+	<item group="questConstructionWorkStation_Broken" count="1"/>
+	<item group="questConstructionWorkStation" count="1"/>
+</lootgroup>
+	<!-- BlockBlocks -->
+<lootgroup name="questConstructionBlockBlocks_A">
+	<item name="awningBlock" count="50,300"/>
+	<item name="brickBlock" count="50,300"/>
+	<item name="cobblestoneBlock" count="50,300"/>
+	<item name="concreteBlock" count="50,300"/>
+	<item name="flagstoneBlock" count="50,300"/>
+	<item name="glassBusinessBlock" count="50,300"/>
+	<item name="glassShowerBlock" count="50,300"/>
+	<item name="hayBaleBlock" count="50,300"/>
+	<item name="rWoodBlock" count="50,300"/>
+	<item name="rWoodMetalBlock" count="50,300"/>
+	<item name="scrapIronFrameBlock" count="50,300"/>
+	<item name="woodBlock" count="50,300"/>
+	<item name="woodFrameBlock" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionBlockBlocks_B">
+	<item name="rebarFrameBlock" count="50,300"/>
+	<item name="scrapIronBlock" count="50,300"/>
+	<item name="rScrapIronBlock" count="50,300"/>
+	<item name="metalTrussingBlock" count="50,300"/>
+	<item name="metalTrussingBlockOld" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionBlockBlocks_C">
+	<item name="rConcreteBlock" count="50,300"/>
+	<item name="stainlessSteelBlock" count="50,300"/>
+	<item name="steelBlock" count="50,300"/>
+	<item name="glassBulletproofBlock" count="50,300"/>
+</lootgroup>
+	<!-- Material Based Loot Blocks -->
+<lootgroup name="questConstructionBlocks_Wood">
+	<item group="questConstructionBars_wood" count="1"/>
+	<item group="questConstructionDoor_Wood" count="1"/>
+	<item group="questConstructionFrames_Wood" count="1"/>
+	<item group="questConstructionHatch_Wood" count="1"/>
+	<item group="questConstructionLadders_wood" count="1"/>
+	<item group="questConstructionRamp_rWood" count="1"/>
+	<item group="questConstructionRamp_rWoodMetal" count="1"/>
+	<item group="questConstructionRamp_wood" count="1"/>
+	<item group="questConstructionRamp_wood_frame" count="1"/>
+	<item group="questConstructionSheet_rWood" count="1"/>
+	<item group="questConstructionSheet_wood" count="1"/>
+	<item group="questConstructionStairs25_rWood" count="1"/>
+	<item group="questConstructionStairs25_rWoodMetal" count="1"/>
+	<item group="questConstructionStairs25_wood" count="1"/>
+	<item group="questConstructionStairs25_wood_frame" count="1"/>
+	<item group="questConstructionWedge_rWood" count="1"/>
+	<item group="questConstructionWedge_rWoodMetal" count="1"/>
+	<item group="questConstructionWedge_wood" count="1"/>
+	<item group="questConstructionWedge_wood_frame" count="1"/>
+	<item name="rWoodBlock" count="50,300"/>
+	<item name="rWoodMetalBlock" count="50,300"/>
+	<item name="woodBlock" count="50,300"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Iron">
+	<item group="questConstructionBars_iron" count="1"/>
+	<item group="questConstructionFrames_Iron" count="1"/>
+	<item group="questConstructionHatch_Iron" count="1"/>
+	<item group="questConstructionDoor_Iron" count="1"/>
+	<item group="questConstructionLadders_metal" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Steel">
+	<item name="steelBlock" count="50,300"/>
+	<item group="questConstructionBars_steel" count="1"/>
+	<item group="questConstructionDoor_Steel" count="1"/>
+	<item group="questConstructionHatch_Steel" count="1"/>
+	<item group="questConstructionLadders_steel" count="1"/>
+	<item group="questConstructionRamp_steel" count="1"/>
+	<item group="questConstructionStairs25_steel" count="1"/>
+	<item group="questConstructionWedge_steel" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Stainless">
+	<item name="stainlessSteelBlock" count="50,300"/>
+	<item group="questConstructionStairs25_stainless" count="1"/>
+	<item group="questConstructionWedge_stainless" count="1"/>
+	<item group="questConstructionRamp_stainless" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Brick">
+	<item name="brickBlock" count="50,300"/>
+	<item group="questConstructionStairs25_brick" count="1"/>
+	<item group="questConstructionRamp_brick" count="1"/>
+	<item group="questConstructionWedge_brick" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Cobble">
+	<item name="cobblestoneBlock" count="50,300"/>
+	<item group="questConstructionRamp_cobble" count="1"/>
+	<item group="questConstructionStairs25_cobble" count="1"/>
+	<item group="questConstructionWedge_cobble" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Concrete">
+	<item name="concreteBlock" count="50,300"/>
+	<item group="questConstructionRamp_concrete" count="1"/>
+	<item group="questConstructionStairs25_concrete" count="1"/>
+	<item group="questConstructionWedge_concrete" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Flag">
+	<item name="flagstoneBlock" count="50,300"/>
+	<item group="questConstructionRamp_flag" count="1"/>
+	<item group="questConstructionStairs25_flag" count="1"/>
+	<item group="questConstructionWedge_flag" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_rConcrete">
+	<item name="rConcreteBlock" count="50,300"/>
+	<item group="questConstructionRamp_rConcrete" count="1"/>
+	<item group="questConstructionStairs25_rConcrete" count="1"/>
+	<item group="questConstructionWedge_rConcrete" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_rScrap">
+	<item name="rScrapIronBlock" count="50,300"/>
+	<item group="questConstructionRamp_rScrap" count="1"/>
+	<item group="questConstructionStairs25_rScrap" count="1"/>
+	<item group="questConstructionWedge_rScrap" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_ScrapIron">
+	<item name="scrapIronBlock" count="50,300"/>
+	<item group="questConstructionRamp_scrap" count="1"/>
+	<item group="questConstructionRamp_scrap_frame" count="1"/>
+	<item group="questConstructionSheet_scrap" count="1"/>
+	<item group="questConstructionStairs25_scrap" count="1"/>
+	<item group="questConstructionWedge_scrap" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_Glass">
+	<item name="glassBulletproofBlock" count="50,300"/>
+	<item name="glassBulletproofCTRPlate" count="50,300"/>
+	<item name="glassBulletproofPlate" count="50,300"/>
+	<item name="glassBulletproofPlateCurved" count="50,300"/>
+	<item name="glassBulletproofRamp" count="50,300"/>
+	<item name="glassBulletproofRampSheet" count="50,300"/>
+	<item name="glassBusinessBlock" count="50,300"/>
+	<item name="glassBusinessCTRSheet" count="50,300"/>
+	<item name="glassBusinessPlate" count="50,300"/>
+	<item name="glassBusinessPlateCurved" count="50,300"/>
+	<item name="glassBusinessSheet" count="50,300"/>
+	<item name="glassCTRSheet" count="50,300"/>
+	<item name="glassRampSheet" count="50,300"/>
+	<item name="glassRampSheetCap" count="50,300"/>
+	<item name="glassRampSheetCap2" count="50,300"/>
+	<item name="glassShowerBlock" count="50,300"/>
+	<item name="glassShowerRamp" count="50,300"/>
+	<item name="trapGlassBusinessCTRSheet1x1" count="50,300"/>
+	<item name="trapGlassBusinessSheet1x1" count="50,300"/>
+</lootgroup>
+<!-- Base Constructor Main Loot -->
+<lootgroup name="questConstructionBlocks_A">
+	<item group="questConstructionBlocks_Wood" count="1"/>
+	<item group="questConstructionBlocks_Glass" count="1"/>
+	<item group="questConstructionBlocks_Brick" count="1"/>
+	<item group="questConstructionBlocks_Flag" count="1"/>
+	<item group="questConstructionBlocks_Cobble" count="1"/>
+	<item group="questConstructionBlocks_Concrete" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_B">
+	<item group="questConstructionBlocks_Iron" count="1"/>
+	<item group="questConstructionBlocks_rScrap" count="1"/>
+	<item group="questConstructionBlocks_ScrapIron" count="1"/>
+	<item group="questConstructionBlocks_Glass" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks_C">
+	<item group="questConstructionBlocks_rConcrete" count="1"/>
+	<item group="questConstructionBlocks_Steel" count="1"/>
+	<item group="questConstructionBlocks_Stainless" count="1"/>
+	<item group="questConstructionBlocks_Glass" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionBlocks">
+	<item group="questConstructionBlockBlocks_A" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questConstructionBlockBlocks_B" count="1" loot_prob_template="GradeBLoot"/>
+	<item group="questConstructionBlockBlocks_C" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="questConstructionBars" count="1"/>
+	<item group="questConstructionDoors" count="1"/>
+	<item group="questConstructionFrames" count="1"/>
+	<item group="questConstructionHatchs" count="1"/>
+	<item group="questConstructionRamp" count="1"/>
+	<item group="questConstructionSheet" count="1"/>
+	<item group="questConstructionStairs25" count="1"/>
+	<item group="questConstructionWedge" count="1"/>
+</lootgroup>
+<lootgroup name="questConstructionMaterials">
+	<item name="resourceScrapIron" count="150,300" prob="1.0"/>
+	<item name="resourceWood" count="500,800" prob="1.0"/>
+	<item name="resourceElectricParts" count="50,100" prob="1.0"/>
+	<item name="resourceCobblestones" count="150,300" prob="1.0"/>
+	<item name="resourceCrushedSand" count="500,800" prob="1.0"/>
+	<item name="resourceCement" count="500,800" prob="1.0"/>
+	<item name="resourceForgedIron" count="150,300" loot_prob_template="GradeBLoot"/>
+	<item name="resourceConcreteMix" count="500,800" loot_prob_template="GradeBLoot"/>
+	<item name="resourceForgedSteel" count="150,300" loot_prob_template="GradeCLoot"/>
+</lootgroup>
+<lootgroup name="questConstructionExtras">
+	<item group="questConstructionAppliances" count="1"/>
+	<item group="questConstructionCabinets" count="1"/>
+	<item group="questConstructionCrushedCars" count="1"/>
+	<item group="questConstructionDoors" count="1"/>
+	<item group="questConstructionElectrical" count="1"/>
+	<item group="questConstructionHatchs" count="1"/>
+	<item group="questConstructionLadders" count="1"/>
+	<item group="questConstructionStorage" count="1"/>
+	<item group="questConstructionWorkStations" count="1"/>
+</lootgroup>
+<lootgroup name="questBaseDefense">
+	<item group="questConstructionBasicDefense" count="1"/>
+	<item group="questConstructionElectrical_Defense" count="1"/>
+	<item group="autoTurret_loot" count="1"/>
+</lootgroup>
+<lootgroup name="questConstruction">
+	<item group="questConstructionBlocks" count="1"/>
+	<item group="questConstructionMaterials" count="1"/>
+	<item group="questConstructionExtras" count="1"/>
+	<item group="questBaseDefense" count="1"/>
+</lootgroup>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~ZOMBIE KILLER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<append xpath="/lootcontainers" >
+<lootgroup name="questKillerArrowsBolts_A" >
+	<item name="ammoArrowStone" count="5,50"/>
+	<item name="ammoArrowIron" count="5,50"/>
+	<item name="ammoCrossbowBoltStone" count="5,50"/>
+	<item name="ammoCrossbowBoltIron" count="5,50"/>
+	<item name="resourceArrowHeadIron" count="15,50" prob="0.05"/>
+</lootgroup>
+<lootgroup name="questKillerArrowsBolts_B" >
+	<item name="ammoArrowStone" count="20,100"/>
+	<item name="ammoArrowIron" count="20,100"/>
+	<item name="ammoArrowSteelAP" count="20,100"/>
+	<item name="ammoCrossbowBoltIron" count="20,100"/>
+	<item name="ammoCrossbowBoltSteelAP" count="20,100"/>
+	<item name="resourceArrowHeadIron" count="20,100" prob="0.05"/>
+	<item name="resourceArrowHeadSteelAP" count="20,100" prob="0.05"/>
+	<item name="ammoCrossbowBoltExploding" count="10,25" prob="0.05" />
+	<item name="ammoArrowFlaming" count="10,25" prob="0.05" />
+</lootgroup>
+<lootgroup name="questKillerArrowsBolts_C" >
+	<item name="ammoArrowSteelAP" count="40,200"/>
+	<item name="ammoCrossbowBoltSteelAP" count="40,200"/>
+	<item name="ammoCrossbowBoltExploding" count="16,50"/>
+	<item name="ammoArrowFlaming" count="16,50"/>
+</lootgroup>
+<lootgroup name="questKillerAmmo_A" >
+	<item name="ammoShotgunShell" count="10,50"/>
+	<item name="ammoShotgunSlug" count="8,40"/>
+	<item name="ammo9mmBullet" count="10,55"/>
+	<item name="ammo762mmBulletFMJ" count="8,35"/>
+</lootgroup>
+<lootgroup name="questKillerAmmo_B" >
+	<item name="ammoShotgunShell" count="20,100"/>
+	<item name="ammoShotgunSlug" count="16,75"/>
+	<item name="ammo9mmBullet" count="20,110"/>
+	<item name="ammo762mmBulletFMJ" count="15,70"/>
+	<item name="ammo44MagnumBullet" count="16,75" prob="0.5"/>
+	<item name="ammoRocketHE" count="5,25"/>
+	<item name="ammoRocketFrag" count="5,25"/>	
+</lootgroup>
+<lootgroup name="questKillerAmmo_C" >
+	<item name="ammoShotgunShell" count="40,200"/>
+	<item name="ammoShotgunSlug" count="35,150"/>
+	<item name="ammo9mmBullet" count="40,220"/>
+	<item name="ammo762mmBulletFMJ" count="30,140"/>
+	<item name="ammo44MagnumBullet" count="35,150"/>
+	<item name="ammoRocketHE" count="10,50"/>
+	<item name="ammoRocketFrag" count="10,50"/>	
+</lootgroup>
+<lootgroup name="questKillerAmmo" >
+	<item name="ammoShotgunShell" count="40,200"/>
+	<item name="ammoShotgunSlug" count="35,150"/>
+	<item name="ammo9mmBullet" count="40,220"/>
+	<item name="ammo762mmBulletFMJ" count="30,140"/>
+	<item name="ammo44MagnumBullet" count="35,150" prob="0.5"/>
+	<item name="ammoRocketHE" count="10,50"/>
+	<item name="ammoRocketFrag" count="10,50"/>	
+</lootgroup>
+<lootgroup name="questKillerAmmoSteel" >
+	<item name="ammoShotgunShell" count="40,200"/>
+	<item name="ammo9mmBulletSteel" count="40,220" prob="1.5"/>
+	<item name="ammo762mmBulletFMJSteel" count="30,140"/>
+	<item name="ammo44MagnumBulletSteel" count="35,150" prob="0.2"/>
+	<item name="ammoArrowSteelAP" count="100,300"/>
+	<item name="ammoCrossbowBoltSteelAP" count="100,300"/>	
+</lootgroup>
+<lootgroup name="questKillerExplosions" >
+	<item name="ammoCrossbowBoltExploding" count="10,20"/>
+	<item name="thrownAmmoPipeBomb" count="10,20"/>	
+	<item name="thrownDynamite" count="10,20"/>
+	<item name="mineCandyTin" count="10,20"/>
+	<item name="mineHubcap" count="10,20"/>
+	<item name="mineAirFilter" count="10,20"/>
+	<item name="mineCookingPot" count="10,20"/>
+	<item name="thrownAmmoMolotovCocktail" count="10,20"/>
+	<item name="rScrapIronPlateMine" count="10,20"/>
+	<item name="ammoRocketFrag" count="10,20"/>
+	<item name="ammoRocketHE" count="10,20"/>
+</lootgroup>
+<lootgroup name="questKillerRanged_A" >
+	<item name="gunPistol" quality="1,2"/>
+	<item name="gunPumpShotgun" quality="1,2"/>
+	<item name="gunSMG5" quality="1,2"/>
+	<item name="gunCompoundBow" quality="1,2"/>
+	<item name="gunCrossbow" quality="1,2"/>
+	<item name="gunHuntingRifle" quality="1,2"/>
+	<item name="gunMR10" quality="1,2"/>
+	<item name="gunAK47" quality="1,2"/>
+</lootgroup>
+<lootgroup name="questKillerRanged_B" >
+	<item name="gunPistol" quality="3,4"/>
+	<item name="gunPumpShotgun" quality="3,4"/>
+	<item name="gunSMG5" quality="3,4"/>
+	<item name="gunCompoundBow" quality="3,4"/>
+	<item name="gunCrossbow" quality="3,4"/>
+	<item name="gunHuntingRifle" quality="3,4"/>
+	<item name="gunMR10" quality="3,4"/>
+	<item name="gunAK47" quality="3,4"/>
+	<item name="gunRocketLauncher" quality="3,4"/>
+	<item name="gun44Magnum" quality="3,4"/>
+</lootgroup>
+<lootgroup name="questKillerRanged_C" >
+	<item name="gunPistol" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunPumpShotgun" lmods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunSMG5" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunCompoundBow" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunCrossbow" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunHuntingRifle" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunMR10" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunAK47" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gunRocketLauncher" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+	<item name="gun44Magnum" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1,1" quality="5,6"/>
+</lootgroup>
+<lootgroup name="questKillerGuns_A" >
+	<item group="questKillerRanged_A" count="1"/>
+	<item group="modGunT1" count="1"/>
+</lootgroup>
+<lootgroup name="questKillerGuns_B" >
+	<item group="questKillerRanged_B" count="1"/>
+	<item group="modGunT1" count="1"/>
+	<item group="modGunT2" count="1"/>
+</lootgroup>
+<lootgroup name="questKillerGuns_C" >
+	<item group="questKillerRanged_C" count="1"/>
+	<item group="modGunT1" count="2"/>
+	<item group="modGunT2" count="2"/>
+	<item group="modGunT3" count="2"/>
+</lootgroup>
+<lootgroup name="questKillerGuns" loot_quality_template="questTierFlexibleTemplate">
+	<item group="questKillerRanged_A" count="1" loot_prob_template="GradeALoot"/>
+	<item group="questKillerRanged_B" count="1"  loot_prob_template="GradeBLoot"/>
+	<item group="questKillerRanged_C" count="1" loot_prob_template="GradeCLoot"/>
+	<item group="weaponsBasicGuns+ammo" count="1"/>
+	<item group="modGunT1" count="1"/>
+	<item group="modGunT2" count="1"/>
+	<item group="modGunT3" count="1"/>
+</lootgroup>
+<lootgroup name="questKillerMelee_A" >
+	<item name="meleeClubWood" quality="1,2"/>
+	<item name="meleeClubIron" quality="1,2"/>
+	<item name="meleeToolHuntingKnife" quality="1,2"/>
+	<item name="meleeToolMachete" quality="1,2"/>
+	<item group="modMeleeT1" count="1"/>
+</lootgroup>
+<lootgroup name="questKillerMelee_B" >
+	<item name="meleeClubIron" quality="3,4"/>
+	<item name="meleeToolHuntingKnife" quality="3,4"/>
+	<item name="meleeToolMachete" quality="3,4"/>
+	<item group="modMeleeT1" count="1"/>
+	<item group="modMeleeT2" count="1"/>
+	<item group="modMeleeT3" count="1"/>
+	<item group="modGunMeleeT2" count="1"/>
+	<item group="modGunMeleeT3" count="1"/>
+</lootgroup>
+<lootgroup name="questKillerMelee_C" >
+	<item name="meleeToolHuntingKnife" mods="melee,knife" quality="5,6"/>
+	<item name="meleeToolMachete" mods="melee,knife" quality="5,6"/>
+	<item group="modMeleeT1" count="1"/>
+	<item group="modMeleeT2" count="1"/>
+	<item group="modMeleeT3" count="1"/>
+	<item group="modGunMeleeT2" count="1"/>
+	<item group="modGunMeleeT3" count="1"/>
+</lootgroup>
+<lootgroup name="questKillerMelee" loot_quality_template="questTierFlexibleTemplate">
+	<item group="weaponsMelee" count="1"/>
+	<item group="modMeleeT1" count="1"/>
+	<item group="modMeleeT2" count="1"/>
+	<item group="modMeleeT3" count="1"/>
+	<item group="modGunMeleeT2" count="1"/>
+	<item group="modGunMeleeT3" count="1"/>
+</lootgroup>
+<lootgroup name="questArmor_A" >
+	<item group="clothes"/>
+	<item group="leatherArmor" count="1" />
+	<item group="ironArmor" count="1" />
+</lootgroup>
+<lootgroup name="questArmor_B" >
+	<item name="armorScrapHelmet" quality="3,4"/>
+	<item name="armorScrapChest" quality="3,4"/>
+	<item name="armorScrapGloves" quality="3,4"/>
+	<item name="armorScrapLegs" quality="3,4"/>
+	<item name="armorScrapBoots" quality="3,4"/>
+</lootgroup>
+<lootgroup name="questArmor_C" >
+	<item name="armorMilitaryGloves" mods="armor" quality="5,6"/>
+	<item name="armorMilitaryHelmet" mods="armor" quality="5,6"/>
+	<item name="armorMilitaryBoots" mods="armor" quality="5,6"/>
+	<item name="armorMilitaryLegs" mods="armor" quality="5,6"/>
+	<item name="armorMilitaryVest" mods="armor" quality="5,6"/>
+	<item name="armorSteelBoots" mods="armor" quality="5,6"/>
+	<item name="armorSteelLegs" mods="armor" quality="5,6"/>
+	<item name="armorSteelChest" mods="armor" quality="5,6"/>
+	<item name="armorSteelGloves" mods="armor" quality="5,6"/>
+	<item name="armorMilitaryHelmet" mods="armor" quality="5,6"/>
+	<item name="armorSwatHelmet" mods="armor" quality="5,6"/>
+</lootgroup>
+
+<!--
+<lootgroup name="questKiller">
+	<item group="questKillerAmmo" count="1"/>
+	<item group="questKillerArmor" count="1"/>
+	<item group="questKillerGuns" count="1"/>
+	<item group="questKillerMelee" count="1"/>
+</lootgroup>
+-->
+	</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~ENVIRONMENT CLEANUP~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<setattribute xpath='/lootcontainers/lootcontainer[@id="10"]' name="destroy_on_close">true</setattribute>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~GENERIC ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/lootcontainers/lootcontainer[@id='5']">
+	<item name="Coking Coal1" count="1,2"/>
+</append>	
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~MEDICAL LOOT~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/lootcontainers" >
+<lootgroup name="questMedicKit">
+	<item name="medicalBandage" count="2,10"/>
+	<item name="medicalFirstAidBandage" count="2,10" loot_prob_template="GradeALoot"/>
+	<item name="medicalFirstAidKit" count="2,10" prob="1.0"/>
+	<item name="medicalPlasterCast" count="2,10" prob="0.5"/>	
+	<item name="medicalSplint"/>
+</lootgroup>
+<lootgroup name="questMedicDrugs">	
+	<item name="drugAntibiotics" count="2,4" prob="0.5"/>
+	<item name="drugHerbalAntibiotics" count="2,4" loot_prob_template="GradeALoot"/>
+	<item name="drugSteroids" count="2,4" loot_prob_template="GradeCLoot"/>
+	<item name="drugPainkillers" count="6,10" loot_prob_template="GradeCLoot"/>
+	<item name="drugVitamins" count="1,2" prob="0.5"/>	
+	<item name="medicalAloeCream" count="4,10" prob="0.5"/>
+	<item name="drugRecog" count="2,4" loot_prob_template="GradeCLoot"/>
+	<item name="drugFortBites" count="2,4" loot_prob_template="GradeCLoot"/>	
+</lootgroup>	
+<lootgroup name="questMedicHollistic">	
+	<item name="toolBeaker" count="1" loot_prob_template="GradeBLoot"/>
+	<item name="drinkJarGoldenRodTea" count="1,4"/>
+	<item name="drinkJarGrainAlcohol" count="5,10"/>
+	<item name="drinkJarRedTea" count="1,4"/>
+	<item name="foodHoney" count="2,4" prob="0.1"/>
+	<item name="resourceCropGoldenrodPlant" count="10,30" prob="0.5"/>
+	<item name="resourceCropChrysanthemumPlant" count="10,30" prob="0.5"/>
+</lootgroup>
+<!--
+<lootgroup name="questBloodKit">
+	<item name="medicalBloodDrawKit" prob="0.05"/>
+	<item name="medicalBloodBag" count="5,10" prob="1.0"/>
+</lootgroup>
+
+<lootgroup name="questMedicLoot">
+	<item name="questMedicKit" count="3" prob="1"/>
+	<item group="questMedicDrugs" count="3" prob="1"/>
+	<item group="questMedicHollistic" count="3" prob="1"/>
+</lootgroup>-->
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~OIL EXTRACTOR~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/lootcontainers" >
+	<lootcontainer id="225" count="1,50" size="8,9" sound_open="forge_open" sound_close="forge_close" destroy_on_close="true" loot_quality_template="baseTemplate" >
+		<item name="resourceOilShale" count="1,50" prob="0.4"/>
+		<item name="ammoGasCan" count="1,75" prob="0.6"/>
+		<item name="resourceOil" count="0,3" prob="0.2"/>
+		<item name="terrOreOilDeposit" count="0,25" prob="0.2"/>
+		<item name="terrOreSandPlusOil" count="0,25" prob="0.2"/>
+		<item name="resourceParaffinWax" count="0,2" prob="0.2"/>
+		<item name="terrAsphalt" count="0,25" prob="0.2"/>
+		<item name="resourceTar" count="0,2" prob="0.2"/>
+	</lootcontainer>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~POWER TOOLS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<insertAfter xpath="/lootcontainers/lootgroup[@name='questChallenge']">
+	<lootgroup name="drillgun" count="all">
+		<item name="mayicDrillGun" count="1"/>
+		<item name="mayicDrillBattery" count="1,3"/>
+	</lootgroup>
+	
+	<lootgroup name="modMotorToolStuff" count="1">
+		<item name="modReserveGasTank1"/>
+		<item name="modGasTank1"/>
+		<item name="modBetterHandles"/>	
+		<item name="modEngineTurbo1"/>		
+		<item name="modDiamondTip1"/>
+		<item name="modChainsawTemperedFrame1"/>			
+		<item name="modEngineTurbo2"/>
+		<item name="modGasTank2"/>		
+		<item name="modReserveGasTank2"/>		
+		<item name="modMotorToolExtension1"/>
+		<item name="modMotorToolExtension2"/>		
+		<item name="modDiamondTip2"/>	
+		<item name="modMotorToolSilencer"/>
+		<item name="modChainsawTemperedFrame2"/>		
+		<item name="modEngineTurbo3"/>
+		<item name="modGasTank3"/>
+		<item name="modReserveGasTank3"/>
+		<item name="modMotorToolExtension3"/>
+		<item name="modDiamondTip3"/>
+		<item name="modChainsawTemperedFrame3"/>
+		<item name="Quicker Fixer Upper"/>
+		<item name="mayicDrillGun"/>
+		<item name="mayicDrillBattery"/>
+	</lootgroup>
+</insertAfter>
+
+<append xpath="/lootcontainers/lootgroup[@name='rareBooks']">
+		<item name="modEngineTurbo1Schematic"/>
+		<item name="modEngineTurbo2Schematic"/>
+		<item name="modEngineTurbo3Schematic"/>
+		<item name="modGasTank1Schematic"/>
+		<item name="modGasTank2Schematic"/>
+		<item name="modGasTank3Schematic"/>	
+		<item name="modReserveGasTank1Schematic"/>
+		<item name="modReserveGasTank2Schematic"/>		
+		<item name="modReserveGasTank3Schematic"/>
+		<item name="modMotorToolExtension1Schematic"/>
+		<item name="modMotorToolExtension2Schematic"/>
+		<item name="modMotorToolExtension3Schematic"/>
+		<item name="modDiamondTip1Schematic"/>
+		<item name="modDiamondTip2Schematic"/>	
+		<item name="modDiamondTip3Schematic"/>
+		<item name="modBetterHandlesSchematic"/>		
+		<item name="modMotorToolSilencerSchematic"/>
+		<item name="modChainsawTemperedFrame1Schematic"/>
+		<item name="modChainsawTemperedFrame2Schematic"/>
+		<item name="modChainsawTemperedFrame3Schematic"/>
+		<item name="Quicker Fixer Upper Schematic"/>
+</append>
+
+<append xpath="lootcontainers/lootgroup[@name='tools']">
+		<item group="drillgun" prob=".2"/>
+		<item group="modMotorToolStuff" prob=".2"/>
+</append>
+
+<append xpath="lootcontainers/lootgroup[@name='rareTools']">
+		<item group="drillgun" prob=".5"/>
+		<item group="modMotorToolStuff" prob=".5"/>
+</append>
+
+<append xpath="lootcontainers/lootgroup[@name='questTools']">
+		<item group="drillgun" loot_prob_template="GradeBLoot"/>
+		<item group="modMotorToolStuff" loot_prob_template="GradeBLoot"/>
+</append>
+
+<append xpath="lootcontainers/lootgroup[@name='workingStiffs']">
+		<item group="modMotorToolStuff"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='modMeleeT1']">
+		<item name="modReserveGasTank1"/>
+		<item name="modGasTank1"/>
+		<item name="modBetterHandles"/>	
+		<item name="modEngineTurbo1"/>		
+		<item name="modDiamondTip1"/>
+		<item name="modChainsawTemperedFrame1"/>
+</append>	
+
+<append xpath="/lootcontainers/lootgroup[@name='modMeleeT2']">	
+		<item name="modEngineTurbo2"/>
+		<item name="modGasTank2"/>		
+		<item name="modReserveGasTank2"/>		
+		<item name="modMotorToolExtension1"/>
+		<item name="modMotorToolExtension2"/>		
+		<item name="modDiamondTip2"/>	
+		<item name="modMotorToolSilencer"/>
+		<item name="modChainsawTemperedFrame2"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='modMeleeT3']">
+		<item name="modEngineTurbo3"/>
+		<item name="modGasTank3"/>
+		<item name="modReserveGasTank3"/>
+		<item name="modMotorToolExtension3"/>
+		<item name="modDiamondTip3"/>
+		<item name="modChainsawTemperedFrame3"/>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~SKILL BOOKS~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<append xpath="/lootcontainers" >
+<lootgroup name="questSkillBook">
+	<item name="SkillBook_Advanced_Engineering" count="1" />
+	<item name="SkillBook_Better_Barter" count="1" />
+	<item name="SkillBook_Daring_Adventurer" count="1" />
+	<item name="SkillBook_Grease_Monkey" count="1" />
+	<item name="SkillBook_Hammer_Forge" count="1" />
+	<item name="SkillBook_Loving_Off_The_Land" count="1" />
+	<item name="SkillBook_Lucky_Looter" count="1" />
+	<item name="SkillBook_Master_Chef" count="1" />
+	<item name="SkillBook_Miner_69r" count="1" />
+	<item name="SkillBook_Mother_Lode" count="1" />
+	<item name="SkillBook_Pack_Mule" count="1" />
+	<item name="SkillBook_Physician" count="1" />
+	<item name="SkillBook_Salvage_Operation" count="1" />
+	<item name="SkillBook_Sexual_Trex" count="1" />
+	<item name="SkillBook_Yeah_Science" count="1" />
+</lootgroup>
+</append>
+
+
+<!-- garage stuff, tools, etc -->
+	<append xpath="/lootcontainers/lootcontainer[@id='22']">
+	<item group="modMotorToolStuff" count="1" prob="0.005"/>
+</append> 
+		
+<!-- construction supplies shipping crate -->	
+<!--  THIS MIGHT BE TOSSING AN ERROR?
+<append xpath="/lootcontainers/lootcontainer[@id='88']">
+	<item group="modMotorToolStuff" count="1" prob="0.01"/>
+</append>	
+-->
+<!-- cntCollapsedWorkbench -->
+	<append xpath="/lootcontainers/lootcontainer[@id='92']">
+	<item group="modMotorToolStuff" count="1" prob="0.01"/>
+</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='medicine']">
+	<item name="Drs_BloodCase" count="1" prob="0.5"/>
+	<item name="Drs_FirstAid_Kit" count="1" prob="0.5"/>
+</append>
+	<append xpath="/lootcontainers/lootgroup[@name='rareMedicine']">
+	<item name="Drs_BloodCase" count="1" prob="0.5"/>
+	<item name="Drs_FirstAid_Kit" count="1" prob="0.5"/>
+</append>
+	<append xpath="/lootcontainers/lootgroup[@name='airdropMedicine']">
+	<item name="Drs_BloodCase" count="1" prob="0.5"/>
+	<item name="Drs_FirstAid_Kit" count="1" prob="0.5"/>
+</append>
+
+</Drs_GoldenRealm>

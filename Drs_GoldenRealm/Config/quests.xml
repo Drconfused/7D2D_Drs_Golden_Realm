@@ -1,0 +1,2504 @@
+<Drs_GoldenRealm>
+<remove xpath="/quests/quest[@id='quest_whiteRiverCitizen1']"/>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival2']"/>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~START QUESTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+	<quest id="quest_BasicSurvival1">
+			<property name="group_name_key" value="quest_BasicSurvival" />
+			<property name="name" value="Getting started" />
+			<property name="subtitle" value="Lets get this part out of the way." />
+			<property name="description" value="To many things to do, need to find a trader so lets get on that right away!" />
+			<property name="icon" value="ui_game_symbol_map_trader" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="medium" />
+			<property name="shareable" value="false" />
+			
+			<reward type="Item" id="vehicleBicyclePlaceable" value="1" />
+			<reward type="Item" id="bedroll" value="1" />
+			<reward type="Item" id="flannelShirtRed" value="1" />
+			<reward type="Item" id="wornBoots" value="1" />
+			<reward type="Item" id="armorLeatherGloves" value="1" />
+			<reward type="Quest" id="quest_BasicSurvival2" />
+			<reward type="Quest" id="Milestone_Zombie_Kill_100" />
+	</quest>
+	<quest id="quest_BasicSurvival2">
+			<property name="group_name_key" value="quest_WhiteRiverCitizen" />
+			<property name="name_key" value="quest_WhiteRiverCitizen1" />
+			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle" />
+			<property name="description_key" value="quest_WhiteRiverCitizen1_description" />
+			<property name="icon" value="ui_game_symbol_map_trader" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="medium" />
+			<property name="shareable" value="false" />
+			
+			<action type="ShowTip" value="quest_WhiteRiverCitizen1_description" />
+			<objective type="Goto" id="trader" value="5" phase="1" />
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2" />
+			</objective>
+			
+			<reward type="Exp" value="1000" />
+			<reward type="SkillPoints" value="5" chainreward="true" />
+			
+			
+			<reward type="Item" id="Impact Wrench" value="1" />
+			<reward type="Item" id="meleeToolAuger" value="1" />
+			<reward type="Item" id="meleeToolChainsaw" value="1" />
+			<reward type="Item" id="ammoGasCan" value="1000" />
+			<reward type="Item" id="overalls" value="1" />
+			<reward type="Item" id="armorMiningHelmet" value="1" />
+
+			<reward type="Item" id="q_BaseConstructor1" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+	</quest>
+
+<!--
+
+	<quest id="quest_whiteRiverCitizen1">
+		<property name="group_name_key" value="quest_WhiteRiverCitizen" />
+		<property name="name_key" value="quest_WhiteRiverCitizen1" />
+		<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle" />
+		<property name="description_key" value="quest_WhiteRiverCitizen1_description" />
+		<property name="icon" value="ui_game_symbol_map_trader" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="medium" />
+		<property name="shareable" value="false" />
+
+		<action type="ShowTip" value="quest_WhiteRiverCitizen1_description">
+			<property name="delay" value="3" />
+		</action>
+		<objective type="Goto" id="trader" value="5" phase="1" />
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="1000" />
+		<reward type="Item" id="bedroll" value="1" />
+		<reward type="Item" id="Impact Wrench" value="1" />
+		<reward type="Item" id="meleeToolAuger" value="1" />
+		<reward type="Item" id="meleeToolChainsaw" value="1" />
+		<reward type="Item" id="ammoGasCan" value="1000" />
+		<reward type="Item" id="overalls" value="1" />
+		<reward type="Item" id="flannelShirtRed" value="1" />
+		<reward type="Item" id="armorMiningHelmet" value="1" />
+		<reward type="Item" id="wornBoots" value="1" />
+		<reward type="Item" id="armorLeatherGloves" value="1" />
+		<reward type="Item" id="q_BaseConstructor1" value="1" />
+	</quest>
+-->
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~BASE CONSTRUCTOR~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+	<quest id="BaseConstructor1">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 1" />
+		<property name="subtitle" value="Build Wood Base" />
+		<property name="description" value="A base is one of the best ways to protect yourself from the hordes of zombies. Get something more than a few blocks built and some doors." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="If you scratch my back I'll scratch yours. Get started biulding a base and help protect the region. This way I can focus on trades rather than developing the area." />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+		
+		<objective type="FetchKeep" id="woodFrameBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="8" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="8" phase="1" />
+		<objective type="FetchKeep" id="secureDoorWooden" value="2" phase="1" />
+		<objective type="FetchKeep" id="woodHatch1_v1" value="2" phase="1" />
+		
+		<objective type="BlockPlace" id="woodFrameBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="woodFrameBlock" value="50" phase="2" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="8" phase="2" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="8" phase="2" />
+		<objective type="BlockPlace" id="secureDoorWooden" value="2" phase="2" />
+		<objective type="BlockPlace" id="woodHatch1_v1" value="2" phase="2" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="3" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3" />
+		</objective>
+	
+		<!--<reward type="Exp" value="3000" />
+		<reward type="Item" id="meleeToolClawHammer" value="1" />
+		<reward type="Item" id="workbench" value="1" />
+		<reward type="Quest" id="BaseConstructor2" />
+		<reward type="Item" id="WorkOrderQuestSchematic1" value="1" />
+		<reward type="LootItem" id="questSkillBook" value="1" />
+		-->
+		<reward type="Quest" id="reward_BC1" />
+		<reward type="LootItem" id="questConstructionBars" value="1" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="1" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="1" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="1" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="1" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_A" value="1" ischosen="true" />
+		
+	</quest>
+	<quest id="BaseConstructor2">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 2" />
+		<property name="subtitle" value="Basic defenses and upgrades." />
+		<property name="description" value="Good job, more to do, go go go." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 2" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+		
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="25" phase="1" />
+		<objective type="FetchKeep" id="ladderWood" value="10" phase="1" />
+		
+		<objective type="BlockUpgrade" id="WoodDowelBars" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="WoodDowelBarsCentered" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="woodBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="secureDoorWooden" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="woodHatch1_v1" value="2" phase="2" />
+		
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="25" phase="3" />
+		<objective type="BlockPlace" id="ladderWood" value="10" phase="3" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC2" />
+		<reward type="LootItem" id="questConstructionBars" value="2" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="2" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="2" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="2" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="2" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_A" value="2" ischosen="true" />
+	</quest>
+	<quest id="BaseConstructor3">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 3" />
+		<property name="subtitle" value="More base additions" />
+		<property name="description" value="On a damn role! Keep that flow going and those zombies will be minced meat pie!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 3" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+		
+		<objective type="FetchKeep" id="flagstoneBlock" value="25" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="50" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="50" phase="2" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="25" phase="2" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="2" />
+		
+		<objective type="BlockUpgrade" id="barbedWireSheet" value="20" phase="3" />
+		<objective type="BlockUpgrade" id="WoodDowelBars01" value="8" phase="3" />
+		<objective type="BlockUpgrade" id="WoodDowelBarsCentered01" value="8" phase="3" />
+		<objective type="BlockUpgrade" id="rWoodBlock" value="50" phase="3" />
+		<objective type="BlockUpgrade" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockUpgrade" id="secureReinforcedDoorWooden" value="2" phase="3" />
+		<objective type="BlockUpgrade" id="woodHatch1_v2" value="2" phase="3" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC3" />
+		<reward type="LootItem" id="questConstructionBars" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_A,questConstructionBlockBlocks_B" value="3" ischosen="true" />
+	</quest>
+	<quest id="BaseConstructor4">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 4" />
+		<property name="subtitle" value="More base additions" />
+		<property name="description" value="A base is one of the best ways to protect yourself from the hordes of zombies. Build a wood door and some bars and put them on your base!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 4" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+		
+		<objective type="FetchKeep" id="burningBarrelPlayer" value="10" phase="1" />
+		
+		<objective type="BlockPlace" id="burningBarrelPlayer" value="10" phase="2" />
+		<objective type="BlockUpgrade" id="WroughtIronBars" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="WroughtIronBarsCentered" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="rWoodMetalBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="cobblestoneBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="metalReinforcedDoorWooden" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="woodHatch1_v3" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="trapSpikesWoodDmg0" value="50" phase="2" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="3" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC4" />
+		<reward type="LootItem" id="questConstructionBars" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="3" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_B" value="3" ischosen="true" />
+	</quest>
+	<quest id="BaseConstructor5">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 5" />
+		<property name="subtitle" value="More base additions" />
+		<property name="description" value="A base is one of the best ways to protect yourself from the hordes of zombies." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 5" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+		
+		<objective type="FetchKeep" id="motionsensor" value="1" phase="1" />
+		<objective type="FetchKeep" id="electricfencepost" value="4" phase="1" />
+		
+		<objective type="BlockPlace" id="motionsensor" value="1" phase="2" />
+		<objective type="BlockPlace" id="electricfencepost" value="4" phase="2" />
+		
+		<objective type="BlockUpgrade" id="WroughtIronBars01" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="WroughtIronBarsCentered01" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="scrapIronBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="concreteBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="ironDoor1_v1" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="scrapHatch_v1" value="2" phase="2" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="3" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC5" />
+		<reward type="LootItem" id="questConstructionBars" value="4" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="4" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="4" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="4" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="4" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_B" value="4" ischosen="true" />
+		
+	</quest>
+	<quest id="BaseConstructor6">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 6" />
+		<property name="subtitle" value="More base additions" />
+		<property name="description" value="A base is one of the best ways to protect yourself from the hordes of zombies." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 5" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+			
+		<objective type="FetchKeep" id="autoTurret" value="1" phase="1" />
+		
+		<objective type="BlockPlace" id="autoTurret" value="1" phase="2" />
+		<objective type="BlockUpgrade" id="steelLootBars" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="steelLootBarsCentered" value="8" phase="2" />
+		<objective type="BlockUpgrade" id="rScrapIronBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="rConcreteBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="ironDoor1_v2" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="scrapHatch_v2" value="2" phase="2" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="3" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC6" />
+		<reward type="LootItem" id="questConstructionBars" value="5" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="5" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="5" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="5" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="5" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_B" value="5" ischosen="true" />
+		
+		
+	</quest>
+	<quest id="BaseConstructor7">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 7" />
+		<property name="subtitle" value="More base additions" />
+		<property name="description" value="A base is one of the best ways to protect yourself from the hordes of zombies." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 5" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+			
+		<objective type="FetchKeep" id="resourceWood" value="536" phase="1" />
+	
+		<objective type="BlockUpgrade" id="rConcreteBlock" value="100" phase="2" />
+		<objective type="BlockUpgrade" id="ironDoor1_v3" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="scrapHatch_v3" value="2" phase="2" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="3" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC7" />
+		<reward type="LootItem" id="questConstructionBars" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_B" value="6" ischosen="true" />
+	</quest>
+	<quest id="BaseConstructor8">
+		<!-- <property name="group_name" value="BaseConstructor" /> -->
+		<property name="name" value="Base Constructor 8" />
+		<property name="subtitle" value="More base additions" />
+		<property name="description" value="A base is one of the best ways to protect yourself from the hordes of zombies." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/> 
+		<property name="offer" value="Base Constructor 5" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="Well Damn! You sure can build. Lets see if you can keep that up. Here is some incentive." />
+	
+
+		<objective type="BlockUpgrade" id="steelBlock" value="50" phase="2" />
+		<objective type="BlockUpgrade" id="vaultDoor01" value="2" phase="2" />
+		<objective type="BlockUpgrade" id="vaultHatch_v1" value="2" phase="2" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="3" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BC8" />
+		<reward type="LootItem" id="questConstructionBars" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionFrames" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionRamp" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionSheet" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionStairs25" value="6" ischosen="true" />
+		<reward type="LootItem" id="questConstructionBlockBlocks_B" value="6" ischosen="true" />
+		<!--
+		<reward type="Quest" id="BaseConstructor7" /> series completion awesomeness
+		-->
+	</quest>	
+
+	<quest id="reward_BC1">
+			<reward type="Exp" value="3000" />
+			<reward type="Item" id="meleeToolClawHammer" value="1" />
+			<reward type="Item" id="workbench" value="1" />
+			<reward type="Item" id="WorkOrderQuestSchematic1" value="1" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="1" />
+			<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Quest" id="BaseConstructor2" />
+	</quest>
+	<quest id="reward_BC2">
+			<reward type="Exp" value="3000" />
+			<reward type="Item" id="forge" value="1" />
+			<reward type="Item" id="WorkOrderQuestSchematic2" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="2" />
+			<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+			<reward type="Quest" id="BaseConstructor3" />
+	</quest>
+	<quest id="reward_BC3">
+			<reward type="Exp" value="3000" />
+			<reward type="Item" id="manux_vehicleQuadPlaceable" value="1" />
+			<reward type="LootItem" id="modMotorToolStuff" value="3" />
+			<reward type="Item" id="WorkOrderQuestSchematic3" value="1" />
+			<reward type="Item" id="q_Second_Base_1" value="1" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="3" />
+			<reward type="Item" id="Drs_Construction_Box_2" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Quest" id="BaseConstructor4" />
+	</quest>
+	<quest id="reward_BC4">
+			<reward type="Exp" value="3000" />
+			<reward type="Item" id="Oil Extractor" value="1" />
+			<reward type="LootItem" id="modMotorToolStuff" value="4" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="4" />
+			<reward type="Item" id="Drs_Construction_Box_2" value="1" />
+			<reward type="Item" id="WorkOrderQuestSchematic4" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Quest" id="BaseConstructor5" />
+	</quest>
+	<quest id="reward_BC5">
+			<reward type="Exp" value="3000" />
+			<reward type="Item" id="Quicker Fixer Upper Schematic" value="1" />
+			<reward type="LootItem" id="modMotorToolStuff" value="5" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="5" />
+			<reward type="Item" id="Drs_Construction_Box_2" value="1" />
+			<reward type="Item" id="WorkOrderQuestSchematic5" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Quest" id="BaseConstructor6" />
+	</quest>
+	<quest id="reward_BC6">
+			<reward type="Exp" value="3000" />
+			<reward type="Item" id="vehicle4x4TruckPlaceable" value="1" />
+			<reward type="LootItem" id="modMotorToolStuff" value="6" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="6" />
+			<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Quest" id="BaseConstructor7" />
+	</quest>
+	<quest id="reward_BC7">
+			<reward type="Exp" value="3000" />
+			<reward type="LootItem" id="modMotorToolStuff" value="1" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="7" />
+			<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+			<reward type="Quest" id="BaseConstructor8" />
+	</quest>
+	<quest id="reward_BC8">
+			<reward type="Exp" value="20000" />
+			<reward type="LootItem" id="modMotorToolStuff" value="1" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="8" />
+			<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+			<reward type="Item" id="WorkOrderQuestSchematic6" value="1" />
+			<reward type="LootItem" id="questSkillBook" value="1" />
+	</quest>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~BASE FINE TUNING~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~BlockHead~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<quest id="quest_Base_FineTune_Blocks1">		
+		<!-- <property name="group_name" value="GROUP_NAMEwHAT" /> -->	
+		<property name="name" value="Block Head"/>	
+		<property name="subtitle" value="Block Head"/>	
+		<property name="description" value="Upgrading blocks is a major part of the ongoing evolving base!"/>	
+		<property name="icon" value="ui_game_symbol_map_fortress"/>	
+		<property name="category_key" value="challenge"/>	
+		<property name="difficulty" value="easy"/>	
+		<property name="offer" value="Upgrade as many of the various types of blocks as you can. The more that is out there refined specificially for our endeavors is great for the community and will certainly make us more resilient against those zombies!"/>	
+		<property name="shareable" value="false"/>	
+		<property name="completiontype" value="TurnIn"/>	
+		<property name="completion_key" value="So many blocks! Your head square yet? Here are some goods I had laying around to keep you on this block headed mission!"/>
+
+		<objective type="BlockUpgrade" id="woodFrameBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="woodBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="rWoodMetalBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="scrapIronBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="rScrapIronBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="concreteBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="rConcreteBlock" value="100" phase="1" />
+		<objective type="BlockUpgrade" id="steelBlock" value="100" phase="1" />
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2" />
+		</objective>
+		
+		<reward type="Quest" id="reward_BFTB1"/>
+	</quest>
+
+	<quest id="reward_BFTB1">
+			<reward type="Exp" value="10000" />
+			<reward type="LootItem" id="modMotorToolStuff" value="16" />
+			<reward type="Item" id="Drs_Trader_Reward_Loot" value="8" />
+			<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+			<reward type="LootItem" id="questConstructionBlocks_A" value="16" />
+			<reward type="LootItem" id="questConstructionBlocks_B" value="16" />
+			<reward type="LootItem" id="questConstructionBlocks_C" value="16" />
+			<reward type="Quest" id="quest_Base_FineTune_Blocks1" />
+	</quest>	
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~HatchingThePlan~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~StairWayToHeaven~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~ChangeTheSheets~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~MorningWood~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~OnTheDefense~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~BunsOfSteel~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~OhSoPretty~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~PumpingIron~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~RampedUp~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~TheDoors~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~LOOT AWESOMENESS~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+	<quest id="loot_BaseConstructor_Box1">
+		<property name="name" value="Construction Loot Box" />
+		<property name="subtitle" value="Box of construction related objects." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Base_Constructor_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questConstructionBlocks_A" value="11" />
+		<reward type="LootItem" id="questConstructionMaterials" value="11" />
+		<reward type="LootItem" id="questConstructionExtras" value="11" />
+		<reward type="LootItem" id="questBaseDefense" value="11" />
+		<reward type="LootItem" id="questTools" value="11" />
+	</quest>
+	<quest id="loot_BaseConstructor_Box2">
+		<property name="name" value="Construction Loot Box" />
+		<property name="subtitle" value="Box of construction related objects." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Base_Constructor_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questConstructionBlocks_B" value="14" />
+		<reward type="LootItem" id="questConstructionMaterials" value="14" />
+		<reward type="LootItem" id="questConstructionExtras" value="14" />
+		<reward type="LootItem" id="questBaseDefense" value="14" />
+		<reward type="LootItem" id="questTools" value="14" />
+	</quest>
+	<quest id="loot_BaseConstructor_Box3">
+		<property name="name" value="Construction Loot Box" />
+		<property name="subtitle" value="Box of construction related objects." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Base_Constructor_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questConstructionBlocks_C" value="16" />
+		<reward type="LootItem" id="questConstructionMaterials" value="16" />
+		<reward type="LootItem" id="questConstructionExtras" value="16" />
+		<reward type="LootItem" id="questBaseDefense" value="16" />
+		<reward type="LootItem" id="questTools" value="16" />
+	</quest>
+
+	<quest id="Drs_Reward_Loot">
+		<property name="name" value="Traders Reward Loot Box" />
+		<property name="subtitle" value="Box of helpful things." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Base_Constructor_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="Item" id="casinoCoin" value="100-800" />
+		<reward type="Item" id="resourceRepairKit" value="1-5" />
+		<reward type="Item" id="ammoGasCan" value="100-800" />
+		<reward type="Item" id="Drs_FirstAid_Kit" value="1" />
+		<reward type="Item" id="Drs_BloodCase" value="0-1" />
+	</quest>
+
+	<quest id="loot_Killer_Box1">
+		<property name="name" value="Combat Loot Box 1" />
+		<property name="subtitle" value="Box of combat related objects." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Zombie_Killer_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questKillerAmmo_A,questKillerAmmoSteel" value="11" />
+		<reward type="LootItem" id="questKillerArrowsBolts_A" value="11" />
+		<reward type="LootItem" id="questKillerGuns_A,questKillerRanged_A,questKillerMelee_A" value="11" />
+		<reward type="LootItem" id="questArmor_A" value="11" />
+		<reward type="LootItem" id="questMods" value="11" />
+	</quest>
+	<quest id="loot_Killer_Box2">
+		<property name="name" value="Combat Loot Box 2" />
+		<property name="subtitle" value="Box of combat related objects." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Zombie_Killer_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questKillerAmmo_B,questKillerAmmoSteel" value="14" />
+		<reward type="LootItem" id="questKillerArrowsBolts_B" value="14" />
+		<reward type="LootItem" id="questKillerGuns_B,questKillerRanged_B" value="14" />
+		<reward type="LootItem" id="questKillerMelee_B" value="14" />
+		<reward type="LootItem" id="questArmor_B" value="14" />
+		<reward type="LootItem" id="questKillerRanged_B" value="14" />
+		<reward type="LootItem" id="questMods" value="14" />
+	</quest>
+	<quest id="loot_Killer_Box3">
+		<property name="name" value="Combat Loot Box 3" />
+		<property name="subtitle" value="Box of combat related objects." />
+		<property name="description" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="Zombie_Killer_Rewards" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questKillerAmmo_C" value="16" />
+		<reward type="LootItem" id="questKillerExplosions" value="16" />
+		<reward type="LootItem" id="questKillerArrowsBolts_C" value="16" />
+		<reward type="LootItem" id="questKillerGuns_C" value="16" />
+		<reward type="LootItem" id="questKillerMelee_C" value="16" />
+		<reward type="LootItem" id="questArmor_C" value="16" />
+		<reward type="LootItem" id="questKillerRanged_C" value="16" />
+		<reward type="LootItem" id="questMods" value="16" />
+	</quest>
+
+	<quest id="loot_FirstAid_Kit">
+		<property name="name" value="Drs First Aid Kit" />
+		<property name="subtitle" value="All this healing!" />
+		<property name="description" value="Activate kit to have rewards instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="loot_FirstAid_" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="LootItem" id="questMedicKit" value="16" />
+		<reward type="LootItem" id="questMedicDrugs" value="16" />
+		<reward type="LootItem" id="questMedicHollistic" value="16" />
+		<reward type="LootItem" id="empty,questMedicKit,questMedicDrugs,questMedicHollistic" value="16" />		
+	</quest>
+	<quest id="loot_BloodCase">
+		<property name="name" value="Case of Blood" />
+		<property name="subtitle" value="Case of medically sealed blood!" />
+		<property name="description" value="Activate case to have contents instantly placed into your inventory." />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Activate box to have rewards instantly placed into your inventory." />
+		<property name="group_name" value="loot_FirstAid_" />
+		<property name="difficulty" value="veryeasy" />
+
+		<reward type="Item" id="medicalBloodBag" count="5-10"/>
+	</quest>
+
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~FINE TUNING BASE~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!--	Get even deeper into the aspects of outfiting and getting a base built, should compliment the Zombie Killer but be more on the concept of being rewarded for the repetative tasks that go into base building.
+1	
+2
+3
+4
+5
+6
+7
+8
+-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~SECOND BASE~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+	<quest id="Second_Base_1">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="We need to expand our protected area, get some supplies and then go to the marked area and start to build a second base." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="200-500" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="2" phase="4" />
+
+		<objective type="ZombieKill" value="5" phase="4" />
+
+
+		<action type="SpawnEnemy" id="zombieSpider" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="2" phase="5" />
+
+		<objective type="ZombieKill" value="5" phase="5" />
+
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="2" />
+		<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+		<reward type="Item" id="Drs_spawnTrader" value="1" />
+		<reward type="LootItem" id="questMods" value="1" />
+		<reward type="Quest" id="Second_Base_2" />
+	</quest>		
+	<quest id="Second_Base_2">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Second Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Wonderful addition, lets keep this up and get more locations ready." />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a second second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="400-700" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="4" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="4" phase="4" />
+
+		<objective type="ZombieKill" value="5" phase="4" />
+
+
+		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="4" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="4" phase="5" />
+
+		<objective type="ZombieKill" value="5" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="3" />
+		<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+		<reward type="LootItem" id="questMods" value="2" />
+		<reward type="Quest" id="Second_Base_3" />
+
+	</quest>		
+	<quest id="Second_Base_3">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Third Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a third second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="700-1000" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="6" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="6" phase="4" />
+
+		<objective type="ZombieKill" value="3" phase="9" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="6" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="6" phase="5" />
+
+		<objective type="ZombieKill" value="9" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="4" />
+		<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+		<reward type="LootItem" id="questMods" value="3" />
+		<reward type="Quest" id="Second_Base_4" />
+	</quest>
+	<quest id="Second_Base_4">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Fourth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a Fourth second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1000-1300" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="8" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="8" phase="4" />
+
+		<objective type="ZombieKill" value="9" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="8" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="8" phase="5" />
+
+		<objective type="ZombieKill" value="9" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="5" />
+		<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+		<reward type="LootItem" id="questMods" value="4" />
+		<reward type="Quest" id="Second_Base_5" />
+	</quest>	
+	<quest id="Second_Base_5">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Fifth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a fifth second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1300-1800" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="10" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="10" phase="4" />
+
+		<objective type="ZombieKill" value="12" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="10" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="10" phase="5" />
+
+		<objective type="ZombieKill" value="12" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="6" />
+		<reward type="Item" id="Drs_Construction_Box_1" value="1" />
+		<reward type="LootItem" id="questMods" value="5" />
+		<reward type="Quest" id="Second_Base_6" />
+	</quest>
+	<quest id="Second_Base_6">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Sixth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a sixth second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1300-1700" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="12" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="12" phase="4" />
+
+		<objective type="ZombieKill" value="12" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="12" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="12" phase="5" />
+
+		<objective type="ZombieKill" value="12" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="7" />
+		<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+		<reward type="LootItem" id="questMods" value="6" />
+		<reward type="Quest" id="Second_Base_7" />
+
+	</quest>
+	<quest id="Second_Base_7">
+	
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Seventh Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a seventh second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="1700-2000" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="14" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="14" phase="4" />
+
+		<objective type="ZombieKill" value="15" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="14" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="14" phase="5" />
+
+		<objective type="ZombieKill" value="15" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="8" />
+		<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+		<reward type="LootItem" id="questMods" value="6" />
+		<reward type="Quest" id="Second_Base_8" />
+	</quest>	
+	<quest id="Second_Base_8">
+		<!-- <property name="group_name" value="Second_Base" /> -->
+		<property name="name" value="The Eighth Second Base" />
+		<property name="subtitle" value="Go to area marked and start building a base" />
+		<property name="description" value="Redundant protection makes things go a lot smoother and it helps trades! Brings in more people already seeing a boost in sales cause of your help!" />
+		<property name="icon" value="ui_game_symbol_map_fortress" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy"/> 
+		<property name="offer" value="Get a third second base built at the marked location" />
+		<property name="shareable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="We're expanding! In no time we will have an empire to sell to!" />
+		
+		<objective type="FetchKeep" id="keystoneBlock" value="1" phase="1" />
+		<objective type="FetchKeep" id="flagstoneBlock" value="50" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBars" value="10" phase="1" />
+		<objective type="FetchKeep" id="WoodDowelBarsCentered" value="10" phase="1" />
+		<objective type="FetchKeep" id="ironDoor1_v1" value="2" phase="1" />
+		<objective type="FetchKeep" id="barbedWireSheet" value="10" phase="1" />
+		<objective type="FetchKeep" id="trapSpikesWoodDmg0" value="25" phase="1" />
+		
+		<objective type="RandomGoto" value="2000-2300" phase="2">
+			<property name="completion_distance" value="100" />
+		</objective>
+		
+		<objective type="BlockPlace" id="keystoneBlock" value="1" phase="3" />
+		<objective type="BlockPlace" id="flagstoneBlock" value="50" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBars" value="10" phase="3" />
+		<objective type="BlockPlace" id="WoodDowelBarsCentered" value="10" phase="3" />		
+		<objective type="BlockPlace" id="ironDoor1_v1" value="2" phase="3" />
+		<objective type="BlockPlace" id="barbedWireSheet" value="10" phase="3" />
+		<objective type="BlockPlace" id="trapSpikesWoodDmg0" value="25" phase="3" />
+		
+		<action type="SpawnEnemy" id="zombieSpider" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="16" phase="4" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="16" phase="4" />
+
+		<objective type="ZombieKill" value="18" phase="4" />
+
+		<action type="SpawnEnemy" id="zombieSpider" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieWightFeral" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieScreamer" value="16" phase="5" />
+		<action type="SpawnEnemy" id="zombieBurnt" value="16" phase="5" />
+
+		<objective type="ZombieKill" value="18" phase="5" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="6" />
+		</objective>
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+	
+		<reward type="Exp" value="3000" />	
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="8" />
+		<reward type="Item" id="Drs_Construction_Box_3" value="1" />
+		<reward type="LootItem" id="questMods" value="6" />
+	</quest>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~MATERIAL TRADER~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+	<quest id="quest_MaterialTrader1_Cobblestone">
+		<property name="name" value="Cobblestone 25" />
+		<property name="subtitle" value="Collect 100 Clay and 100 Stone" />
+		<property name="description" value="Trade 100 clay and 100 small stones for 25 cobblestones." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 100 clay and 100 small stones for 25 cobblestones" />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceClayLump" value="100" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="100" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCobblestones" value="25" />
+	</quest>
+	<quest id="quest_MaterialTrader2_Cobblestone">
+		<property name="name" value="Cobblestone 100" />
+		<property name="subtitle" value="Collect 400 Clay and 400 Stone" />
+		<property name="description" value="Trade 400 clay and 400 small stones for 100 cobblestones." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 400 clay and 400 small stones for 100 cobblestones." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceClayLump" value="400" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="400" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCobblestones" value="100" />
+	</quest>
+	<quest id="quest_MaterialTrader3_Cobblestone">
+		<property name="name" value="Cobblestone 500" />
+		<property name="subtitle" value="Collect 2000 Clay and 2000 Stone" />
+		<property name="description" value="Trade 2000 clay and 2000 small stones for 500 cobblestones." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 2000 clay and 2000 small stones for 500 cobblestones." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceClayLump" value="2000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="2000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCobblestones" value="500" />
+	</quest>		
+	<quest id="quest_MaterialTrader4_Cobblestone">
+		<property name="name" value="Cobblestone 1000" />
+		<property name="subtitle" value="Collect 4000 Clay and 4000 Stone" />
+		<property name="description" value="Trade 4000 clay and 4000 small stones for 1000 cobblestones." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 4000 clay and 4000 small stones for 1000 cobblestones." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceClayLump" value="4000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="4000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCobblestones" value="1000" />
+	</quest>	
+	<quest id="quest_MaterialTrader5_Cobblestone">
+		<property name="name" value="Cobblestone 3000" />
+		<property name="subtitle" value="Collect 12000 Clay and 12000 Stone" />
+		<property name="description" value="Trade 12000 clay and 12000 small stones for 3000 cobblestones." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 12000 clay and 12000 small stones for 3000 cobblestones." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceClayLump" value="12000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="12000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCobblestones" value="3000" />
+	</quest>		
+	<quest id="quest_MaterialTrader6_Cobblestone">
+		<property name="name" value="Cobblestone 6000" />
+		<property name="subtitle" value="Collect 24000 Clay and 24000 Stone" />
+		<property name="description" value="Trade 24000 clay and 24000 small stones for 6000 cobblestones." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 24000 clay and 24000 small stones for 6000 cobblestones." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceClayLump" value="24000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="24000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCobblestones" value="6000" />
+	</quest>
+	<quest id="quest_MaterialTrader1_ConcreteMix">
+		<property name="name" value="Concrete Mix 25" />
+		<property name="subtitle" value="Collect 25 crushed sand 25 cement and 50 small stones" />
+		<property name="description" value="Trade 25 crushed sand 25 cement and 50 small stones for 25 concrete mix." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 25 crushed sand 25 cement and 50 small stones for 25 concrete mix." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceCrushedSand" value="25" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="50" phase="1" />
+		<objective type="Fetch" id="resourceCement" value="25" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceConcreteMix" value="25" />
+	</quest>			
+	<quest id="quest_MaterialTrader2_ConcreteMix">
+		<property name="name" value="Concrete Mix 100" />
+		<property name="subtitle" value="Collect 100 crushed sand 100 cement and 200 small stones" />
+		<property name="description" value="Trade 100 crushed sand 100 cement and 200 small stones for 100 concrete mix." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 100 crushed sand 100 cement and 200 small stones for 100 concrete mix." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceCrushedSand" value="100" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="200" phase="1" />
+		<objective type="Fetch" id="resourceCement" value="100" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceConcreteMix" value="100" />
+	</quest>	
+	<quest id="quest_MaterialTrader3_ConcreteMix">
+		<property name="name" value="Concrete Mix 500" />
+		<property name="subtitle" value="Collect 500 crushed sand 500 cement and 1000 small stones" />
+		<property name="description" value="Trade 500 crushed sand 500 cement and 1000 small stones for 500 concrete mix." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 500 crushed sand 500 cement and 1000 small stones for 500 concrete mix." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceCrushedSand" value="500" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="1000" phase="1" />
+		<objective type="Fetch" id="resourceCement" value="500" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceConcreteMix" value="500" />
+	</quest>		
+	<quest id="quest_MaterialTrader4_ConcreteMix">
+		<property name="name" value="Concrete Mix 1000" />
+		<property name="subtitle" value="Collect 1000 crushed sand 1000 cement and 2000 small stones" />
+		<property name="description" value="Trade 1000 crushed sand 1000 cement and 2000 small stones for 1000 concrete mix." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 1000 crushed sand 1000 cement and 2000 small stones for 1000 concrete mix." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceCrushedSand" value="1000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="2000" phase="1" />
+		<objective type="Fetch" id="resourceCement" value="1000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceConcreteMix" value="1000" />
+	</quest>		
+	<quest id="quest_MaterialTrader5_ConcreteMix">
+		<property name="name" value="Concrete Mix 3000" />
+		<property name="subtitle" value="Collect 3000 crushed sand 3000 cement and 6000 small stones" />
+		<property name="description" value="Trade 3000 crushed sand 3000 cement and 6000 small stones for 3000 concrete mix." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 3000 crushed sand 3000 cement and 6000 small stones for 3000 concrete mix." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceCrushedSand" value="3000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="6000" phase="1" />
+		<objective type="Fetch" id="resourceCement" value="3000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceConcreteMix" value="3000" />
+	</quest>		
+	<quest id="quest_MaterialTrader6_ConcreteMix">
+		<property name="name" value="Concrete Mix 6000" />
+		<property name="subtitle" value="Collect 6000 crushed sand 6000 cement and 12000 small stones" />
+		<property name="description" value="Trade 6000 crushed sand 6000 cement and 12000 small stones for 6000 concrete mix." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 6000 crushed sand 6000 cement and 12000 small stones for 6000 concrete mix." />
+		<property name="group_name" value="Material Trades Cobblestone" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceCrushedSand" value="6000" phase="1" />
+		<objective type="Fetch" id="resourceRockSmall" value="12000" phase="1" />
+		<objective type="Fetch" id="resourceCement" value="6000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceConcreteMix" value="6000" />
+	</quest>
+	<quest id="quest_MaterialTrader1_Cement">
+		<property name="name" value="Cement 25" />
+		<property name="subtitle" value="Collect  125 small stones" />
+		<property name="description" value="Trade 125 small stones for 25 cement." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 125 small stones for 25 cement." />
+		<property name="group_name" value="Material Trades Cement" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceRockSmall" value="125" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCement" value="25" />
+	</quest>		
+	<quest id="quest_MaterialTrader2_Cement">
+		<property name="name" value="Cement 100" />
+		<property name="subtitle" value="Collect  500 small stones" />
+		<property name="description" value="Trade 500 small stones for 100 cement." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 500 small stones for 100 cement." />
+		<property name="group_name" value="Material Trades Cement" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceRockSmall" value="500" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCement" value="100" />
+	</quest>
+	<quest id="quest_MaterialTrader3_Cement">
+		<property name="name" value="Cement 500" />
+		<property name="subtitle" value="Collect  500 small stones" />
+		<property name="description" value="Trade 2500 small stones for 500 cement." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 2500 small stones for 500 cement." />
+		<property name="group_name" value="Material Trades Cement" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceRockSmall" value="2500" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCement" value="500" />
+	</quest>
+	<quest id="quest_MaterialTrader4_Cement">
+		<property name="name" value="Cement 1000" />
+		<property name="subtitle" value="Collect  5000 small stones" />
+		<property name="description" value="Trade 5000 small stones for 1000 cement." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 5000 small stones for 1000 cement." />
+		<property name="group_name" value="Material Trades Cement" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceRockSmall" value="5000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCement" value="1000" />
+	</quest>
+	<quest id="quest_MaterialTrader5_Cement">
+		<property name="name" value="Cement 3000" />
+		<property name="subtitle" value="Collect  15000 small stones" />
+		<property name="description" value="Trade 15000 small stones for 3000 cement." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 15000 small stones for 3000 cement." />
+		<property name="group_name" value="Material Trades Cement" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceRockSmall" value="15000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCement" value="3000" />
+	</quest>
+	<quest id="quest_MaterialTrader6_Cement">
+		<property name="name" value="Cement 6000" />
+		<property name="subtitle" value="Collect  30000 small stones" />
+		<property name="description" value="Trade 30000 small stones for 6000 cement." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 30000 small stones for 6000 cement." />
+		<property name="group_name" value="Material Trades Cement" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceRockSmall" value="30000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceCement" value="6000" />
+	</quest>
+	<quest id="quest_MaterialTrader1_resourceForgedIron">
+		<property name="name" value="Forged Iron 25" />
+		<property name="subtitle" value="Collect 250 Scrap Iron and 125 Clay to trade for 25 Forged Iron" />
+		<property name="description" value="Collect 250 Scrap Iron and 125 Clay to trade for 25 Forged Iron." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 250 Scrap Iron and 125 Clay to trade for 25 Forged Iron" />
+		<property name="group_name" value="Material Trades Forged Iron" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="250" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="125" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedIron" value="25" />
+	</quest>		
+	<quest id="quest_MaterialTrader2_resourceForgedIron">
+		<property name="name" value="Forged Iron 100" />
+		<property name="subtitle" value="Collect 1000 Scrap Iron and 125 Clay to trade for 100 Forged Iron" />
+		<property name="description" value="Collect 1000 Scrap Iron and 125 Clay to trade for 100 Forged Iron" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 1000 Scrap Iron and 125 Clay to trade for 100 Forged Iron" />
+		<property name="group_name" value="Material Trades Forged Iron" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="1000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="500" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedIron" value="100" />
+	</quest>		
+	<quest id="quest_MaterialTrader3_resourceForgedIron">
+		<property name="name" value="Forged Iron 500" />
+		<property name="subtitle" value="Collect 5000 Scrap Iron and 125 Clay to trade for 500 Forged Iron" />
+		<property name="description" value="Collect 5000 Scrap Iron and 125 Clay to trade for 500 Forged Iron" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 5000 Scrap Iron and 125 Clay to trade for 500 Forged Iron" />
+		<property name="group_name" value="Material Trades Forged Iron" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="5000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="2500" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedIron" value="2000" />
+	</quest>		
+	<quest id="quest_MaterialTrader4_resourceForgedIron">
+		<property name="name" value="Forged Iron 1000" />
+		<property name="subtitle" value="Collect 10000 Scrap Iron and 125 Clay to trade for 1000 Forged Iron" />
+		<property name="description" value="Collect 10000 Scrap Iron and 125 Clay to trade for 1000 Forged Iron" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 10000 Scrap Iron and 125 Clay to trade for 1000 Forged Iron" />
+		<property name="group_name" value="Material Trades Forged Iron" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="10000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="5000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedIron" value="1000" />
+	</quest>		
+	<quest id="quest_MaterialTrader5_resourceForgedIron">
+		<property name="name" value="Forged Iron 3000" />
+		<property name="subtitle" value="Collect 30000 Scrap Iron and 125 Clay to trade for 3000 Forged Iron" />
+		<property name="description" value="Collect 30000 Scrap Iron and 125 Clay to trade for 3000 Forged Iron" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 30000 Scrap Iron and 125 Clay to trade for 3000 Forged Iron" />
+		<property name="group_name" value="Material Trades Forged Iron" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="30000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="15000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedIron" value="3000" />
+	</quest>		
+	<quest id="quest_MaterialTrader6_resourceForgedIron">
+		<property name="name" value="Forged Iron 6000" />
+		<property name="subtitle" value="Collect 60000 Scrap Iron and 125 Clay to trade for 6000 Forged Iron" />
+		<property name="description" value="Collect 60000 Scrap Iron and 125 Clay to trade for 6000 Forged Iron" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 60000 Scrap Iron and 125 Clay to trade for 6000 Forged Iron" />
+		<property name="group_name" value="Material Trades Forged Iron" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="60000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="30000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedIron" value="6000" />
+	</quest>	
+	<quest id="quest_MaterialTrader1_resourceForgedSteel">
+		<property name="name" value="Forged Steel 25" />
+		<property name="subtitle" value="Collect 500 Scrap Iron and 250 Clay to trade for 25 Forged Steel" />
+		<property name="description" value="Collect 500 Scrap Iron and 250 Clay to trade for 25 Forged Steel." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 500 Scrap Iron and 250 Clay to trade for 25 Forged Steel" />
+		<property name="group_name" value="Material Trades Forged Steel" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="500" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="250" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedSteel" value="25" />
+	</quest>
+	<quest id="quest_MaterialTrader2_resourceForgedSteel">
+		<property name="name" value="Forged Steel 100" />
+		<property name="subtitle" value="Collect 2000 Scrap Iron and 250 Clay to trade for 100 Forged Steel" />
+		<property name="description" value="Collect 2000 Scrap Iron and 250 Clay to trade for 100 Forged Steel" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 2000 Scrap Iron and 250 Clay to trade for 100 Forged Steel" />
+		<property name="group_name" value="Material Trades Forged Steel" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="2000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="1000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedSteel" value="100" />
+	</quest>
+	<quest id="quest_MaterialTrader3_resourceForgedSteel">
+		<property name="name" value="Forged Steel 500" />
+		<property name="subtitle" value="Collect 10000 Scrap Iron and 250 Clay to trade for 500 Forged Steel" />
+		<property name="description" value="Collect 10000 Scrap Iron and 250 Clay to trade for 500 Forged Steel" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 10000 Scrap Iron and 250 Clay to trade for 500 Forged Steel" />
+		<property name="group_name" value="Material Trades Forged Steel" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceScrapIron" value="10000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="5000" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedSteel" value="2000" />
+	</quest>	
+	<quest id="quest_MaterialTrader4_resourceForgedSteel">
+		<property name="name" value="Forged Steel 1000" />
+		<property name="subtitle" value="Collect 20000 Scrap Iron and 250 Clay to trade for 1000 Forged Steel" />
+		<property name="description" value="Collect 20000 Scrap Iron and 250 Clay to trade for 1000 Forged Steel" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 20000 Scrap Iron and 250 Clay to trade for 1000 Forged Steel" />
+		<property name="group_name" value="Material Trades Forged Steel" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceScrapIron" value="20000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="10000" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedSteel" value="1000" />
+	</quest>	
+	<quest id="quest_MaterialTrader5_resourceForgedSteel">
+		<property name="name" value="Forged Steel 3000" />
+		<property name="subtitle" value="Collect 60000 Scrap Iron and 250 Clay to trade for 3000 Forged Steel" />
+		<property name="description" value="Collect 60000 Scrap Iron and 250 Clay to trade for 3000 Forged Steel" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 60000 Scrap Iron and 250 Clay to trade for 3000 Forged Steel" />
+		<property name="group_name" value="Material Trades Forged Steel" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="60000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="30000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedSteel" value="3000" />
+	</quest>
+	<quest id="quest_MaterialTrader6_resourceForgedSteel">
+		<property name="name" value="Forged Steel 6000" />
+		<property name="subtitle" value="Collect 120000 Scrap Iron and 250 Clay to trade for 6000 Forged Steel" />
+		<property name="description" value="Collect 120000 Scrap Iron and 250 Clay to trade for 6000 Forged Steel" />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Collect 120000 Scrap Iron and 250 Clay to trade for 6000 Forged Steel" />
+		<property name="group_name" value="Material Trades Forged Steel" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceScrapIron" value="120000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="60000" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="resourceForgedSteel" value="6000" />
+	</quest>
+	<quest id="quest_MaterialTrader1_FlagstoneBlock">
+		<property name="name" value="FlagstoneBlock 25" />
+		<property name="subtitle" value="Collect 100 Cobblestones" />
+		<property name="description" value="Trade 100 Cobblestones for 25 Flagstone Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 100 Cobblestones for 25 Flagstone Blocks." />
+		<property name="group_name" value="Material Trades Flagstone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceCobblestones" value="100" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="flagstoneBlock" value="25" />
+	</quest>
+	<quest id="quest_MaterialTrader2_FlagstoneBlock">
+		<property name="name" value="FlagstoneBlock 100" />
+		<property name="subtitle" value="Collect 400 Cobblestones" />
+		<property name="description" value="Trade 400 Cobblestones for 100 Flagstone Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 400 Cobblestones for 100 Flagstone Blocks." />
+		<property name="group_name" value="Material Trades Flagstone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceCobblestones" value="400" phase="1" />	
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="flagstoneBlock" value="100" />
+	</quest>
+	<quest id="quest_MaterialTrader3_FlagstoneBlock">
+		<property name="name" value="FlagstoneBlock 500" />
+		<property name="subtitle" value="Collect 2000 Cobblestones" />
+		<property name="description" value="Trade 2000 Cobblestones for 500 Flagstone Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 2000 Cobblestones for 500 Flagstone Blocks." />
+		<property name="group_name" value="Material Trades Flagstone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceCobblestones" value="2000" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="flagstoneBlock" value="500" />
+	</quest>
+	<quest id="quest_MaterialTrader4_FlagstoneBlock">
+		<property name="name" value="FlagstoneBlock 1000" />
+		<property name="subtitle" value="Collect 4000 Cobblestones" />
+		<property name="description" value="Trade 4000 Cobblestones for 1000 Flagstone Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 4000 Cobblestones for 1000 Flagstone Blocks." />
+		<property name="group_name" value="Material Trades Flagstone" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceCobblestones" value="4000" phase="1" />	
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="flagstoneBlock" value="1000" />
+	</quest>
+	<quest id="quest_MaterialTrader1_rebarFrameBlock">
+		<property name="name" value="rebarFrameBlock 25" />
+		<property name="subtitle" value="Collect  25 small stones and 125 scrap iron." />
+		<property name="description" value="Trade 25 small stones and 125 scrap iron for 1 rebar frame block." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 25 small stones and 125 scrap iron for 1 rebar frame block." />
+		<property name="group_name" value="Material Trades Rebar" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceClayLump" value="25" phase="1" />
+		<objective type="Fetch" id="resourceScrapIron" value="125" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="rebarFrameBlock" value="25" />
+	</quest>
+	<quest id="quest_MaterialTrader2_rebarFrameBlock">
+		<property name="name" value="rebarFrameBlock 100" />
+		<property name="subtitle" value="Collect  100 small stones and 500 scrap iron." />
+		<property name="description" value="Trade 100 small stones and 500 scrap iron for 1 rebar frame block." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 100 small stones and 500 scrap iron for 1 rebar frame block." />
+		<property name="group_name" value="Material Trades Rebar" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceClayLump" value="100" phase="1" />
+		<objective type="Fetch" id="resourceScrapIron" value="500" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="rebarFrameBlock" value="100" />
+	</quest>		
+	<quest id="quest_MaterialTrader3_rebarFrameBlock">
+		<property name="name" value="rebarFrameBlock 500" />
+		<property name="subtitle" value="Collect  500 small stones and 2500 scrap iron." />
+		<property name="description" value="Trade 500 small stones and 2500 scrap iron for 1 rebar frame block." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 500 small stones and 2500 scrap iron for 1 rebar frame block." />
+		<property name="group_name" value="Material Trades Rebar" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceClayLump" value="500" phase="1" />
+		<objective type="Fetch" id="resourceScrapIron" value="2500" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="rebarFrameBlock" value="500" />
+	</quest>		
+	<quest id="quest_MaterialTrader4_rebarFrameBlock">
+		<property name="name" value="rebarFrameBlock 1000" />
+		<property name="subtitle" value="Collect  1000 small stones and 5000 scrap iron." />
+		<property name="description" value="Trade 1000 small stones and 5000 scrap iron for 1 rebar frame block." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 1000 small stones and 5000 scrap iron for 1 rebar frame block." />
+		<property name="group_name" value="Material Trades Rebar" />
+		<property name="difficulty" value="easy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceClayLump" value="1000" phase="1" />
+		<objective type="Fetch" id="resourceScrapIron" value="5000" phase="1" />		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="rebarFrameBlock" value="1000" />
+	</quest>
+	<quest id="quest_MaterialTrader1_scrapIronFrameBlock">
+		<property name="name" value="Iron Frame 25" />
+		<property name="subtitle" value="Collect 375 Scrap Iron and 100 Clay to trade for 1000 Iron Frames" />
+		<property name="description" value="Trade 375 Scrap Iron and 100 Clay for 25 Iron Frames.." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 375 Scrap Iron and 100 Clay for 25 Iron Frames." />
+		<property name="group_name" value="Material Trades Iron Frame" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceScrapIron" value="375" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="100" phase="1" />	
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="scrapIronFrameBlock" value="25" />
+	</quest>		
+	<quest id="quest_MaterialTrader2_scrapIronFrameBlock">
+		<property name="name" value="Iron Frame 100" />
+		<property name="subtitle" value="Collect 1500 Scrap Iron and 400 Clay to trade for 100 Iron Frames" />
+		<property name="description" value="Trade 1500 Scrap Iron and 400 Clay for 100 Iron Frames." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 1500 Scrap Iron and 400 Clay for 100 Iron Frames." />
+		<property name="group_name" value="Material Trades Iron Frame" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />		
+		<objective type="Fetch" id="resourceScrapIron" value="1500" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="400" phase="1" />			
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="scrapIronFrameBlock" value="100" />
+	</quest>		
+	<quest id="quest_MaterialTrader3_scrapIronFrameBlock">
+		<property name="name" value="Iron Frame 500" />
+		<property name="subtitle" value="Collect 7500 Scrap Iron and 2000 Clay to trade for 500 Iron Frames" />
+		<property name="description" value="Trade 7500 Scrap Iron and 2000 Clay for 500 Iron Frames." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 7500 Scrap Iron and 2000 Clay for 500 Iron Frames." />
+		<property name="group_name" value="Material Trades Iron Frame" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		<objective type="Fetch" id="resourceScrapIron" value="7500" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="2000" phase="1" />	
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="scrapIronFrameBlock" value="2000" />
+	</quest>		
+	<quest id="quest_MaterialTrader4_scrapIronFrameBlock">
+		<property name="name" value="Iron Frame 1000" />
+		<property name="subtitle" value="Collect 15000 Scrap Iron and 4000 Clay to trade for 1000 Iron Frames" />
+		<property name="description" value="Trade 15000 Scrap Iron and 4000 Clay for 1000 Iron Frames." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 15000 Scrap Iron and 4000 Clay for 1000 Iron Frames." />
+		<property name="group_name" value="Material Trades Iron Frame" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		<objective type="Fetch" id="resourceScrapIron" value="15000" phase="1" />
+		<objective type="Fetch" id="resourceClayLump" value="4000" phase="1" />	
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="scrapIronFrameBlock" value="1000" />
+	</quest>		
+	<quest id="quest_MaterialTrader1_pouredConcreteBlock">
+		<property name="name" value="Wet Concrete Block 25" />
+		<property name="subtitle" value="Collect 250 concrete mix." />
+		<property name="description" value="Trade 250 concrete mix for 25 Wet Concrete Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 250 concrete mix for 25 Wet Concrete Blocks." />
+		<property name="group_name" value="Material Trades Wet Concrete Block" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		<objective type="Fetch" id="resourceConcreteMix" value="250" phase="1" />
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="pouredConcreteBlock" value="25" />
+	</quest>		
+	<quest id="quest_MaterialTrader2_pouredConcreteBlock">
+		<property name="name" value="Wet Concrete Block 100" />
+		<property name="subtitle" value="Collect 1000 concrete mix." />
+		<property name="description" value="Trade 1000 concrete mix for 100 Wet Concrete Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 1000 concrete mix for 100 Wet Concrete Blocks." />
+		<property name="group_name" value="Material Trades Wet Concrete Block" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceConcreteMix" value="1000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="pouredConcreteBlock" value="100" />
+	</quest>		
+	<quest id="quest_MaterialTrader3_pouredConcreteBlock">
+		<property name="name" value="Wet Concrete Block 500" />
+		<property name="subtitle" value="Collect 5000 concrete mix." />
+		<property name="description" value="Trade 5000 concrete mix for 500 Wet Concrete Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 5000 concrete mix for 500 Wet Concrete Blocks." />
+		<property name="group_name" value="Material Trades Wet Concrete Block" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		
+		<objective type="Fetch" id="resourceConcreteMix" value="5000" phase="1" />
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="pouredConcreteBlock" value="500" />
+	</quest>		
+	<quest id="quest_MaterialTrader4_pouredConcreteBlock">
+		<property name="name" value="Wet Concrete Block 1000" />
+		<property name="subtitle" value="Collect 10000 concrete mix." />
+		<property name="description" value="Trade 10000 concrete mix for 1000 Wet Concrete Blocks." />
+		<property name="icon" value="ui_game_symbol_map_house" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Trade 10000 concrete mix for 1000 Wet Concrete Blocks." />
+		<property name="group_name" value="Material Trades Wet Concrete Block" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="completiontype" value="TurnIn" />
+		<objective type="Fetch" id="resourceConcreteMix" value="10000" phase="1" />
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+		<reward type="Exp" value="100" />
+		<reward type="Item" id="casinoCoin" value="100" />
+		<reward type="Item" id="pouredConcreteBlock" value="1000" />
+	</quest>
+</append>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~ZOMBIE KILLER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/quests">
+<!--	Add in the zombie kill quest that auto repeats on completion and awards a quest chit per 100 zombie kills -->
+	<quest id="Milestone_Zombie_Kill_100">	
+		<property name="name" value="Zombie Killer 100"/>
+		<property name="subtitle" value="Kill 100 zombies"/>
+		<property name="description" value="Gain some prestige in the area by killing zombies."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true" />
+		<property name="category" value="challenge"/>
+		<property name="offer" value="Killing zombies is now a lifestyle"/>
+		<property name="group_name" value="Zombie_Killer_" />
+		<property name="difficulty" value="easy"/>
+		<property name="shareable" value="false" />
+
+		<objective type="ZombieKill" value="100" phase="1"/>
+	
+		<reward type="Exp" value="1000"/>
+		<reward type="Item" id="Quest_Chit" value="1"/>
+		<reward type="Quest" id="Milestone_Zombie_Kill_100_"/>
+	</quest>
+	<quest id="Milestone_Zombie_Kill_100_">	
+		<property name="name" value="Zombie Killer 100"/>
+		<property name="subtitle" value="Kill 100 zombies"/>
+		<property name="description" value="Gain some prestige in the area by killing zombies."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true" />
+		<property name="category" value="challenge"/>
+		<property name="offer" value="Killing zombies is now a lifestyle"/>
+		<property name="group_name" value="Zombie_Killer_" />
+		<property name="difficulty" value="easy"/>
+		<property name="shareable" value="false" />
+
+		<objective type="ZombieKill" value="100" phase="1"/>
+	
+		<reward type="Exp" value="1000"/>
+		<reward type="Item" id="Quest_Chit" value="1"/>
+		<reward type="Quest" id="Milestone_Zombie_Kill_100"/>
+	</quest>
+<!--	Make the hand in quest for the chits -->
+	<quest id="Quest_Chit1">
+		<property name="name" value="1 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 1 quest chit for rewards" />
+		<property name="description" value="Traded 1 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 1 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="1000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="1" />
+		<reward type="Item" id="Drs_Killer_Box_1" value="1" />
+		<reward type="Quest" id="Milestone_Zombie_Kill_100"/>
+		
+	</quest>	
+	<quest id="Quest_Chit5">
+		<property name="name" value="5 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 5 quest chit for rewards" />
+		<property name="description" value="Traded 5 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 5 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="5000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="5" />
+		<reward type="Item" id="Drs_Killer_Box_2" value="1" />
+		
+	</quest>	
+	<quest id="Quest_Chit10">
+		<property name="name" value="10 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 10 quest chit for rewards" />
+		<property name="description" value="Traded 10 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 10 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="4000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="10" />
+		<reward type="Item" id="Drs_Killer_Box_3" value="1" />
+		<reward type="SkillPoints" value="1" />
+		
+	</quest>	
+	<quest id="Quest_Chit50">
+		<property name="name" value="50 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 50 quest chit for rewards" />
+		<property name="description" value="Traded 50 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 50 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="8000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="10" />
+		<reward type="Item" id="Drs_Killer_Box_3" value="5" />
+		<reward type="SkillPoints" value="1" />
+		
+	</quest>	
+	<quest id="Quest_Chit100">
+		<property name="name" value="100 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 100 quest chit for rewards" />
+		<property name="description" value="Traded 100 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 100 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="10" />
+		<reward type="Item" id="Drs_Killer_Box_3" value="5" />
+		<reward type="SkillPoints" value="1" />
+		
+	</quest>	
+	<quest id="Quest_Chit500">
+		<property name="name" value="500 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 500 quest chit for rewards" />
+		<property name="description" value="Traded 500 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 500 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="10" />
+		<reward type="Item" id="Drs_Killer_Box_3" value="5" />
+		<reward type="SkillPoints" value="1" />
+		
+	</quest>	
+	<quest id="Quest_Chit1000">
+		<property name="name" value="1000 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 1000 quest chit for rewards" />
+		<property name="description" value="Traded 1000 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 1000 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="10" />
+		<reward type="Item" id="Drs_Killer_Box_3" value="5" />
+		<reward type="SkillPoints" value="1" />
+		
+	</quest>	
+	<quest id="Quest_Chit5000">
+		<property name="name" value="5000 Quest Chit Exchange" />
+		<property name="subtitle" value="Traded 5000 quest chit for rewards" />
+		<property name="description" value="Traded 5000 quest chit to the Trader for rewards." />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category" value="treasure" />
+		<property name="offer" value="Traded 5000 quest chit to the Trader for rewards." />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="You sure are making a dent in the zombie population around here, a tiny dent but one none the less!"/>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="1" />
+		</objective>
+		
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="Drs_Trader_Reward_Loot" value="10" />
+		<reward type="Item" id="Drs_Killer_Box_3" value="5" />
+		<reward type="SkillPoints" value="1" />
+	</quest>	
+</append>
+
+</Drs_GoldenRealm>

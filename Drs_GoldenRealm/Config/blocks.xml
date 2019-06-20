@@ -1,0 +1,2298 @@
+<Drs_GoldenRealm>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~BlockChanges~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- BIRD NEST -->
+<set xpath="/blocks/block[@name='cntBirdnest']/drop[@event='Destroy']/@count">1</set>
+<setattribute xpath="/blocks/block[@name='cntBirdnest']/drop[@event='Destroy']" name="name">cntBirdnest</setattribute>
+	<append xpath="/blocks/block[@name='cntBirdnest']" >
+		<property name="Weight" value="10"/> 
+	</append>
+<!-- BARBED WIRE -->
+	<append xpath="/blocks/block[@name='barbedWireSheet']">
+		<property name="CanPickup" value="true"/>
+	</append>
+<!-- BIRD BATH -->
+	<append xpath="/blocks/block[@name='birdBathPlanter']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!--  BLINDS & CURTAINS -->
+	<append xpath="/blocks/block[@name='commercialBlindsTop']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="2"/>
+		<property name="Material" value="MresourceScrapPolymers"/>
+	</append> 
+	<append xpath="/blocks/block[@name='curtain_top1Sheet3']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="10"/>
+	</append> 
+	<append xpath="/blocks/block[@name='miniblindTopSheet']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="2"/>
+		<property name="Material" value="MresourceScrapPolymers"/>
+	</append>
+<!-- BLOCK FRAMES -->
+	<!-- WOOD FRAMES -->
+	<set xpath="/blocks/block[contains(@name, 'solidWoodFrame')]/property[@name='CreativeMode']/@value">Player</set>
+	<set xpath="/blocks/block[contains(@name, 'solidWoodFrame')]/property[@name='CanPickup']/@value">true</set>
+	<append xpath="/blocks/block[contains(@name, 'solidWoodFrame')]">
+		<property name="Weight" value="10"/>
+	</append>
+	<!-- SCRAP IRON FRAMES -->
+	<set xpath="/blocks/block[contains(@name, 'solidScrapIronFrame')]/property[@name='CreativeMode']/@value">Player</set>
+	<set xpath="/blocks/block[contains(@name, 'solidScrapIronFrame')]/property[@name='CanPickup']/@value">true</set>
+	<append xpath="/blocks/block[contains(@name, 'solidScrapIronFrame')]">
+		<property name="Weight" value="15"/>
+	</append>
+<!-- BURNING BARREL -->
+	<set xpath="/blocks/block[@name='burningBarrel']">
+		<property name="Extends" value="burningBarrelPlayer"/>
+	</set>
+	<append xpath="/blocks/block[@name='burningBarrelPlayer']">
+		<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
+	</append>
+	<!-- /property[@name='Extends']/@value">burningBarrelPlayer</set> -->
+	<append xpath="/blocks/block[@name='burningBarrel']">
+		<property name="CanPickup" value="true" param1="burningBarrelPlayer"/>
+	</append>
+<!-- CASH REGISTER EMPTY -->
+	<append xpath="/blocks/block[@name='cntCashRegisterEmpty']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!-- CINDER BLOCKS -->
+	<append xpath="/blocks/block[@name='cinderBlocks01']">
+		<property name="Extends" value="concreteNoUpgradeMaster"/>
+		<property name="AllowAllRotations" value="true"/>
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!-- DRIFT WOOD -->
+	<append xpath="/blocks/block[@name='driftwood']">
+		<property name="Extends" value="woodWeakNoUpgradeMaster" />
+		<property name="AllowAllRotations" value="true"/>
+		<property name="CanPickup" value="true"/>
+		<property name="FuelValue" value="750"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!-- EMBER PILES -->
+	<append xpath="/blocks/block[@name='emberPileDeco1']">
+		<property name="Extends" value="woodWeakNoUpgradeMaster" />
+		<property name="AllowAllRotations" value="true"/>
+		<property name="CanPickup" value="true"/>
+		<property name="FuelValue" value="500"/>
+		<property name="Weight" value="20"/> 
+	</append>	
+	<append xpath="/blocks/block[@name='emberPileDeco3']">
+		<property name="Extends" value="woodWeakNoUpgradeMaster" />
+		<property name="AllowAllRotations" value="true"/>
+		<property name="CanPickup" value="true"/>
+		<property name="FuelValue" value="750"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!--  EXERCISE EQUIPMENT -->
+	<append xpath="/blocks/block[@name='decoBenchPress']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='decoStationaryBike']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='decoTreadmill']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='decoWeightBar']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+<!--  FURNITURE -->
+	<append xpath="/blocks/block[contains(@name,'Bed') and not(contains(@name,'terr'))]">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append> 
+	<append xpath="/blocks/block[@name='barStool']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='parkBenchA']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+		<append xpath="/blocks/block[@name='pew_segment01']" >
+		<property name="CanPickup" value="true"/>
+	</append>
+	<append xpath="/blocks/block[contains(@name, 'Sofa')]">	
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+	<append xpath="/blocks/block[@name='coffeeTable']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='decoPicnicTable']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='endTable']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='rScrapIronTable']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='rustyIronTable']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='schoolDesk']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='tableDynamic']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='woodTable']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+	<append xpath="/blocks/block[@name='cntBookcaseEmpty']">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+<!-- LADDERS -->
+<!-- Ladder Movement Speed -->
+	<append xpath="/blocks/block[@name='ladderWood']">
+		<property name="MovementFactor" value="2"/>
+	</append>
+	<append xpath="/blocks/block[@name='ladderMetal']">
+		<property name="MovementFactor" value="2"/>
+	</append>
+	<append xpath="/blocks/block[@name='ladderSteel']">
+		<property name="MovementFactor" value="2"/>
+	</append>
+<!-- LIGHTS -->
+<append xpath="/blocks">
+<block name="Drs_porchLight01">
+	<property name="Class" value="PoweredLight"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="porchLight01"/>
+	
+	<property name="DescriptionKey" value="lightPlayerGroupDesc"/>
+	<property name="RuntimeSwitch" value="true"/>
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Light" value="0.5"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Model" value="Entities/Lighting/porchLight01Prefab"/> <property name="HandleFace" value="West"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> <property name="resourceElectricParts" value="3"/> </property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> <!-- HV: mounted lamp -->
+	<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="1"/>
+	<property name="Group" value="Science"/>
+	<property name="EconomicValue" value="76"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="Drs_porchLight04">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/> <!-- does NOT extend -->
+	<property name="CustomIcon" value="porchLight04"/>
+	<property name="Model" value="Entities/Lighting/porchLight04Prefab"/>
+</block>
+<block name="Drs_porchLight04Brass">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="porchLight04Brass"/>
+	<property name="Model" value="Entities/Lighting/porchLight04BrassPrefab"/>
+	<drop event="Destroy" name="resourceScrapBrass" count="10,30" prob="1"/>
+</block>
+<block name="Drs_ceilingLight01">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Material" value="Mglass"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="CustomIcon" value="ceilingLight01"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight01Prefab"/> <property name="HandleFace" value="Top"/>
+	<drop event="Destroy" count="0"/>
+</block>
+<block name="Drs_ceilingLight02">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight02"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_ceilingLight02Brass">
+	<property name="Extends" value="Drs_porchLight04Brass"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight02Brass"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_ceilingLight04">
+	<property name="Extends" value="Drs_porchLight04"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight01"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight04Prefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_ceilingLight05">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight05"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight05Prefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_ceilingLight05Brass">
+	<property name="Extends" value="porchLight04Brass"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight05Brass"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight05BrassPrefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_wallLight01">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="wallLight01"/>
+	<property name="Model" value="Entities/Lighting/wall_light01Prefab"/> <property name="HandleFace" value="South"/>
+</block>
+<block name="Drs_ceilingLight07">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight07"/>
+	<property name="Model" value="Entities/Lighting/ceilingLight07Prefab"/>
+	<property name="HandleFace" value="Top"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<property name="EconomicValue" value="191"/>
+</block>
+<block name="Drs_streetLight01">
+	<property name="Class" value="Light" param1="HandleFace"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="lightPOIGroupDesc"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="ImposterExchange" value="streetLightImposter"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="CustomIcon" value="streetLight01"/>
+	<property name="Model" value="Entities/Lighting/street_light01Prefab"/> <!-- <property name="HandleFace" value="Bottom"/> -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="4,8" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="-1"/>
+	<property name="Group" value="Science"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="Drs_streetLightClassic">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="streetLightClassic"/>
+	<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
+	<property name="DisplayType" value="blockMulti" />
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ImposterExchange" value="imposterDontBlockCTRPole" param1="169"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="4,6" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+</block>
+<block name="Drs_industrialLight01">
+	<property name="Class" value="Light"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="lightPOIGroupDesc"/>
+	<property name="Group" value="Science"/>
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Light" value="0.5"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="CustomIcon" value="industrialLight01"/>
+	<property name="Model" value="Entities/Lighting/industrialLight01Prefab"/> <property name="HandleFace" value="South"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="-1"/>
+	<property name="EconomicValue" value="175"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="Drs_sconce1Light">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="sconce1Light"/>
+	<property name="Model" value="Entities/Lighting/sconce_1_Prefab"/>
+</block>
+<block name="Drs_sconce1LightShadow">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="sconce1Light"/>
+	<property name="Model" value="Entities/Lighting/sconce_1_ShadowPrefab"/>
+</block>
+<block name="Drs_lanternDecorLight">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CustomIcon" value="lanternDecorLight"/>
+	<property name="Model" value="Entities/Lighting/lanternDecorPrefab"/>
+</block>
+<block name="Drs_flashlightDecor">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CustomIcon" value="flashlightDecor"/>
+	<property name="Model" value="Entities/Lighting/flashlightDecorPrefab"/> <property name="HandleFace" value="Bottom"/>
+</block>
+<block name="Drs_industrialLight02">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CustomIcon" value="industrialLight02"/>
+	<property name="Model" value="Entities/Lighting/industrial_light_02Prefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_industrialLight02Red">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CustomIcon" value="industrialLight02Red"/>
+	<property name="Model" value="Entities/Lighting/industrial_light_02_redPrefab"/> <property name="HandleFace" value="Top"/>
+</block>
+<block name="Drs_ceilingFanLight">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="Path" value="solid"/>
+	<property name="CustomIcon" value="ceilingFanLight"/>
+	<property name="Model" value="Entities/Lighting/ceiling_fanPrefab"/> <property name="HandleFace" value="Top"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceMechanicalParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="salvageHarvest"/>
+</block>
+<block name="Drs_endTableLamp">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="Path" value="solid"/>
+	<property name="CustomIcon" value="endTableLamp"/>
+	<property name="Model" value="Entities/Lighting/end_table_lightPrefab"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+</block>
+<block name="Drs_signExitLight">
+	<property name="Extends" value="Drs_porchLight01"/>
+	<property name="CustomIcon" value="signExitLight"/>
+	<property name="Model" value="Entities/Lighting/exit_signPrefab"/> <property name="HandleFace" value="South"/>
+</block>
+<block name="Drs_roadBarricadeLight">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="DisplayType" value="blockMulti" />
+	<property name="MultiBlockDim" value="3,2,1"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="CustomIcon" value="roadBarricadeLight"/>
+	<property name="Model" value="Entities/Signs/barricadePrefab"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+	<drop event="Destroy" name="resourceScrapIron" count="3,12"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture,felectrical"/>
+	<property name="DescriptionKey" value="decorationBlockGroupDesc"/>
+</block>
+<block name="Drs_deskLampLight">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="CustomIcon" value="deskLampLight"/>
+	<property name="Model" value="Entities/Lighting/desk_lampPrefab"/>
+</block>
+<block name="Drs_tableLampLight">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="CustomIcon" value="tableLampLight"/>
+	<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
+</block>
+<block name="Drs_tableLampTippedOverLight">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="CustomIcon" value="tableLampTippedOverLight"/>
+	<property name="Model" value="Entities/Lighting/table_lamp_tipped_overPrefab"/>
+</block>
+<block name="Drs_workLightPOI">
+	<property name="Extends" value="Drs_porchLight01" param1="HandleFace"/>
+	<property name="CustomIcon" value="workLightPOI"/>
+	<property name="Model" value="Entities/Lighting/work_lightPrefab"/>
+	<property name="DisplayType" value="blockMulti" />
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+</block>
+</append>
+	<append xpath="/blocks/block[@name='porchLight01']">
+		<drop event="Destroy" name="Drs_porchLight01" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='porchLight04Brass']">
+		<drop event="Destroy" name="Drs_porchLight04Brass" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight01']">
+		<drop event="Destroy" name="Drs_pceilingLight01" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight02']">
+		<drop event="Destroy" name="Drs_ceilingLight02" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight02Brass']">
+		<drop event="Destroy" name="Drs_ceilingLight02Brass" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight04']">
+		<drop event="Destroy" name="Drs_ceilingLight04" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight05']">
+		<drop event="Destroy" name="Drs_ceilingLight05" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight05Brass']">
+		<drop event="Destroy" name="Drs_ceilingLight05Brass" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='wallLight01']">
+		<drop event="Destroy" name="Drs_pwallLight01" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingLight07']">
+		<drop event="Destroy" name="Drs_ceilingLight07" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='streetLight01']">
+		<drop event="Destroy" name="Drs_streetLight01" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='streetLightClassic']">
+		<drop event="Destroy" name="Drs_streetLightClassic" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='industrialLight01']">
+		<drop event="Destroy" name="Drs_industrialLight01" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='sconce1Light']">
+		<drop event="Destroy" name="Drs_sconce1Light" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='sconce1LightShadow']">
+		<drop event="Destroy" name="Drs_sconce1LightShadow" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='lanternDecorLight']">
+		<drop event="Destroy" name="Drs_lanternDecorLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='flashlightDecor']">
+		<drop event="Destroy" name="Drs_flashlightDecor" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='industrialLight02']">
+		<drop event="Destroy" name="Drs_industrialLight02" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='industrialLight02Red']">
+		<drop event="Destroy" name="Drs_industrialLight02Red" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='ceilingFanLight']">
+		<drop event="Destroy" name="Drs_ceilingFanLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='endTableLamp']">
+		<drop event="Destroy" name="Drs_endTableLamp" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='signExitLight']">
+		<drop event="Destroy" name="Drs_signExitLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='roadBarricadeLight']">
+		<drop event="Destroy" name="Drs_roadBarricadeLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='deskLampLight']">
+		<drop event="Destroy" name="Drs_deskLampLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='tableLampLight']">
+		<drop event="Destroy" name="Drs_tableLampLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='tableLampTippedOverLight']">
+		<drop event="Destroy" name="Drs_tableLampTippedOverLight" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='workLightPOI']">
+		<drop event="Destroy" name="Drs_workLightPOI" count="1"/>
+	</append>
+	<append xpath="/blocks/block[@name='spotlightNailedDownPOI']">
+		<property name="CreativeMode" value="Player"/>
+		<drop event="Destroy" name="spotlightPlayer" count="1"/>
+	</append>
+
+<!-- MINES -->
+	<set xpath="/blocks/block[@name='mineCandyTin']/property[@name='CanPickup']/@value">true</set> 
+<!-- PAINTINGS -->
+	<append xpath="/blocks/block[contains(@name, 'painting')]">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="10"/>
+	</append>
+<!-- PALLETS -->
+	<append xpath="/blocks/block[contains(@name,'pallet') and not(contains(@name,'Full'))]">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="10"/>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletWhite') and not(contains(@name,'Full'))]">
+		<property name="CanPickup" value="true" param1="palletWhiteBagsBase"/>
+		<property name="Weight" value="10"/>
+		<drop event="Harvest" name="resourceConcreteMix" count="50" tag="oreWoodHarvest"/>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBrown') and not(contains(@name,'Full'))]">
+		<property name="CanPickup" value="true" param1="palletBrownBoxesBase"/>
+		<property name="Weight" value="10"/>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBricks') and not(contains(@name,'Full'))]">
+		<property name="CanPickup" value="true" param1="palletBricksBase"/>
+		<property name="Weight" value="10"/>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBlue') and not(contains(@name,'Full'))]">
+		<property name="CanPickup" value="true" param1="palletBlueTarpBase"/>
+		<property name="Weight" value="10"/>
+	</append>
+<!-- PICTURE FRAME -->
+	<append xpath="/blocks/block[contains(@name, 'pictureFrame')]">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="10"/>
+	</append>
+<!-- PLANTS IN THE WILD -->
+	<append xpath="/blocks/block[contains(@name,'3Harvest') and not(contains(@name,'Player'))]">
+		<property name="Class" value="CropsGrown"/>
+	</append>
+<!-- PLANTS BY PLAYERS -->
+	<append xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
+		<property name="Extends" value="plantedAloe3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']">
+		<property name="Extends" value="plantedBlueberry3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
+		<property name="Extends" value="plantedChrysanthemum3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']">
+		<property name="Extends" value="plantedCoffee3Harvest" param1="Class"/>
+	</append>	
+	<append xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']">
+		<property name="Extends" value="plantedCorn3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
+		<property name="Extends" value="plantedCotton3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
+		<property name="Extends" value="plantedGoldenrod3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
+		<property name="Extends" value="plantedGraceCorn3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedHop3HarvestPlayer']">
+		<property name="Extends" value="plantedHop3Harvest" param1="Class"/>
+	</append>	
+	<append xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']">
+		<property name="Extends" value="plantedMushroom3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']">
+		<property name="Extends" value="plantedPotato3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedSnowberry3HarvestPlayer']">
+		<property name="Extends" value="plantedSnowberry3Harvest" param1="Class"/>
+	</append>
+	<append xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
+		<property name="Extends" value="plantedYucca3Harvest" param1="Class"/>
+	</append>
+<!-- SANDBAGS -->
+	<set xpath="/blocks/block[@name='sandbagStraight01']">
+			<property name="Material" value="DRsand"/>
+			<property name="Weight" value="20"/>
+			<property name="MaxDamage" value="200" />
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Sandbags/sandbag_straight_01Prefab"/>
+			<property name="Path" value="solid"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property class="RepairItems"> <property name="resourceCrushedSand" value="5"/> </property>
+			<drop event="Harvest" name="resourceCrushedSand" count="2" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceCrushedSand" count="1,10"/>
+			<property name="CanPickup" value="true"/>
+			<property name="DescriptionKey" value="sandbagsGroupDesc"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+			<property name="SortOrder1" value="70o0"/>
+	</set>
+	<append xpath="/blocks/block[contains(@name, 'sandbag')]">	
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!-- SCRAP METAL PILE -->	
+	<append xpath="/blocks/block[@name='scrapMetalPile']">
+		<property name="Extends" value="scrapIronNoUpgradeMaster" />
+		<property name="AllowAllRotations" value="true"/>
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+<!-- SHOPPING CART -->
+	<append xpath="/blocks/block[@name='shoppingCartEmpty']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>
+	<append xpath="/blocks/block[@name='shoppingBasketEmpty']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="20"/> 
+	</append>	
+<!-- SIGNS -->
+	<append xpath="/blocks/block[starts-with(@name,'sign')]">
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>	
+	</append>
+<!-- SPIKE TRAPS -->
+	<append xpath="/blocks/block[@name='trapSpikesWoodDmg0']">
+		<property name="CanPickup" value="true"/>
+	</append>	
+	<append xpath="/blocks/block[@name='trapSpikesIronDmg0']">
+		<property name="CanPickup" value="true"/>
+	</append>
+<!--  terrStone -->
+	<append xpath="blocks/block[@name='terrStone']">
+		<drop event="Harvest" name="resourceGoldNugget" count="1"  prob="0.01" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourceRawDiamond" count="1"  prob="0.005" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourceSilverNugget" count="1"  prob="0.01"  tag="oreWoodHarvest"/>
+	</append>
+<!--  TIRES -->
+	<append xpath="/blocks/block[@name='tire']" >
+		<property name="CanPickup" value="true"/>
+	</append>
+<!--  TV -->
+	<append xpath="/blocks/block[@name='tv']" >
+		<property name="CanPickup" value="true"/>
+	</append>
+<!--  WINE BARREL -->
+	<append xpath="/blocks/block[@name='wineBarrel']" >
+		<property name="CanPickup" value="true"/>
+		<property name="Weight" value="30"/>
+	</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~Auto Turret System~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		autoTurret_Arrow_Stone
+		autoTurret_Arrow_Iron
+		autoTurret_Arrow_Steel
+		autoTurret_Bolt_Stone
+		autoTurret_Bolt_Iron
+		autoTurret_Bolt_Steel
+		autoTurret_Steel_44mag
+		autoTurret_Steel_9mm
+		autoTurret_Steel_762mm
+		autoTurret_44Mag
+		autoTurret_762mm
+		autoTurret_Dart
+		autoTurret_SnowBall
+		autoTurret_Stone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<append xpath="/blocks">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Arrow_Stone
+			autoTurret_Arrow_Iron
+			autoTurret_Arrow_Steel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Arrow_Stone">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Arrow"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoArrowStone"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Arrow_Iron">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Arrow"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoArrowIron"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Arrow_Steel">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Arrow"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoArrowSteelAP"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Bolt_Stone
+			autoTurret_Bolt_Iron
+			autoTurret_Bolt_Steel			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Bolt_Stone">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Bolt"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoCrossbowBoltStone"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Bolt_Iron">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Bolt"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoCrossbowBoltIron"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Bolt_Steel">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Bolt"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoCrossbowBoltSteelAP"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Steel_44mag
+			autoTurret_Steel_9mm
+			autoTurret_Steel_762mm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Steel_44mag">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_44Mag"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammo44MagnumBulletSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Steel_9mm">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Steel_9mm"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammo9mmBulletSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Steel_762mm">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_762mm"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammo762mmBulletFMJSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_44Mag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_44Mag">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_44Mag"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammo44MagnumBullet"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_762mm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_762mm">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_762mm"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammo762mmBulletFMJ"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			ammoDartSteel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Dart">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Dart"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="ammoDartSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_SnowBall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_SnowBall">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_SnowBall"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="resourceSnowBall"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="2"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="1"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="0.2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Stone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->	
+<block name="autoTurret_Stone">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Stone"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="AmmoItem" value="TurretStone"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="10"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/>
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~BASE CONSTRUCTOR SERIES 1~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Wood Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Vanilla Wood Bars changes -->
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@name='Texture']/@value">379</set>
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">scrapIronBarsCentered</set>
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='Item']/@value">resourceScrapIron</set>
+	<set xpath="/blocks/block[@name='woodBarsCentered']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">40</set>
+	<set xpath="/blocks/block[@name='woodBars']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">scrapIronBars</set>
+<append xpath="/blocks">
+	<!-- WoodDowelBars -->	
+	<block name="WoodDowelBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Mwood" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="woodDowelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceWood" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WoodDowelBarsCentered01"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>	
+	<block name="WoodDowelBars">
+			<property name="Extends" value="WoodDowelBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="woodDowelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WoodDowelBars01"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>
+	<!-- WoodDowelBars01 -->			
+	<block name="WoodDowelBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Mwood" />
+			<property name="MaxDamage" value="300"/>
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="woodDowelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceWood" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBarsCentered"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WoodDowelBarsCentered"/>
+	</block>	
+	<block name="WoodDowelBars01">
+			<property name="Extends" value="WoodDowelBarsCentered01"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="woodDowelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBars"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WoodDowelBars"/>
+	</block>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Scrap Iron Bars -->
+	<block name="scrapIronBarsCentered">
+			<property name="CustomIcon" value="ironBars"/>
+			<property name="CustomIconTint" value="373D40" />
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="Shape" value="New"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="iron_bars_centered"/>
+			<property name="Texture" value="352"/><!-- scrap iron log spike 2.352 and 380 (woodlogspike) -->
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="ImposterExcludeAndStop" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+			<drop event="Harvest" name="resourceScrapIron" count="32" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="ironBarsDesc"/>
+			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="IronBars01Centered"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="woodBarsCentered"/>
+	</block>
+	<block name="scrapIronBars">
+			<property name="Extends" value="scrapIronBarsCentered"/>
+			<property name="Model" value="iron_bars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+			<property class="UpgradeBlock"> 
+				<property name="ToBlock" value="IronBars01"/> </property>
+			<property name="DowngradeBlock" value="woodBars"/>
+	</block>
+	<block name="IronBars01Centered">
+			<property name="CustomIcon" value="ironBars"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="2500"/>
+			<property name="Shape" value="New"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="iron_bars_centered"/>
+			<property name="Texture" value="352"/><!-- scrap iron log spike 2.352 and 380 (woodlogspike) -->
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="ImposterExcludeAndStop" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+			<drop event="Harvest" name="resourceScrapIron" count="32" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="ironBarsDesc"/>
+			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelBars"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="woodBarsCentered"/>
+	</block>
+	<block name="IronBars01">
+			<property name="Extends" value="IronBars01Centered"/>
+			<property name="Model" value="iron_bars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+			<property class="UpgradeBlock"> <property name="ToBlock" value="steelBars"/> </property>
+			<property name="DowngradeBlock" value="woodBars"/>
+	</block>
+	<!-- Wrought Iron Bars -->	
+	<block name="WroughtIronBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Miron" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="wroughtIronBarsCentered" />
+			<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+			<property name="MaxDamage" value="2500"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBarsCentered01"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>	
+	<block name="WroughtIronBars">
+			<property name="Extends" value="WroughtIronBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="wroughtIronBars" />
+			<property name="MaxDamage" value="2500"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBars01"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+	</block>
+	<!-- Wrought Iron Bars Upgrade -->	
+	<block name="WroughtIronBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Miron" />
+			<property name="MaxDamage" value="5000"/>
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="wroughtIronBarsCentered" />
+			<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBarsCentered"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WroughtIronBarsCentered"/>
+	</block>	
+	<block name="WroughtIronBars01">
+			<property name="Extends" value="WroughtIronBarsCentered01"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="wroughtIronBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBars"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WroughtIronBars"/>
+	</block>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Steel Bars	-->
+	<block name="steelBarsCentered">
+			<property name="CustomIcon" value="ironBars"/>
+			<property name="CustomIconTint" value="799399" />
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="6000"/>
+			<property name="Shape" value="New"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="Model" value="iron_bars_centered"/>
+			<property name="Texture" value="356"/><!-- Steel block 356-->
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="ImposterExcludeAndStop" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property class="RepairItems"> 
+				<property name="resourceForgedSteel" value="10"/>
+			</property>
+			<property name="DowngradeBlock" value="scrapIronBarsCentered"/>
+			<drop event="Harvest" name="resourceScrapIron" count="64" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="1" stick_chance="1"/>
+			<property name="Group" value="Building"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="ironBarsDesc"/>
+			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+	</block>
+	<block name="steelBars">
+			<property name="Extends" value="steelBarsCentered"/>
+			<property name="Model" value="iron_bars"/>
+			<property name="DowngradeBlock" value="scrapIronBars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+	</block>
+	<!-- Steel Loot Bars -->
+	<block name="steelLootBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBarsCentered" />
+			<property name="MaxDamage" value="6000"/>
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property name="DowngradeBlock" value="WroughtIronBarsCentered01"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBarsCentered01"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+	</block>	
+	<block name="steelLootBars">
+			<property name="Extends" value="steelLootBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="steelBars" />
+			<property name="DowngradeBlock" value="WroughtIronBars01"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelLootBars01"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+	</block>
+	<!-- Steel Loot Bars Upgrade -->
+	<block name="steelLootBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property name="MaxDamage" value="8000"/>
+			<property name="DowngradeBlock" value="steelLootBarsCentered"/>
+	</block>
+	<block name="steelLootBars01">
+			<property name="Extends" value="steelLootBarsCentered01"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBars" />
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>		
+			<property name="DowngradeBlock" value="steelLootBars"/>
+	</block>
+
+</append>
+<!--
+<append xpath="/blocks/block[@name='ironBarsCentered']">
+		<property class="UpgradeBlock">
+		<property name="ToBlock" value="steelBarsCentered"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+		</property>
+		<property name="DowngradeBlock" value="woodBarsCentered"/>
+</append>
+<append xpath="/blocks/block[@name='ironBars']">
+	<property class="UpgradeBlock"> <property name="ToBlock" value="steelBars"/> </property>
+	<property name="DowngradeBlock" value="woodBars"/>
+</append>
+-->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Barbwire Upgrade~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- <remove xpath="blocks/block/[@name='barbedWireSheet']"/> -->
+<append xpath="/blocks/block[@name='barbedWireSheet']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="barbedWireSheet01"/>
+			<property name="Item" value="resourceScrapIron"/>
+			<property name="ItemCount" value="15"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>	
+</append>
+<append xpath="/blocks">
+	<block name="barbedWireSheet01">
+		<property name="Class" value="Damage"/>
+		<property name="Damage" value="1"/>
+		<property name="DamageType" value="BarbedWire"/>
+		<property name="Damage_received" value="6"/>
+		<property name="MaxDamage" value="500"/>
+		<property name="Material" value="MbarbedWire"/>
+		<property name="Shape" value="New"/>
+		<property name="Mesh" value="cutout"/>
+		<property name="LightOpacity" value="0"/>
+		<property name="Model" value="billboard"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+		<property name="Texture" value="68"/>
+		<property name="ImposterExclude" value="true"/>
+		<property name="ShapeMinBB" value="0.3,0,0.3"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="DowngradeBlock" value="barbedWireSheet"/>
+		<!--<property name="BuffsWhenWalkedOn" value="trapDamage1Trigger"/>-->
+		<property class="RepairItems"> <property name="resourceScrapIron" value="15"/> </property>
+		<drop event="Destroy" name="resourceScrapIron" count="1,12" prob="1"/>
+		<property name="EconomicValue" value="15"/>
+		<property name="FilterTags" value="fdecor,ftraps"/>
+		<property name="SortOrder1" value="70g0"/>
+	</block>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~crushedCars~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/blocks/block[@name='crushedCars']">
+		<property name="AllowAllRotations" value="true"/>
+		<property class="RepairItems"> <property name="resourceScrapIron" value="50"/> </property>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~Oil Extractor~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/blocks">
+	<block name="Oil Extractor">
+		<property name="CustomIcon" value="controlPanelBase01" />
+		<property name="Class" value="UpgradeRated" />
+		<property name="Material" value="Mmetal"/>
+		<!-- <property name="StabilitySupport" value="false"/> -->
+		<property name="Shape" value="Ext3dModel"/> 
+		<property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Industrial/control_panel_base_01" param1="main_mesh"/>
+		<property name="DisplayType" value="blockMulti" />
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="2"/>
+		<property name="Weight" value="216" />
+		<property name="Collide" value="movement,rockets,sight,melee" />
+		<property name="Stacknumber" value="1"/>
+		<property name="HeatMapStrength" value="1.5"/>
+		<property name="HeatMapTime" value="1200"/>
+		<property name="HeatMapFrequency" value="25"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+		<property name="TakeDelay" value="30"/>
+		<property name="UpgradeRated.ToBlock" value="OilShaleHere" />
+		<property name="UpgradeRated.Rate" value="30" />			
+			<!-- Can I have a customupgradesound? 
+			<property name="CustomUpgradeSound" value="place_block_wood"/>
+			-->
+	 </block>
+	<block name="OilShaleHere">
+		<property name="CustomIcon" value="cntGasPump" />
+		<property name="Class" value="Loot" />
+		<property name="Material" value="Mmetal_thin"/>	
+		<property name="Shape" value="Ext3dModel"/>
+		<property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Industrial/gas_pump" param1="main_mesh"/>	
+		<property name="DisplayType" value="blockMulti" />
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="ImposterExchange" value="imposterDontBlockCTRPlate" param1="90"/> 
+		<property name="Weight" value="216" />
+		<property name="Collide" value="movement,rockets,sight,melee" />		
+		<property name="Stacknumber" value="1"/>
+		<property name="HeatMapStrength" value="1.5"/>
+		<property name="HeatMapTime" value="1200"/>
+		<property name="HeatMapFrequency" value="25"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>		
+		<property name="LootList" value="225" />
+		<drop event="Destroy" count="0"/>
+		<drop event="Harvest" count="0"/>
+		<property name="DowngradeBlock" value="Oil Extractor"/> 
+	</block>	 
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~Power Sources~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/blocks">
+<!-- * BATTERY BANK UPGRADES-->
+	<!-- * MINI BATTERYBANK		-->
+		<block name="batterybank_mini">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="Drs_BatteryCharger"/>
+			<property name="Class" value="BatteryBank"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#@modfolder:Resources/DrsBatteryCharger.unity3d?DrsBatteryChargerPrefab"/><!-- Free model by Stratus3D -->
+			<!-- offset model x0 y-0.472 z 0 -->
+			<!-- <property name="ModelOffset" value="0,-0.15,0.2"/> -->
+			<!-- <property name="OnlySimpleRotations" value="true"/> -->
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="WireOffset" value="0,0,0.5" />
+			<property name="MaxPower" value="30"/>
+			<property name="InputPerTick" value="5"/>
+			<property name="ChargePerInput" value="1"/>
+			<property name="OutputPerStack" value="4"/>
+			<property name="OutputPerCharge" value="30"/>
+			<property name="SlotItem" value="battery_small_single"/>
+			<!-- carBattery,battery_small_single,battery_SuperDurable -->
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="1"/>
+				<property name="resourceElectricParts" value="1"/>
+				<property name="resourceScrapPolymers" value="1"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="0" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="Group" value="Science"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<!-- <property name="CanPickup" value="true"/> -->
+		</block>
+	<!-- * ENHANCED BATTERYBANK	-->
+		<block name="batterybank_enhanced">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="batterybank_enhanced"/>
+			<property name="Class" value="BatteryBank"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#@modfolder:Resources/DrsBatteryBankUpgrade.unity3d?DrsBatteryBankUpgradePrefab"/> 
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxPower" value="600"/>
+			<property name="InputPerTick" value="5"/>
+			<property name="ChargePerInput" value="1"/>
+			<property name="OutputPerStack" value="63"/>
+			<property name="OutputPerCharge" value="120"/>
+			<property name="SlotItem" value="battery_SuperDurable"/>
+			<!-- carBattery,battery_small_single -->
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceElectricParts" value="6"/>
+				<property name="resourceElectricParts" value="2"/>
+				<property name="resourceScrapPolymers" value="4"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+		</block>
+			
+<!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
+	<!-- generator bank max fuel 1	-->
+		<block name="generatorbank_MaxFuel_1">
+			<property name="CustomIcon" value="Drs_GeneratorMax1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Generator"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+		<!--	<property name="Model" value="Entities/Electrical/generatorPrefab"/> -->
+			<property name="Model" value="#@modfolder:Resources/DrsOldGenerator.unity3d?DrsOldGeneratorPrefab"/><!-- Free model by ?? -->
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxFuel" value="2000"/>
+			<property name="OutputPerFuel" value="11250"/>
+			<property name="MaxPower" value="12250"/>
+			<property name="OutputPerStack" value="125"/>
+			<property name="SlotItem" value="smallEngine"/>
+			<property name="DisplayType" value="blockElectrical" />
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceMechanicalParts" value="8"/>
+				<property name="resourceElectricParts" value="8"/>
+				<property name="resourceElectricParts" value="3"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+		</block>		
+	<!-- generator bank max fuel 2	-->	
+		<block name="generatorbank_MaxFuel_2">
+			<property name="CustomIcon" value="Drs_GeneratorMax1"/>
+			<property name="CustomIconTint" value="ffb0b0"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Generator"/>
+			<!-- <property name="DisplayType" value="blockElectricalMulti" /> -->
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="DisplayType" value="blockHardenedMulti" /> 
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<!-- DrsOldGenerator2 -->
+		<!--	<property name="Model" value="Entities/Electrical/generatorPrefab"/> -->
+			<property name="Model" value="#@modfolder:Resources/DrsOldGenerator2.unity3d?DrsOldGenerator2Prefab"/><!-- Free model by ?? -->
+		<!--	<property name="HandleFace" value="Bottom"/> -->
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxFuel" value="4000"/>
+			<property name="OutputPerFuel" value="11250"/>
+			<property name="MaxPower" value="12250"/>
+			<property name="OutputPerStack" value="200"/>
+			<property name="SlotItem" value="smallEngine"/>
+			<property name="DisplayType" value="blockElectrical" />
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceMechanicalParts" value="8"/>
+				<property name="resourceElectricParts" value="8"/>
+				<property name="resourceElectricParts" value="3"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+		</block>
+<!-- * SOLAR BANK UPGRADES-->
+<block name="solarbank_mini">
+	<property name="CustomIcon" value="Drs_Mini_Solar"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SolarPanel"/>
+	<property name="Material" value="Mmetal_weak"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#@modfolder:Resources/DrsSolarPanel.unity3d?DrsSolarPrefab"/>
+	<property name="DisplayType" value="blockElectricalMulti" />
+<!--	<property name="MultiBlockDim" value="1,1,1"/> -->
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterExchange" value="imposterRamp" param1="18"/>
+	<property name="DescriptionKey" value="powerSourceDesc"/>
+	<property name="OutputPerStack" value="7"/>
+	<property name="SlotItem" value="solarCell_mini"/>
+	<property name="MaxPower" value="45"/>
+	<property name="Group" value="Science"/>
+	<property name="ActivationDistance" value="6"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceElectricParts" value="2"/>
+		<property name="resourceScrapPolymers" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="solarbank_Enhanced">
+	<property name="CustomIcon" value="solarbank"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SolarPanel"/>
+	<property name="Material" value="Mmetal_weak"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/solar_panelPrefab"/>
+	<property name="DisplayType" value="blockElectricalMulti" />
+	<property name="MultiBlockDim" value="4,1,1"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterExchange" value="imposterRamp" param1="18"/>
+	<property name="DescriptionKey" value="powerSourceDesc"/>
+	<property name="OutputPerStack" value="60"/>
+	<property name="SlotItem" value="solarCell_SuperDurable"/>
+	<property name="MaxPower" value="360"/>
+	<property name="Group" value="Science"/>
+	<property name="ActivationDistance" value="6"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceElectricParts" value="2"/>
+		<property name="resourceScrapPolymers" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="EconomicValue" value="4000"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>		
+</append>
+
+<set xpath="/blocks/block[contains(@name, 'cntCollapsed')]/drop[@event='Harvest']/@count">0</set>
+
+<append xpath="/blocks/block[@name='cntCollapsedGeneratorbank']">
+		<drop event="Destroy" name="cntCollapsedGeneratorbank" count="1"/>
+</append>
+<append xpath="/blocks/block[@name='cntCollapsedSolarbank']">
+		<drop event="Destroy" name="cntCollapsedSolarbank" count="1"/>
+</append>
+<append xpath="/blocks/block[@name='cntCollapsedBatterybank']">
+		<drop event="Destroy" name="cntCollapsedBatterybank" count="1"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntCollapsedForge']">
+		<drop event="Destroy" name="cntCollapsedForge" count="1"/>
+</append>
+<append xpath="/blocks/block[@name='cntCollapsedWorkbench']">
+		<drop event="Destroy" name="cntCollapsedWorkbench" count="1"/>
+</append>
+<append xpath="/blocks/block[@name='cntCollapsedCementMixer']">
+		<drop event="Destroy" name="cntCollapsedCementMixer" count="1"/>
+</append>
+<append xpath="/blocks/block[@name='cntCollapsedChemistryStation']">
+		<drop event="Destroy" name="cntCollapsedChemistryStation" count="1"/>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Stainless Block~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/blocks/block[@name='steelBlock']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="stainlessSteelBlock"/>
+			<property name="Item" value="resourceForgedSteel"/>
+			<property name="ItemCount" value="15"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~Spawn Block~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/blocks">
+<block name="Drs_spawnTrader">
+	<property name="Extends" value="metalTrussingRampOld" param1="DescriptionKey"/>
+	<property name="CustomIcon" value="metalTrussingRampOld"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SpawnEntity"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="Entities/Electrical/battery_bankPrefab"/> <property name="HandleFace" value="Bottom"/>
+	<property name="SpawnClass" value="npcTraderJoel,npcTraderRekt,npcTraderHugh,npcTraderBob,npcTraderJen"/>
+	<property name="FilterTags" value="fdesign"/>
+	<property name="Collide" value="sight"/>
+</block>
+</append>
+</Drs_GoldenRealm>

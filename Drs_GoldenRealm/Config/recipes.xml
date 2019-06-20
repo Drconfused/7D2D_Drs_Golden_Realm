@@ -1,0 +1,1288 @@
+<Drs_GoldenRealm>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ITEM CHANGES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+<!-- Beaker added as a craftable item -->
+    <recipe name="toolBeaker" count="1" craft_area="forge" material_based="true" tags="learnable">
+    	<ingredient name="unit_glass" count="20" />
+    	<ingredient name="unit_clay" count="2" />
+    </recipe>
+</append>
+<!-- PICKUP STUFF RECIPES -->
+	<append xpath="/recipes">
+	<!-- Crushed sand as proper resource -->	
+		<recipe name="resourceCrushedSand" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true">
+			<wildcard_forge_category />
+		</recipe>
+	<!-- CINDER BLOCKS -->
+		<recipe name="cinderBlocks01" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceRockSmall" count="8"/>
+		</recipe>
+		<recipe name="cinderBlocks02" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceRockSmall" count="10"/>
+		</recipe>
+		<recipe name="cinderBlocks03" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceRockSmall" count="12"/>
+		</recipe>
+	<!-- EMBER PILES -->		
+		<recipe name="emberPileDeco1" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceWood" count="4"/>
+		</recipe>
+		<recipe name="emberPileDeco2" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceWood" count="6"/>
+		</recipe>
+		<recipe name="emberPileDeco3" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceWood" count="8"/>
+		</recipe>
+		<recipe name="emberPileDeco4" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceWood" count="10"/>
+		</recipe>
+	<!-- PALLETS resourceConcreteMix -->
+		<recipe name="resourceConcreteMix" count="15">
+			<ingredient name="palletWhiteBagsBase" count="1"/>
+		</recipe>
+		<recipe name="resourceConcreteMix" count="10">
+			<ingredient name="palletWhiteBagsTile" count="1"/>
+		</recipe>
+		<recipe name="resourceConcreteMix" count="5">
+			<ingredient name="palletWhiteBagsTop" count="1"/>
+		</recipe>
+		<recipe name="resourceConcreteMix" count="5">
+			<ingredient name="palletWhiteBagsPartial1" count="1"/>
+		</recipe>
+		<recipe name="resourceConcreteMix" count="5">
+			<ingredient name="palletWhiteBagsPartial2" count="1"/>
+		</recipe>
+		<recipe name="resourceConcreteMix" count="5">
+			<ingredient name="palletWhiteBagsLoose" count="1"/>
+		</recipe>
+
+		<recipe name="resourceWood" count="5">
+			<ingredient name="palletBrownBoxesBase" count="1"/>
+		</recipe>
+		<recipe name="resourceWood" count="5">
+			<ingredient name="palletBrownBoxesTile" count="1"/>
+		</recipe>
+		<recipe name="resourceWood" count="5">
+			<ingredient name="palletBrownBoxesTop" count="1"/>
+		</recipe>
+		<recipe name="resourceWood" count="5">
+			<ingredient name="palletBrownBoxesLoose" count="1"/>
+		</recipe>
+		
+		<recipe name="resourceCobblestones" count="35">
+			<ingredient name="palletBlueTarpBase" count="1"/>
+		</recipe>
+		<recipe name="resourceCobblestones" count="5">
+			<ingredient name="palletWhiteBagsBase" count="1"/>
+		</recipe>
+	<!-- SANDBAGS -->
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagStraight01" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagCorner01Short" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagCorner02Long" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagEnd00" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagCap01" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagEnd01" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagEnd02" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagPile01" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagPile02" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagSingle01" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagSingle02" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagSingle03" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagSingle04" count="1"/>
+		</recipe>
+		<recipe name="resourceCrushedSand" count="10">
+			<ingredient name="sandbagSingle05" count="1"/>
+		</recipe>
+		
+		<recipe name="sandbagStraight01" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagCorner01Short" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagCorner02Long" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagEnd00" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagCap01" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagEnd01" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagEnd02" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagPile01" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagPile02" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagSingle01" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagSingle02" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagSingle03" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagSingle04" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		<recipe name="sandbagSingle05" count="1">
+			<ingredient name="resourceCrushedSand" count="10"/>
+			<ingredient name="resourceCloth" count="2"/>
+		</recipe>		
+		
+	<!-- SCRAP METAL PILE -->	
+		<recipe name="scrapMetalPile" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceScrapIron" count="20"/>
+		</recipe>
+		
+		<!-- WOOD -->
+			<!-- driftwood -->
+		<recipe name="driftwood" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceWood" count="14"/>
+		</recipe>
+		<recipe name="driftwood2" count="1" material_based="true" tags="learnable">
+			<ingredient name="resourceWood" count="16"/>
+		</recipe>			
+	</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~GENERIC ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+	<recipe name="Coking Coal1" count="1" craft_area="chemistryStation" material_based="true">
+		<ingredient name="resourceCoal" count="2"/>
+	</recipe>	
+
+	<recipe name="Coking Coal2" count="1" craft_area="chemistryStation" material_based="true">
+		<ingredient name="resourceWood" count="2"/>
+	</recipe>	
+</append>
+	
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~AUTO TURRET SYSTEM~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<append xpath="/recipes">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Calibration_Kit
+			Generic_Turret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="Calibration_Kit" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="resourceMechanicalParts" count="1"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="25"/>
+	<ingredient name="resourceMechanicalParts" count="8"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="4"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Arrow_Stone" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Arrow_Iron" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Arrow_Steel" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Bolt_Stone" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Bolt_Iron" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Bolt_Steel" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Steel_44mag" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Steel_9mm" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Steel_762mm" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_44Mag" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_762mm" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Dart" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_SnowBall" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Stone" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Stone Turret Ammo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<recipe name="TurretStone" count="1" craft_area="cementMixer">
+		<ingredient name="resourceRockSmall" count="1"/>
+	</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Arrow_Stone
+			autoTurret_Arrow_Iron
+			autoTurret_Arrow_Steel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Arrow_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Bolt_Stone
+			autoTurret_Bolt_Iron
+			autoTurret_Bolt_Steel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Bolt_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Steel_44mag
+			autoTurret_Steel_9mm
+			autoTurret_Steel_762mm			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Steel_44mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Steel_9mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Steel_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Steel_44mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Steel_9mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Steel_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_44Mag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_44Mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_44Mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_762mm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Dart
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Dart" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Dart" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_SnowBall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_SnowBall" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_SnowBall" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Stone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->	
+<recipe name="autoTurret_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+
+
+
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~BASE CONSTRUCTOR~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+	<recipe name="q_BaseConstructor1" count="1">
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_Cobblestone" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_ConcreteMix" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_Cement" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_resourceForgedIron" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT5_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT6_resourceForgedSteel" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_FlagstoneBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_rebarFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_ironFrameBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT1_pouredConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT2_pouredConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT3_pouredConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	<recipe name="MT4_pouredConcreteBlock" count="1" tags="learnable" >
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~FOOD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<set xpath="/recipes/recipe/ingredient[@name='foodRawMeat' and @count='5']/@count">1</set>
+<append xpath="/recipes">
+	<recipe name="cooked_foodCanBeef" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanBeef" count="1"/>
+	</recipe>
+	<recipe name="cooked_foodCanChicken" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanChicken" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanLamb" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanLamb" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanCatfood" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanCatfood" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanDogfood" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanDogfood" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanChili" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanChili" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanTuna" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanTuna" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanHam" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanHam" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanPasta" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanPasta" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanSalmon" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanSalmon" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanMiso" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanMiso" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanPeas" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanPeas" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanSoup" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanSoup" count="1"/>		
+	</recipe>
+	<recipe name="cooked_foodCanStock" count="1" craft_area="campfire" craft_tool="toolCookingGrill" >
+		<ingredient name="foodCanStock" count="1"/>
+	</recipe>
+
+	<recipe name="foodJarPickledEggs6" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+		<ingredient name="drinkJarEmpty" count="1"/>
+		<ingredient name="foodEgg" count="6"/>
+		<ingredient name="drinkJarBeer" count="1"/>
+	</recipe>
+	<recipe name="foodJarMeat" count="2" craft_area="campfire" craft_tool="toolCookingPot" >
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<ingredient name="foodRawMeat" count="1"/>
+		<ingredient name="drinkJarEmpty" count="1"/>
+	</recipe>
+	<recipe name="foodJarCorn" count="1" craft_area="campfire" craft_tool="toolCookingPot" >
+		<ingredient name="foodCropCorn" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<ingredient name="drinkJarEmpty" count="1"/>
+	</recipe>
+	<recipe name="foodJarPotato" count="2" craft_area="campfire" craft_tool="toolCookingPot" >
+		<ingredient name="foodCropPotato" count="4"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<ingredient name="drinkJarEmpty" count="1"/>		
+	</recipe>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~BARS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- The original ironBars essentially become the master's for this file -->
+<remove xpath="/recipes/recipe[@name='ironBars']"/>
+<remove xpath="/recipes/recipe[@name='ironBarsCentered']"/>
+<append xpath="/recipes">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Wood Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="WoodDowelBars" count="1" >
+			<ingredient name="resourceWood" count="10"/>
+	</recipe>
+	<recipe name="WoodDowelBarsCentered" count="1" >
+			<ingredient name="resourceWood" count="10"/>
+	</recipe>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Iron Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="IronBars01Centered" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+		<ingredient name="unit_iron" count="70"/>
+		<ingredient name="unit_clay" count="20"/>
+	</recipe>
+	<recipe name="IronBars01" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+		<ingredient name="unit_iron" count="70"/>
+		<ingredient name="unit_clay" count="20"/>
+	</recipe>
+	<recipe name="scrapIronBarsCentered" count="1"> 
+			<ingredient name="resourceScrapIron" count="40"/>
+	</recipe>
+	<recipe name="scrapIronBars" count="1"> 
+			<ingredient name="resourceScrapIron" count="40"/>
+	</recipe>
+	<recipe name="WroughtIronBars" count="1" craft_area="forge" material_based="true">
+			<ingredient name="unit_iron" count="50" />
+			<ingredient name="unit_clay" count="15" />
+	</recipe>
+	<recipe name="WroughtIronBarsCentered" count="1" craft_area="forge" material_based="true">
+			<ingredient name="unit_iron" count="50" />
+			<ingredient name="unit_clay" count="15" />
+	</recipe>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Steel Bars Series~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="steelLootBars" count="1" craft_area="forge" craft_tool="toolForgeCrucible" material_based="true">
+			<ingredient name="unit_iron" count="100" />
+			<ingredient name="unit_clay" count="20" />
+			<ingredient name="unit_lead" count="20" />
+	</recipe>
+	<recipe name="steelLootBarsCentered" count="1" craft_area="forge" craft_tool="toolForgeCrucible" material_based="true">
+			<ingredient name="unit_iron" count="100" />
+			<ingredient name="unit_clay" count="20" />
+			<ingredient name="unit_lead" count="20" />
+	</recipe>	
+	
+	<recipe name="steelBarsCentered" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+			<ingredient name="unit_iron" count="80"/>
+			<ingredient name="unit_clay" count="15"/>
+			<ingredient name="unit_lead" count="15" />
+	</recipe>
+	<recipe name="steelBars" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true"> 
+			<ingredient name="unit_iron" count="80"/>
+			<ingredient name="unit_clay" count="15"/>
+			<ingredient name="unit_lead" count="15" />
+	</recipe>
+</append>	
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~OIL EXTRACTOR STUFF~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+	<recipe name="Oil Extractor" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="generatorbank" count="1"/>
+			<ingredient name="meleeToolAuger" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMetalPipe" count="5"/>		
+		<!--
+			<ingredient name="Oil Extractor Bottom" count="1"/>
+			<ingredient name="Oil Extractor Top" count="1"/>
+			<ingredient name="Oil Extractor Piping" count="1"/>
+			<ingredient name="Oil Extractor Drill" count="1"/>
+			<ingredient name="Oil Extractor Tank" count="1"/>
+		-->
+	</recipe>
+				
+	<!-- OIL EXTRACTOR BOTTOM 
+		<recipe name="Oil Extractor Bottom" count="1" craft_area="workbench">
+			<ingredient name="scrapIronFrameRamp" count="1"/>
+			<ingredient name="resourceInsulator" count="2"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+		-->
+	<!-- OIL EXTRACTOR TOP 
+		<recipe name="Oil Extractor Top" count="1" craft_area="workbench">
+			<ingredient name="generatorbank" count="1"/>
+			<ingredient name="carBattery" count="6"/>
+			<ingredient name="scrapIronFrameHalf" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceForgedIron" count="5"/>
+		</recipe>
+		-->	
+	<!-- OIL EXTRACTOR DRILL 		
+		<recipe name="Oil Extractor Drill" count="1" craft_area="workbench">
+			<ingredient name="meleeToolAuger" count="1"/>
+			<ingredient name="resourceRawDiamond" count="1"/>
+			<ingredient name="motionsensor" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+		</recipe>
+		-->
+	<!-- OIL EXTRACTOR PIPING 		
+		<recipe name="Oil Extractor Tank" count="1" craft_area="workbench">
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+			<ingredient name="resourceInsulator" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="20"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+		</recipe>	
+		-->
+	<!-- OIL EXTRACTOR TANK 		
+		<recipe name="Oil Extractor Tank" count="1" craft_area="workbench">
+			<ingredient name="scrapIronSheet" count="10"/>
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="motionsensor" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="20"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+		</recipe>
+		-->
+<!-- CANDLE -->	
+		<recipe name="Paraffin Candle" count="1">
+			<ingredient name="resourceYuccaFibers" count="1"/>
+			<ingredient name="resourceParaffinWax" count="1"/>
+		</recipe>
+<!-- TAR stuff -->
+    <recipe name="resourceTar" count="2" craft_area="chemistryStation">
+    	<ingredient name="terrAsphalt" count="1"/>
+    </recipe>
+    <recipe name="resourceDuctTape" count="1">
+    	<ingredient name="resourceTar" count="1"/>
+    	<ingredient name="resourceCloth" count="1"/>
+    </recipe>	
+    <recipe name="meleeToolTorch" count="1">
+    	<ingredient name="resourceTar" count="1"/>
+    	<ingredient name="resourceCloth" count="2"/>
+    	<ingredient name="resourceWood" count="1"/>
+    </recipe>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~POWER SOURCES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+<!-- * BATTERY BANK UPGRADES AND BATTERIES 	-->
+	<!-- * MINI BATTERYBANK		-->
+		<recipe name="batterybank_mini" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceScrapIron" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+		</recipe>
+	<!-- * ENHANCED BATTERYBANK	-->	
+		<recipe name="batterybank_enhanced" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="resourceInsulator" count="2"/>
+		</recipe>
+	<!-- * BATTERIES			-->
+		<!-- small Batteries AA -->
+		<recipe name="battery_small_single" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="1"/>
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceScrapLead" count="2"/>
+			<ingredient name="resourceInsulator" count="1"/>
+		</recipe>
+		<!-- super durable battery -->
+		<recipe name="battery_SuperDurable" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="resourceAcid" count="2"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+		<!-- carBattery -->
+		<recipe name="carBattery">
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceAcid" count="3"/>
+			<ingredient name="resourceScrapLead" count="5"/>
+		</recipe>
+		<!-- Battery Repair -->
+		<recipe name="disposable_Battery_Recharger" count="10">
+			<ingredient name="resourceScrapPolymers" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="resourceScrapLead" count="2"/>
+		</recipe>
+<!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
+	<!-- generator bank max fuel 1	-->
+		<recipe name="generatorbank_MaxFuel_1" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="generatorbank" count="1"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+		</recipe>
+	<!-- generator bank max fuel 2	-->	
+		<recipe name="generatorbank_MaxFuel_2" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="generatorbank_MaxFuel_1" count="1"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+		</recipe>
+	<!-- small engine -->
+		<recipe name="smallEngine" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedIron" count="15"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceInsulator" count="2"/>
+		</recipe>
+<!-- * SOLAR BANK UPGRADES AND SOLAR CELLS	-->
+	<!-- mini solar bank -->
+	<recipe name="solarbank_mini" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceForgedSteel" count="5"/>
+		<ingredient name="resourceElectricParts" count="5"/>
+		<ingredient name="resourceInsulator" count="1"/>
+	</recipe>
+	<!-- solar bank -->
+	<recipe name="solarbank" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceElectricParts" count="25"/>
+		<ingredient name="resourceInsulator" count="4"/>
+	</recipe>
+	<!-- solar bank alternate recipe-->
+	<recipe name="solarbank" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="solarbank_mini" count="4"/>
+	</recipe>
+	<!-- enhanced solar bank -->	
+	<recipe name="solarbank_Enhanced" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="solarbank" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="80"/>
+		<ingredient name="resourceForgedSteel" count="120"/>
+		<ingredient name="resourceElectricParts" count="40"/>
+		<ingredient name="resourceInsulator" count="10"/>
+	</recipe>
+<!-- SOLAR CELLS -->
+	<!-- mini solar cell -->	
+	<recipe name="solarCell_mini" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="purifiedSilicone" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="2"/>
+		<ingredient name="resourceGlue" count="1"/>
+		<ingredient name="resourceBrokenGlass" count="10"/>"
+	</recipe>
+	<!-- mini solar cell alternate -->	
+	<recipe name="solarCell_mini" count="4" craft_area="workbench" tags="learnable">
+		<ingredient name="solarCell" count="1"/>
+		<ingredient name="resourceForgedSteel" count="1"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceBrokenGlass" count="4"/>"
+	</recipe>
+	<!-- solar cell -->	
+	<recipe name="solarCell" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="purifiedSilicone" count="4"/>
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceElectricParts" count="10"/>
+		<ingredient name="resourceGlue" count="4"/>
+		<ingredient name="glassBusinessPlate" count="1"/>
+	</recipe>
+		<!-- solar cell alternate -->	
+	<recipe name="solarCell" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="solarCell_mini" count="1"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceBrokenGlass" count="4"/>
+	</recipe>
+	<!-- super durable solar cell -->	
+	<recipe name="solarCell_SuperDurable" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="solarCell" count="5"/>
+		<ingredient name="purifiedSilicone" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceBrokenGlass" count="4"/>
+	</recipe>
+	<recipe name="purifiedSilicone" count="1" craft_area="chemistryStation" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="2"/>
+		<ingredient name="resourcePotassiumNitratePowder" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+	</recipe>		
+<recipe name="generatorbank" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedGeneratorbank" count="1"/>
+	<ingredient name="resourceForgedIron" count="1"/>
+	<ingredient name="resourceMechanicalParts" count="1"/>
+	<ingredient name="resourceElectricParts" count="1"/>
+</recipe>
+<recipe name="solarbank" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedSolarbank" count="1"/>
+	<ingredient name="resourceForgedIron" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="1"/>
+	<ingredient name="resourceElectricParts" count="1"/>
+</recipe>
+<recipe name="batterybank" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedBatterybank" count="1"/>
+	<ingredient name="resourceForgedIron" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="1"/>
+	<ingredient name="resourceElectricParts" count="1"/>
+</recipe>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~WORK STATIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+<recipe name="forge" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedForge" count="1"/>
+	<ingredient name="resourceRockSmall" count="5"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+<recipe name="workbench" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedWorkbench" count="1"/>
+	<ingredient name="resourceForgedIron" count="1"/>
+	<ingredient name="resourceMechanicalParts" count="1"/>
+	<ingredient name="resourceWood" count="10"/>
+</recipe>
+<recipe name="cementMixer" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedCementMixer" count="1"/>
+	<ingredient name="resourceForgedIron" count="1"/>
+	<ingredient name="resourceMechanicalParts" count="1"/>
+	<ingredient name="resourceSpring" count="1"/>
+</recipe>
+<recipe name="chemistryStation" count="1" craft_area="workbench">
+	<ingredient name="cntCollapsedChemistryStation" count="1"/>
+	<ingredient name="resourceWood" count="5"/>
+	<ingredient name="toolBeaker" count="1"/>
+	<ingredient name="resourceMetalPipe" count="1"/>
+</recipe>
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~POWER TOOLS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+<!-- TURBO ENGINE -->
+	<recipe name="modEngineTurbo1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modEngineTurbo1Schematic" count="1"/>
+		<ingredient name="smallEngine" count="1"/>
+		<ingredient name="resourceElectricParts" count="5"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="2"/>		
+	</recipe>
+	<recipe name="modEngineTurbo2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modEngineTurbo2Schematic" count="1"/>
+		<ingredient name="smallEngine" count="2"/>
+		<ingredient name="resourceElectricParts" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="6"/>
+		<ingredient name="resourceForgedSteel" count="5"/>		
+	</recipe>	
+	<recipe name="modEngineTurbo3" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modEngineTurbo3Schematic" count="1"/>
+		<ingredient name="smallEngine" count="3"/>
+		<ingredient name="resourceElectricParts" count="15"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceForgedSteel" count="10"/>		
+	</recipe>
+<!-- GAS TANK -->
+	<recipe name="modGasTank1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGasTank1Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="2"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+	</recipe>	
+	<recipe name="modGasTank2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGasTank2Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+	</recipe>	
+	<recipe name="modGasTank3" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGasTank3Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="8"/>
+		<ingredient name="resourceScrapPolymers" count="8"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+	</recipe>
+<!-- RESERVE GAS TANK -->
+	<recipe name="modReserveGasTank1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modReserveGasTank1Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="2"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+	</recipe>	
+	<recipe name="modReserveGasTank2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modReserveGasTank2Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+	</recipe>	
+	<recipe name="modReserveGasTank3" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modReserveGasTank3Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="8"/>
+		<ingredient name="resourceScrapPolymers" count="8"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+	</recipe>	
+<!-- BARREL EXTENSION -->
+	<recipe name="modMotorToolExtension1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modMotorToolExtension1Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="2"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+		<ingredient name="resourceMechanicalParts" count="2"/>
+	</recipe>	
+	<recipe name="modMotorToolExtension2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modMotorToolExtension2Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceMechanicalParts" count="4"/>
+	</recipe>	
+	<recipe name="modMotorToolExtension3" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modMotorToolExtension3Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="8"/>
+		<ingredient name="resourceScrapPolymers" count="8"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+		<ingredient name="resourceMechanicalParts" count="8"/>
+	</recipe>	
+<!--DIAMOND TIP FOR AUGER	-->
+	<recipe name="modDiamondTip1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modDiamondTip1Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="2"/>
+		<ingredient name="resourceRawDiamond" count="1"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+		<ingredient name="resourceMechanicalParts" count="2"/>
+	</recipe>	
+	<recipe name="modDiamondTip2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modDiamondTip2Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceRawDiamond" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceMechanicalParts" count="4"/>
+	</recipe>	
+	<recipe name="modDiamondTip3" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modDiamondTip3Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="8"/>
+		<ingredient name="resourceRawDiamond" count="8"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+		<ingredient name="resourceMechanicalParts" count="8"/>
+	</recipe>
+<!-- 	BETTER HANDLES 	-->
+	<!-- removing 2 entries to the better handles till I know better how it works and if there is a need for a series 
+	<recipe name="modBetterHandles1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modBetterHandles1" count="1"/>
+		<ingredient name="resourceMetalPipe" count="2"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+		<ingredient name="resourceMechanicalParts" count="2"/>
+		<ingredient name="resourceSpring" count="2"/>
+	</recipe>	
+	<recipe name="modBetterHandles2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modBetterHandles2" count="1"/>
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceMechanicalParts" count="4"/>
+		<ingredient name="resourceSpring" count="4"/>
+	</recipe>
+-->
+	<recipe name="modBetterHandles" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modBetterHandlesSchematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="8"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+		<ingredient name="resourceMechanicalParts" count="8"/>
+		<ingredient name="resourceSpring" count="8"/>
+	</recipe>	
+<!-- MOTOR TOOL SILENCER 	-->
+	<recipe name="modMotorToolSilencer" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modMotorToolSilencerSchematic" count="1"/>
+		<ingredient name="resourceSpring" count="8"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+		<ingredient name="resourceMechanicalParts" count="8"/>
+		<ingredient name="resourceCropCottonPlant" count="20"/>
+	</recipe>	
+<!-- CHAINSAW TEMPERED FRAME -->
+	<recipe name="modChainsawTemperedFrame1" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modChainsawTemperedFrame1Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="8"/>
+		<ingredient name="resourceCoal" count="8"/>
+		<ingredient name="resourceForgedIron" count="8"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+	</recipe>
+	<recipe name="modChainsawTemperedFrame2" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modChainsawTemperedFrame2Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="16"/>
+		<ingredient name="resourceCoal" count="16"/>
+		<ingredient name="resourceForgedIron" count="16"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+	</recipe>
+	<recipe name="modChainsawTemperedFrame3" counts="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modChainsawTemperedFrame3Schematic" count="1"/>
+		<ingredient name="resourceMetalPipe" count="24"/>
+		<ingredient name="resourceCoal" count="24"/>
+		<ingredient name="resourceForgedIron" count="24"/>
+		<ingredient name="resourceScrapPolymers" count="30"/>
+	</recipe>
+<!-- mod Quicker Fixer Upper -->
+	<recipe name="Quicker Fixer Upper" counts="1" craft_area="workbench"> <!-- tags="learnable"> -->
+		<ingredient name="Quicker Fixer Upper Schematic" count="1"/>
+		<ingredient name="gunToolNailgun" count="1"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceForgedSteel" count="5"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+	</recipe>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~QUEST ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+	<recipe name="Paper_Milestone_Zombie_Kill_100" count="1">
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+
+	<recipe name="QuestChit1" count="1">
+		<ingredient name="Quest_Chit" count="1"/>
+	</recipe>
+	<recipe name="QuestChit5" count="1">
+		<ingredient name="Quest_Chit" count="5"/>
+	</recipe>
+	<recipe name="QuestChit10" count="1">
+		<ingredient name="Quest_Chit" count="10"/>
+	</recipe>
+	<recipe name="QuestChit50" count="1">
+		<ingredient name="Quest_Chit" count="50"/>
+	</recipe>
+	<recipe name="QuestChit100" count="1">
+		<ingredient name="Quest_Chit" count="100"/>
+	</recipe>
+	<recipe name="QuestChit500" count="1">
+		<ingredient name="Quest_Chit" count="500"/>
+	</recipe>
+	<recipe name="QuestChit1000" count="1">
+		<ingredient name="Quest_Chit" count="1000"/>
+	</recipe>	
+	<recipe name="QuestChit5000" count="1">
+		<ingredient name="Quest_Chit" count="5000"/>
+	</recipe>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~OTHER MODDERS ADDITIONS~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/recipes">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Manux Quad~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="manux_vehicleQuadPlaceable" count="1" craft_area="workbench" craft_time="300">
+			<ingredient name="vehicleWheels" count="4"/>
+			<ingredient name="vehicleMotorcycleChassis" count="1"/>
+			<ingredient name="vehicleMotorcycleHandlebars" count="1"/>
+			<ingredient name="smallEngine" count="2"/>
+			<ingredient name="carBattery" count="1"/>
+	</recipe>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~IMPACT WRENCH~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~by Elucidus~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="Impact Wrench" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceForgedSteel" count="80"/>
+		<ingredient name="resourceMechanicalParts" count="100"/>
+		<ingredient name="resourceDuctTape" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="50"/>
+		<ingredient name="carBattery" count="1"/>
+	</recipe>	
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~Mayics Drill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<recipe name="mayicDrillGun" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceElectricParts" count="15"/>
+		<ingredient name="resourceDuctTape" count="4"/>
+		<ingredient name="mayicDrillBattery"/>
+	</recipe>
+	<recipe name="mayicDrillBattery" count="2" craft_area="workbench" tags="learnable">
+		<ingredient name="carBattery" count="1"/>
+		<ingredient name="resourceMechanicalParts" count="2"/>
+		<ingredient name="resourceElectricParts" count="5"/>
+		<ingredient name="resourceScrapLead" count="50"/>
+	</recipe>
+</append>
+
+
+</Drs_GoldenRealm>

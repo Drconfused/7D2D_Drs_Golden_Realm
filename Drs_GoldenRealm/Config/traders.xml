@@ -1,0 +1,36 @@
+<Drs_GoldenRealm>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~Auto Turret System~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']" >
+	<item name="autoTurret_Arrow_Stone" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Arrow_Iron" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Arrow_Steel" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Bolt_Stone" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Bolt_Iron" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Bolt_Steel" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Steel_44mag" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Steel_9mm" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Steel_762mm" count="1,2" prob="0.5"/>
+	<item name="autoTurret_44Mag" count="1,2" prob="0.5"/>
+	<item name="autoTurret_762mm" count="1,2" prob="0.5"/>
+	<item name="autoTurret_Dart" count="1,2" prob="0.5"/>
+	<item name="autoTurret_SnowBall" count="1,2" prob="0.5"/>
+	<item name="Generic_Turret" count="1,2" prob="0.6"/>
+	<item name="Calibration_Kit" count="1,5" prob="0.5"/>
+	<item name="TurretStone" count="100,500" prob="0.7"/>
+</append>	
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~Mayics Drill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
+	<item name="mayicDrillGun" prob=".3"/>
+	<item name="mayicDrillBattery" prob="1"/>
+</append>
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
+	<item name="mayicDrillGun" prob=".5"/>
+	<item name="mayicDrillBattery" prob="1.4"/>
+</append>
+
+</Drs_GoldenRealm>

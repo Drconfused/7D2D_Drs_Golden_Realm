@@ -1,0 +1,2098 @@
+<Drs_GoldenRealm>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ITEM CHANGES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items" >		
+<item name="medicalBandage">
+	<property name="CustomIcon" value="bandageOutlined"/>
+	<property name="DisplayType" value="medical"/>
+	<property name="HoldType" value="16"/>
+	<property name="Meshfile" value="Items/Health/gauze"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mcloth"/>
+	<property name="Stacknumber" value="10"/> <!-- STK medical -->
+	<property name="FuelValue" value="1"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="5"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_bandage"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="UseOther"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_bandage"/>
+	</property>
+	<property name="Group" value="Science,Basics"/>
+	<property name="DescriptionKey" value="medicalBandageDesc"/>
+	<property name="ActionSkillGroup" value="Medicine"/>
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+	<property name="PickupJournalEntry" value="firstAidTip"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="15"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthIncrease" operation="set" value="@medicPerkIncrease"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffInjuryBleeding"/>
+
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="15"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
+			<requirement name="CVarCompare" target="self" cvar="maxHealthIncrease" operation="Equals" value="1.25"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.5">
+			<requirement name="CVarCompare" target="self" cvar="maxHealthIncrease" operation="Equals" value="1.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="2">
+			<requirement name="CVarCompare" target="self" cvar="maxHealthIncrease" operation="Equals" value="2"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~GENERIC ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items" >
+<item name="Coking Coal1">
+	<property name="CustomIcon" value="CokingCoal2"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="DescriptionKey" value="resourceCharcoalDesc"/>
+	<property name="Material" value="Mwood"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="6000"/>
+	<property name="FuelValue" value="500"/>
+	<property name="EconomicValue" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="0.25"/>
+</item>
+		
+<item name="Coking Coal2">
+	<property name="CustomIcon" value="CokingCoal2"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="DescriptionKey" value="resourceCharcoalDesc"/>
+	<property name="Material" value="Mwood"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="6000"/>
+	<property name="FuelValue" value="500"/>
+	<property name="EconomicValue" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="0.25"/>
+</item>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~AUTO TURRET SYSTEM~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Generic auto Turret no ammo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<item name="Calibration_Kit">
+        <property name="CustomIcon" value="Drs_CalibrationKit"/>
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="1"/>
+      	<property name="EconomicValue" value="5"/>
+      	<property name="Group" value="Ammo/Weapons,Resources"/>
+</item>
+<item name="Generic_Turret">
+        <property name="CustomIcon" value="Generic_Turret"/>
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="1"/>
+      	<property name="EconomicValue" value="5"/>
+      	<property name="Group" value="Ammo/Weapons,Resources"/>
+</item>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			 Turret ammo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<item name="TurretStone">
+        <property name="CustomIcon" value="Drs_TurretStone"/> 
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="1"/>
+      	<property name="EconomicValue" value="5"/>
+      	<property name="Group" value="Ammo/Weapons,Resources"/>
+</item>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~BASE CONSTRUCTOR~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items" >
+	<item name="q_BaseConstructor1">
+		<property name="Extends" value="questMaster" />
+		<property name="DescriptionKey" value="q_BaseConstructor1Desc" />
+		<property name="CustomIcon" value="Drs_Construction_WorkOrder"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="BaseConstructor1" />
+		</property>
+	</item>
+	<item name="q_Second_Base_1">
+		<property name="Extends" value="questMaster" />
+		<property name="DescriptionKey" value="q_Second_Base_1Desc" />
+		<property name="CustomIcon" value="Drs_Construction_WorkOrder"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Second_Base_1" />
+		</property>
+	</item>
+	<item name="MT1_Cobblestone">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_CobblestoneDesc" />
+		<property name="CustomIcon" value="MT_Cobblestone25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_Cobblestone" />
+		</property>
+	</item>
+	<item name="MT2_Cobblestone">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_CobblestoneDesc" />
+		<property name="CustomIcon" value="MT_Cobblestone100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_Cobblestone" />
+		</property>
+	</item>
+	<item name="MT3_Cobblestone">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_CobblestoneDesc" />
+		<property name="CustomIcon" value="MT_Cobblestone500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_Cobblestone" />
+		</property>
+	</item>
+	<item name="MT4_Cobblestone">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_CobblestoneDesc" />
+		<property name="CustomIcon" value="MT_Cobblestone1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_Cobblestone" />
+		</property>
+	</item>
+	<item name="MT5_Cobblestone">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT5_CobblestoneDesc" />
+		<property name="CustomIcon" value="MT_Cobblestone3000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader5_Cobblestone" />
+		</property>
+	</item>
+	<item name="MT6_Cobblestone">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT6_CobblestoneDesc" />
+		<property name="CustomIcon" value="MT_Cobblestone6000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader6_Cobblestone" />
+		</property>
+	</item>
+	<item name="MT1_ConcreteMix">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_ConcreteMixDesc" />
+		<property name="CustomIcon" value="MT_ConcreteMix25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_ConcreteMix" />
+		</property>
+	</item>
+	<item name="MT2_ConcreteMix">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_ConcreteMixDesc" />
+		<property name="CustomIcon" value="MT_ConcreteMix100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_ConcreteMix" />
+		</property>
+	</item>
+	<item name="MT3_ConcreteMix">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_ConcreteMixDesc" />
+		<property name="CustomIcon" value="MT_ConcreteMix500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_ConcreteMix" />
+		</property>
+	</item>
+	<item name="MT4_ConcreteMix">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_ConcreteMixDesc" />
+		<property name="CustomIcon" value="MT_ConcreteMix1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_ConcreteMix" />
+		</property>
+	</item>
+	<item name="MT5_ConcreteMix">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT5_ConcreteMixDesc" />
+		<property name="CustomIcon" value="MT_ConcreteMix3000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader5_ConcreteMix" />
+		</property>
+	</item>
+	<item name="MT6_ConcreteMix">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT6_ConcreteMixDesc" />
+		<property name="CustomIcon" value="MT_ConcreteMix6000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader6_ConcreteMix" />
+		</property>
+	</item>
+	<item name="MT1_Cement">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_CementDesc" />
+		<property name="CustomIcon" value="MT_Cement25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_Cement" />
+		</property>
+	</item>
+	<item name="MT2_Cement">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_CementDesc" />
+		<property name="CustomIcon" value="MT_Cement100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_Cement" />
+		</property>
+	</item>
+	<item name="MT3_Cement">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_CementDesc" />
+		<property name="CustomIcon" value="MT_Cement500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_Cement" />
+		</property>
+	</item>
+	<item name="MT4_Cement">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_CementDesc" />
+		<property name="CustomIcon" value="MT_Cement1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_Cement" />
+		</property>
+	</item>
+	<item name="MT5_Cement">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT5_CementDesc" />
+		<property name="CustomIcon" value="MT_Cement3000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader5_Cement" />
+		</property>
+	</item>
+	<item name="MT6_Cement">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT6_CementDesc" />
+		<property name="CustomIcon" value="MT_Cement6000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader6_Cement" />
+		</property>
+	</item>
+	<item name="MT1_resourceForgedIron">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_resourceForgedIronDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedIron25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_resourceForgedIron" />
+		</property>
+	</item>
+	<item name="MT2_resourceForgedIron">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_resourceForgedIronDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedIron100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_resourceForgedIron" />
+		</property>
+	</item>
+	<item name="MT3_resourceForgedIron">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_resourceForgedIronDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedIron500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_resourceForgedIron" />
+		</property>
+	</item>
+	<item name="MT4_resourceForgedIron">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_resourceForgedIronDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedIron1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_resourceForgedIron" />
+		</property>
+	</item>
+	<item name="MT5_resourceForgedIron">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT5_CresourceForgedIronDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedIron3000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader5_resourceForgedIron" />
+		</property>
+	</item>
+	<item name="MT6_resourceForgedIron">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT6_resourceForgedIronDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedIron6000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader6_resourceForgedIron" />
+		</property>
+	</item>
+	<item name="MT1_resourceForgedSteel">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_resourceForgedSteelDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedSteel25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_resourceForgedSteel" />
+		</property>
+	</item>
+	<item name="MT2_resourceForgedSteel">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_resourceForgedSteelDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedSteel100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_resourceForgedSteel" />
+		</property>
+	</item>
+	<item name="MT3_resourceForgedSteel">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_resourceForgedSteelDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedSteel500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_resourceForgedSteel" />
+		</property>
+	</item>
+	<item name="MT4_resourceForgedSteel">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_resourceForgedSteelDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedSteel1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_resourceForgedSteel" />
+		</property>
+	</item>
+	<item name="MT5_resourceForgedSteel">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT5_resourceForgedSteelDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedSteel3000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader5_resourceForgedSteel" />
+		</property>
+	</item>
+	<item name="MT6_resourceForgedSteel">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT6_resourceForgedSteelDesc" />
+		<property name="CustomIcon" value="MT_resourceForgedSteel6000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader6_resourceForgedSteel" />
+		</property>
+	</item>
+	<item name="MT1_FlagstoneBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_FlagstoneBlockDesc" />
+		<property name="CustomIcon" value="MT_FlagstoneBlock25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_FlagstoneBlock" />
+		</property>
+	</item>
+	<item name="MT2_FlagstoneBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_FlagstoneBlockDesc" />
+		<property name="CustomIcon" value="MT_FlagstoneBlock100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_FlagstoneBlock" />
+		</property>
+	</item>
+	<item name="MT3_FlagstoneBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_FlagstoneBlockDesc" />
+		<property name="CustomIcon" value="MT_FlagstoneBlock500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_FlagstoneBlock" />
+		</property>
+	</item>
+	<item name="MT4_FlagstoneBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_FlagstoneBlockDesc" />
+		<property name="CustomIcon" value="MT_FlagstoneBlock1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_FlagstoneBlock" />
+		</property>
+	</item>
+	<item name="MT1_rebarFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_rebarFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_rebarFrameBlock25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_rebarFrameBlock" />
+		</property>
+	</item>
+	<item name="MT2_rebarFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_rebarFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_rebarFrameBlock100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_rebarFrameBlock" />
+		</property>
+	</item>
+	<item name="MT3_rebarFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_rebarFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_rebarFrameBlock500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_rebarFrameBlock" />
+		</property>
+	</item>
+	<item name="MT4_rebarFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_rebarFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_rebarFrameBlock1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_rebarFrameBlock" />
+		</property>
+	</item>
+	<item name="MT1_ironFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_ironFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_ironFrameBlock25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_ironFrameBlock" />
+		</property>
+	</item>
+	<item name="MT2_ironFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_ironFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_ironFrameBlock100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_ironFrameBlock" />
+		</property>
+	</item>
+	<item name="MT3_ironFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_ironFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_ironFrameBlock500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_ironFrameBlock" />
+		</property>
+	</item>
+	<item name="MT4_ironFrameBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_ironFrameBlockDesc" />
+		<property name="CustomIcon" value="MT_ironFrameBlock1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_ironFrameBlock" />
+		</property>
+	</item>
+	<item name="MT1_pouredConcreteBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT1_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock25"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader1_pouredConcreteBlock" />
+		</property>
+	</item>
+	<item name="MT2_pouredConcreteBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT2_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader2_pouredConcreteBlock" />
+		</property>
+	</item>
+	<item name="MT3_pouredConcreteBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT3_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader3_pouredConcreteBlock" />
+		</property>
+	</item>
+	<item name="MT4_pouredConcreteBlock">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="MT4_pouredConcreteBlockDesc" />
+		<property name="CustomIcon" value="MT_pouredConcreteBlock1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_MaterialTrader4_pouredConcreteBlock" />
+		</property>
+	</item>
+	<item name="WorkOrderQuestSchematic1">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="Description" value="Enables you to write work orders for various resources and blocks in the amount of 25"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="Work_order_25"/>
+		<property class="Action0">
+			<requirement name="CVarCompare" cvar="MT1_Cobblestone" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_ConcreteMix" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_Cement" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_resourceForgedIron" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_resourceForgedSteel" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_FlagstoneBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_rebarFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_ironFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT1_pouredConcreteBlock" operation="Equals" value="0"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_Cobblestone" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_ConcreteMix" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_Cement" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_resourceForgedIron" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_resourceForgedSteel" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_FlagstoneBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_rebarFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_ironFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT1_pouredConcreteBlock" operation="set" value="1"/>
+		</effect_group>
+	</item>
+	<item name="WorkOrderQuestSchematic2">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="Description" value="Enables you to write work orders for various resources and blocks in the amount of 100"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="Work_order_100"/>
+		<property class="Action0">
+			<requirement name="CVarCompare" cvar="MT2_Cobblestone" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_ConcreteMix" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_Cement" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_resourceForgedIron" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_resourceForgedSteel" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_FlagstoneBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_rebarFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_ironFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT2_pouredConcreteBlock" operation="Equals" value="0"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_Cobblestone" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_ConcreteMix" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_Cement" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_resourceForgedIron" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_resourceForgedSteel" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_FlagstoneBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_rebarFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_ironFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT2_pouredConcreteBlock" operation="set" value="1"/>
+		</effect_group>
+	</item>	
+	<item name="WorkOrderQuestSchematic3">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="Description" value="Enables you to write work orders for various resources and blocks in the amount of 500"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="Work_order_500"/>
+		<property class="Action0">
+			<requirement name="CVarCompare" cvar="MT3_Cobblestone" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_ConcreteMix" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_Cement" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_resourceForgedIron" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_resourceForgedSteel" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_FlagstoneBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_rebarFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_ironFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT3_pouredConcreteBlock" operation="Equals" value="0"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_Cobblestone" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_ConcreteMix" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_Cement" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_resourceForgedIron" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_resourceForgedSteel" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_FlagstoneBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_rebarFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_ironFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT3_pouredConcreteBlock" operation="set" value="1"/>
+		</effect_group>
+	</item>	
+	<item name="WorkOrderQuestSchematic4">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="Description" value="Enables you to write work orders for various resources and blocks in the amount of 1000"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="Work_order_1000"/>
+		<property class="Action0">
+			<requirement name="CVarCompare" cvar="MT4_Cobblestone" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_ConcreteMix" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_Cement" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_resourceForgedIron" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_resourceForgedSteel" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_FlagstoneBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_rebarFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_ironFrameBlock" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT4_pouredConcreteBlock" operation="Equals" value="0"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_Cobblestone" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_ConcreteMix" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_Cement" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_resourceForgedIron" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_resourceForgedSteel" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_FlagstoneBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_rebarFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_ironFrameBlock" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT4_pouredConcreteBlock" operation="set" value="1"/>
+		</effect_group>
+	</item>
+	<item name="WorkOrderQuestSchematic5">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="Description" value="Enables you to write work orders for various resources in the amount of 3000"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="Work_order_3000"/>
+		<property class="Action0">
+			<requirement name="CVarCompare" cvar="MT5_Cobblestone" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT5_ConcreteMix" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT5_Cement" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT5_resourceForgedIron" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT5_resourceForgedSteel" operation="Equals" value="0"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT5_Cobblestone" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT5_ConcreteMix" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT5_Cement" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT5_resourceForgedIron" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT5_resourceForgedSteel" operation="set" value="1"/>
+		</effect_group>
+	</item>
+	<item name="WorkOrderQuestSchematic6">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="Description" value="Enables you to write work orders for various resources in the amount of 6000"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="Work_order_6000"/>
+		<property class="Action0">
+			<requirement name="CVarCompare" cvar="MT6_Cobblestone" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT6_ConcreteMix" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT6_Cement" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT6_resourceForgedIron" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="MT6_resourceForgedSteel" operation="Equals" value="0"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT6_Cobblestone" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT6_ConcreteMix" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT6_Cement" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT6_resourceForgedIron" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MT6_resourceForgedSteel" operation="set" value="1"/>
+		</effect_group>
+	</item>	
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~LOOT AWESOMENESS~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<item name="Drs_Trader_Reward_Loot">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Construction_Loot_Box1" />
+		<property name="CustomIcon" value="Drs_Construction_UnCrate"/>
+		<property name="CustomIconTint" value="ffb300"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Drs_Reward_Loot" />
+		</property>
+	</item>
+	<item name="Drs_Construction_Box_1">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Construction_Loot_Box1" />
+		<property name="CustomIcon" value="Drs_ConstructorLoot_Uncrate"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_BaseConstructor_Box1" />
+		</property>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	<item name="Drs_Construction_Box_2">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Construction_Loot_Box1" />
+		<property name="CustomIcon" value="Drs_ConstructorLoot_Uncrate"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_BaseConstructor_Box2" />
+		</property>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	<item name="Drs_Construction_Box_3">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Construction_Loot_Box1" />
+		<property name="CustomIcon" value="Drs_ConstructorLoot_Uncrate"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_BaseConstructor_Box3" />
+		</property>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+
+	<item name="Drs_Killer_Box_1">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Combat_Loot_Box1" />
+		<property name="CustomIcon" value="Drs_CombatLoot_Uncrate"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_Killer_Box1" />
+		</property>
+	</item>
+	<item name="Drs_Killer_Box_2">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Combat_Loot_Box2" />
+		<property name="CustomIcon" value="Drs_CombatLoot_Uncrate"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_Killer_Box2" />
+		</property>
+	</item>
+	<item name="Drs_Killer_Box_3">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_Combat_Loot_Box3" />
+		<property name="CustomIcon" value="Drs_CombatLoot_Uncrate"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_Killer_Box3" />
+		</property>
+	</item>
+
+	<item name="Drs_FirstAid_Kit">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_FirstAid" />
+		<property name="CustomIcon" value="Drs_FirstAid_Uncrate"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_FirstAid_Kit" />
+		</property>
+	</item>
+	<item name="Drs_BloodCase">
+		<property name="Extends" value="questMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Description" value="Drs_BloodCase" />
+		<property name="CustomIcon" value="Drs_BloodCase_Uncrate"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="loot_BloodCase" />
+		</property>
+	</item>
+	
+	<item name="SkillBook_Advanced_Engineering">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkAdvancedEngineering"/>
+		</property>
+	</item>	
+	<item name="SkillBook_Better_Barter">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkBetterBarter"/>
+		</property>
+	</item>
+	<item name="SkillBook_Daring_Adventurer">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkDaringAdventurer"/>
+		</property>
+	</item>
+	<item name="SkillBook_Grease_Monkey">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkGreaseMonkey"/>
+		</property>
+	</item>
+	<item name="SkillBook_Hammer_Forge">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkHammerForge"/>
+		</property>	
+	</item>	
+	<item name="SkillBook_Loving_Off_The_Land">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkLivingOffTheLand"/>
+		</property>
+	</item>
+	<item name="SkillBook_Lucky_Looter">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkLuckyLooter"/>
+		</property>
+	</item>
+	<item name="SkillBook_Master_Chef">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkMasterChef"/>
+		</property>
+	</item>
+	<item name="SkillBook_Miner_69r">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkMiner69r"/>
+		</property>
+	</item>
+	<item name="SkillBook_Mother_Lode">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkMotherLode"/>
+		</property>
+	</item>
+	<item name="SkillBook_Pack_Mule">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkPackMule"/>
+		</property>
+	</item>	
+	<item name="SkillBook_Physician">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkPhysician"/>
+		</property>
+	</item>
+	<item name="SkillBook_Salvage_Operation">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkSalvageOperations"/>
+		</property>
+	</item>	
+	<item name="SkillBook_Sexual_Trex">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkSexualTrex"/>
+		</property>
+	</item>
+	<item name="SkillBook_Yeah_Science">
+		<property name="Extends" value="unlockBookMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="Drs_Book1"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="Description" value="shit just got real"/>
+		<property class="Action0">
+			<property name="Class" value="GainSkill"/>
+			<property name="Skills_to_gain" value="perkYeahScience"/>
+		</property>
+	</item>
+	<!-- start getting quest rewards in that reward skills for quest completions to help give a early game boost to players and so they can focus their point elsewhere other than the contstruction and engineering skills.
+	-->
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~FOOD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items">
+<!-- Canned Bachelor Magic! -->
+<item name="cooked_foodCanBeef">
+	<property name="CustomIcon" value="cooked_foodCanBeef"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="60"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<property name="Create_item" value="drinkCanEmpty"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanChicken">
+	<property name="CustomIcon" value="cooked_foodCanChicken"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanLamb">
+	<property name="CustomIcon" value="cooked_foodCanLamb"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanCatfood">
+	<property name="CustomIcon" value="cooked_foodCanCatfood"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<property name="EconomicValue" value="20"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanDogfood">
+	<property name="CustomIcon" value="cooked_foodCanDogfood"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<property name="EconomicValue" value="40"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanChili">
+	<property name="CustomIcon" value="cooked_foodCanChili"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>	
+	</effect_group>
+</item>
+<item name="cooked_foodCanTuna">
+	<property name="CustomIcon" value="cooked_foodCanTuna"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<property name="EconomicValue" value="20"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanHam">
+	<property name="CustomIcon" value="cooked_foodCanHam"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>	
+	</effect_group>
+</item>
+<item name="cooked_foodCanPasta">
+	<property name="CustomIcon" value="cooked_foodCanPasta"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="cooked_foodCanSalmon">
+	<property name="CustomIcon" value="cooked_foodCanSalmon"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>				
+	</effect_group>
+</item>
+<item name="cooked_foodCanMiso">
+	<property name="CustomIcon" value="cooked_foodCanMiso"/>
+	<property name="Extends" value="foodCanBeef"/>
+	<property name="DisplayType" value="foodWater"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>				
+	</effect_group>
+</item>
+<item name="cooked_foodCanPeas">
+	<property name="CustomIcon" value="cooked_foodCanPeas"/>
+	<property name="Extends" value="foodCanMiso"/>
+	<property name="EconomicValue" value="20"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>				
+	</effect_group>
+</item>
+<item name="cooked_foodCanSoup">
+	<property name="CustomIcon" value="cooked_foodCanSoup"/>
+	<property name="Extends" value="foodCanMiso"/>
+	<property name="EconomicValue" value="40"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>		
+	</effect_group>
+</item>
+
+<item name="cooked_foodCanStock">
+	<property name="CustomIcon" value="cooked_foodCanStock"/>
+	<property name="Extends" value="foodCanMiso"/>
+	<property name="EconomicValue" value="40"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>		
+	</effect_group>
+</item>
+</append>
+<!-- Jarring Food -->
+<append xpath="/items">
+<item name="foodJarCorn">
+	<property name="CustomIcon" value="jarred_corn"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="EconomicValue" value="16"/>
+	<property name="EconomicBundleSize" value="2"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodJarMeat">
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="foodWater"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="EconomicValue" value="52"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="foodJarPickledEggs6">
+	<property name="CustomIcon" value="pickled_eggs"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="foodJarPickledEggs5"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="foodJarPickledEggs5">
+	<property name="CustomIcon" value="pickled_eggs"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="foodJarPickledEggs4"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="foodJarPickledEggs4">
+	<property name="CustomIcon" value="pickled_eggs"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="foodJarPickledEggs3"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="foodJarPickledEggs3">
+	<property name="CustomIcon" value="pickled_eggs"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="foodJarPickledEggs2"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="foodJarPickledEggs2">
+	<property name="CustomIcon" value="pickled_eggs"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="foodJarPickledEggs1"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+<item name="foodJarPickledEggs1">
+	<property name="CustomIcon" value="pickled_eggs"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="drinkJarEmpty"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodJarPotato">
+	<property name="CustomIcon" value="jarred_potato"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="EconomicValue" value="16"/>
+	<property name="EconomicBundleSize" value="2"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+</append>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~OIL EXTRACTOR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items">
+	<item name="resourceParaffinWax">
+		<property name="HoldType" value="45"/>
+		<property name="CustomIcon" value="Drs_paraffinWax"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="MresourceOilShale"/>
+		<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+		<property name="FuelValue" value="1"/>
+		<property name="EconomicValue" value="5"/>
+		<property name="EconomicBundleSize" value="50"/>
+		<property name="Group" value="Resources"/>
+		<property name="CraftingIngredientExp" value="2"/>
+	</item>
+	<item name="Paraffin Candle">
+		<property name="Class" value="ItemClassTorch"/>
+		<property name="CustomIcon" value="candle"/>
+		<property name="HoldType" value="12"/>
+		<property name="Meshfile" value="Items/Tools/candlePrefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="50"/> 
+		<property name="FuelValue" value="16"/>
+		<property name="EconomicValue" value="24"/>
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock"/>
+			<property name="Delay" value="0.5"/>
+			<property name="Blockname" value="candleWallLightPlayer"/>
+		</property>
+		<property name="Group" value="Basics,Decor/Miscellaneous"/>
+	</item>
+    <item name="resourceTar">
+        <property name="CustomIcon" value="Drs_Tar"/> 
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="10"/>
+      	<property name="EconomicValue" value="20"/>
+      	<property name="Group" value="Resources,Chemicals"/>
+      </item>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~POWER SOURCES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items">
+<!-- * BATTERIES			-->
+		<!-- small Batteries AA -->
+			<item name="battery_small_single">
+				<property name="CustomIcon" value="Drs_battery_single"/>
+				<property name="HoldType" value="45"/>
+				<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+				<property name="VehicleSlotType" value="battery"/>
+				<property name="Material" value="MresourceScrapLeadSmall"/>
+				
+				<property name="RepairTools" value="disposable_Battery_Recharger"/>
+				
+				<property name="Stacknumber" value="1"/>
+				<property name="Weight" value="1"/>
+				<property name="EconomicValue" value="10"/>
+				<property name="Group" value="Resources"/>
+				<property name="DegradationBreaksAfter" value="false"/>
+				<property class="Attributes">
+					<property name="DegradationMax" value="200,1200"/> <!-- needed for electrical calculations -->
+					<property name="BatteryMaxLoadInVolts" value="24, 36"/>
+					<property name="BatteryDischargeTimeInMinutes" value="30,90"/>
+				</property>				
+				<effect_group>
+					<passive_effect name="ModSlots" operation="base_set" value="0"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="200,1200" tier="1,6"/>
+				</effect_group>	
+			</item>
+		<!-- disposable_Battery_Recharger -->
+		    <item name="disposable_Battery_Recharger">
+				<property name="CustomIcon" value="Drs_disposable_Battery_Charger"/>
+				<property name="HoldType" value="45" />
+				<property name="Meshfile" value="Items/Misc/sackPrefab" />
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+				<property name="Material" value="MresourceScrapLeadLarge" />
+				<property name="Stacknumber" value="100" />
+				<property name="EconomicValue" value="10" />
+				<property name="RepairTime" value="0.5" />
+				<property name="RepairAmount" value="1200" />
+			  <property name="Group" value="Resources,Ammo/Weapons" />
+				<property name="CraftingSkillGroup" value="craftSkillGuns" />
+			</item>	
+		<!-- super durable battery -->
+			<item name="battery_SuperDurable">
+				<property name="CustomIcon" value="Drs_enhanced_battery"/>
+				<property name="HoldType" value="45"/>
+				<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+				<property name="VehicleSlotType" value="battery"/>
+				<property name="Material" value="MresourceScrapLeadLarge"/>
+				<property name="RepairTools" value="resourceRepairKit"/>
+				<property name="Stacknumber" value="1"/>
+				<property name="Weight" value="160"/>
+				<property name="EconomicValue" value="500"/>
+				<property name="Group" value="Resources"/>
+				<property name="DegradationBreaksAfter" value="false"/>
+				<property class="Attributes">
+					<property name="DegradationMax" value="5000,10000"/> <!-- needed for electrical calculations -->
+					<property name="BatteryMaxLoadInVolts" value="24, 48"/>
+					<property name="BatteryDischargeTimeInMinutes" value="90,180"/>
+				</property>
+				<effect_group>
+					<passive_effect name="ModSlots" operation="base_set" value="0"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+				</effect_group>
+			</item>
+	<item name="junk_batteries">
+		<property name="CustomIcon" value="Drs_battery_junk"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Mlead"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="250"/>
+		<property name="EconomicValue" value="5"/>
+		<property name="EconomicBundleSize" value="10"/>
+		<property name="Group" value="Basics,Decor/Miscellaneous"/>
+		<property name="CraftingIngredientExp" value="2"/>
+		<property name="CraftingIngredientTime" value="2"/>
+	</item>
+<!-- * ENGINES	-->
+	<!-- tool engine -->
+		<!-- Will bring about with release of Power Series 2 -->		
+<!-- * SOLAR CELLS	-->
+	<!-- mini solarCell -->
+		<item name="solarCell_mini">
+			<property name="CustomIcon" value="Drs_solarcell_mini"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="3"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Attributes">
+				<property name="DegradationMax" value="300,1200"/>
+			</property>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="300,1200" tier="1,6"/>
+			</effect_group>
+		</item>
+	<!-- super durable solarCell -->
+		<item name="solarCell_SuperDurable">
+			<property name="CustomIcon" value="solarCell"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="4000"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Attributes">
+				<property name="DegradationMax" value="5000,10000"/>
+			</property>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+			</effect_group>
+		</item>
+<!-- purified silicone -->
+	<item name="purifiedSilicone">
+		<property name="CustomIcon" value="DrsSilicon"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="MresourceScrapPolymers"/>
+		<property name="Stacknumber" value="1000"/>
+		<property name="EconomicValue" value="50"/>
+		<property name="Group" value="Resources"/>
+		<property name="CraftingIngredientTime" value="2"/>
+	</item>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~POWER TOOLS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Auger update -->
+	<append xpath="/items/item[@name='meleeToolAuger']/property[@name='Tags']/@value">,motorTools1,gasTank1,motorToolReach,diamondBlade1</append>
+	<append xpath="/items/item[@name='meleeToolAuger']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,1" tier="1,6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,2" tier="1,6"/>
+	</append>	
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='ModSlots' and @operation='base_set']/@value">3,8</set>
+
+<!-- Chainsaw update -->
+	<append xpath="/items/item[@name='meleeToolChainsaw']/property[@name='Tags']/@value">,motorTools1,gasTank1,motorToolReach</append>
+	<append xpath="/items/item[@name='meleeToolChainsaw']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,1" tier="1,6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,2" tier="1,6"/>
+	</append>
+	<set xpath="/items/item[@name='meleeToolChainsaw']/effect_group/passive_effect[@name='ModSlots' and @operation='base_set']/@value">3,8</set>
+<!-- Auger and Chainsaw schematics and attachments -->
+<append xpath="/items">
+
+<!-- ENGINE TURBO -->
+	<item name="modEngineTurbo1Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsTurboCharger_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster3Desc"/>
+		<property name="EconomicValue" value="250"/>
+	</item>
+	<item name="modEngineTurbo2Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsTurboCharger_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster4Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>
+	<item name="modEngineTurbo3Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsTurboCharger_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>	
+<!-- GAS TANK -->
+	<item name="modGasTank1Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="JerryCans1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster2Desc"/>
+		<property name="EconomicValue" value="250"/>
+	</item>
+	<item name="modGasTank2Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="JerryCans1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster3Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>
+	<item name="modGasTank3Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="JerryCans1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>
+<!-- 	RESERVE GAS TANK	-->
+	<item name="modReserveGasTank1Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsReserveGasTank_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster3Desc"/>
+		<property name="EconomicValue" value="250"/>
+	</item>
+	<item name="modReserveGasTank2Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsReserveGasTank_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster4Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>
+	<item name="modReserveGasTank3Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsReserveGasTank_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>	
+<!-- BLADE EXTENSION -->	
+	<item name="modMotorToolExtension1Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerBlade1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster2Desc"/>
+		<property name="EconomicValue" value="250"/>
+	</item>	
+	<item name="modMotorToolExtension2Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerBlade1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster3Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>		
+	<item name="modMotorToolExtension3Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerBlade1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>	
+<!-- DIAMOND TIP AUGER -->
+	<item name="modDiamondTip1Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerBlade1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster2Desc"/>
+		<property name="EconomicValue" value="250"/>
+	</item>	
+	<item name="modDiamondTip2Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerBlade1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster3Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>		
+	<item name="modDiamondTip3Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerBlade1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>
+<!-- BETTER HANDLES -->
+	<item name="modBetterHandlesSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsAugerHandles1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster2Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>
+<!-- MOTOR TOOL SILENCER -->
+	<item name="modMotorToolSilencerSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsSoundDampnerField1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>	
+<!-- CHAINSAW TEMPERED FRAME -->
+	<item name="modChainsawTemperedFrame1Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsChainsawBody1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster3Desc"/>
+		<property name="EconomicValue" value="250"/>
+	</item>		
+	<item name="modChainsawTemperedFrame2Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsChainsawBody1_schematic"/>
+		<property name="DescriptionKey" value="schematicMaster4Desc"/>
+		<property name="EconomicValue" value="500"/>
+	</item>	
+	<item name="modChainsawTemperedFrame3Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsChainsawBody1_schematic"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+	</item>
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~QUICKER FIXER UPPER~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items">
+	<item name="Quicker Fixer Upper Schematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="DrsQuickerFixerUpper_Schematic"/>
+		<property name="DescriptionKey" value="schematicMaster5Desc"/>
+		<property name="EconomicValue" value="750"/>
+	</item>		
+	<item name="Quicker Fixer Upper">
+	<property name="Tags" value="tool,nailgun,sideAttachments,selfLoading"/>
+	<property name="DisplayType" value="meleeRepairTool"/>
+	<property name="HoldType" value="37"/>
+	<property name="CustomIcon" value="Drs_chipped_nailGun"/>
+	<property name="Meshfile" value="Items/Tools/nailgunPrefab"/>
+	<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairUpAfterShot" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Launcher"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value="0.3"/> 
+		<property name="Magazine_items" value="resourceNail"/>
+		<property name="Instantiate_on_load" value="false"/>
+		<property name="Reload_time" value="2"/>
+		<property name="Sound_start" value="nailgun_fire"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="weapon_empty"/>
+		<property name="Sound_reload" value="nailgun_reload"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value="0.3"/> <!-- Repair actions still need the delay amount -->
+		<property name="Repair_amount" value="250"/>
+		<property name="Upgrade_hit_offset" value="-5"/>
+		<property name="Repair_action_sound" value="nailgun_fire"/>
+		<property name="Upgrade_action_sound" value="nailgun_fire"/>
+		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceNail"/>
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="ActionSkillGroup" value="Construction Tools"/>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<effect_group name="Base Effects"> <!-- gunToolNailgun -->
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="3"/>
+		<passive_effect name="MaxRange" operation="base_set" value="10"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="500"/>
+		<!-- <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>  does not work at all on the nailgun -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="0.7"/> <!-- crosshair reset speed -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="200"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+		<passive_effect name="KickDegreesVertical" operation="base_set" value="-.7,.7"/>
+		<passive_effect name="KickDegreesHorizontal" operation="base_set" value="-.6,.6"/>
+		<display_value name="dRecoil" value="1" />
+		<passive_effect name="DegradationMax" operation="base_set" value="2000,4000" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="5" tier="1,6"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value="0.15" tags="EntityDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+	</effect_group>
+</item>
+</append>
+ 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~ZOMBIE KILLER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items" >
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~Milestone quests paper if adding to existing game~~~~~~~ -->
+	
+	<item name="Paper_Milestone_Zombie_Kill_100">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Zombie Kill Milestone" />
+		<property class="Action0">
+			<property name="QuestGiven" value="Milestone_Zombie_Kill_100" />
+		</property>
+	</item>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~QuestChit Items~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<item name="Quest_Chit">
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="CustomIcon" value="Drs_QuestChit"/>
+		<property name="Material" value="MresourcePaper"/>
+		<property name="FuelValue" value="1"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="30000"/>
+		<property name="EconomicValue" value="1"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Resources"/>
+	</item>
+	<item name="QuestChit1">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 100 zombie kills" />
+		<property name="CustomIcon" value="Chit1"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit1" />
+		</property>
+	</item>
+	<item name="QuestChit5">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 500 zombie kills" />
+		<property name="CustomIcon" value="Chit5"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit5" />
+		</property>
+	</item>
+	<item name="QuestChit10">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 1000 zombie kills" />
+		<property name="CustomIcon" value="Chit10"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit10" />
+		</property>
+	</item>
+	<item name="QuestChit50">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 5000 zombie kills" />
+		<property name="CustomIcon" value="Chit50"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit50" />
+		</property>
+	</item>
+	<item name="QuestChit100">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 10000 zombie kills" />
+		<property name="CustomIcon" value="Chit100"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit100" />
+		</property>
+	</item>
+	<item name="QuestChit500">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 50000 zombie kills" />
+		<property name="CustomIcon" value="Chit500"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit500" />
+		</property>
+	</item>
+	<item name="QuestChit1000">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 100000 zombie kills" />
+		<property name="CustomIcon" value="Chit1000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit1000" />
+		</property>
+	</item>
+	<item name="QuestChit5000">
+		<property name="Extends" value="questMaster" />
+		<property name="Description" value="Equivalent to 500000 zombie kills" />
+		<property name="CustomIcon" value="Chit5000"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="Quest_Chit5000" />
+		</property>
+	</item>	
+</append>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~OTHER MODDERS ADDITIONS~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<append xpath="/items" >
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~Manux Quad~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<item name="manux_vehicleQuadPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="CustomIcon" value="manux_Quad"/>
+			<property name="DescriptionKey" value="manux_vehicleQuadDesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/manux_Quad.unity3d?QuadPrefab_A17.prefab"/>
+			<property name="EconomicValue" value="15000"/>
+			<property class="Action1">
+				<property name="Vehicle" value="manux_vehicleQuad"/>
+				<property name="VehicleSize" value="1.1, 1.3, 2"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="DegradationMax" operation="base_set" value="3000,6000" tier="1,6"/>
+			</effect_group>
+	</item>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~Mayics Drill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<item name="mayicDrillGun">
+		<property name="Tags" value="blunt,melee,light,tool,perkSalvageOperations"/>
+		<property name="DisplayType" value="meleeRepairTool"/>
+		<property name="HoldType" value="1"/>
+		<property name="Meshfile" value="#@modfolder:Resources/Drill.unity3d?DrillPrefab"/>
+		<property name="CustomIcon" value="drill"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="RepairTools" value="resourceForgedSteel"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="metaldestroy1"/>
+		<property name="EconomicValue" value="288"/>
+				<property name="DescriptionKey" value="mayicDrillGunDesc"/>
+		
+		<property class="Action0">
+			<property name="Class" value="Ranged"/>
+			<property name="Hitmask_override" value="Melee"/>
+			<property name="UseMeleeCrosshair" value="true"/>
+			<property name="Single_magazine_usage" value="true"/>
+			<property name="Magazine_items" value="mayicDrillBattery"/>
+			<property name="Bullet_material" value="metal"/>
+			<property name="Reload_time" value="4.1"/>
+			<property name="Sound_start" value="drill1"/>
+			<property name="Sound_repeat" value=""/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_empty" value="auger_empty"/>
+			<property name="Sound_reload" value="Auger_Reload"/>
+			<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+			<!-- <property name="DamageBonus.wood" value="0.25"/> -->
+			<!-- <property name="DamageBonus.head" value="3"/> -->
+			<property name="SupportHarvesting" value="true"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+			<property name="Sound_harvesting" value="wrench_harvest" param1="metal"/>
+			<property name="Particle_harvesting" value="true" param1="metal"/>
+		</property>
+		<property class="Action1"> <!-- UseAction -->
+			<property name="Class" value="Repair"/>
+			<property name="Delay" value=".1"/> <!-- Repair actions still need the delay amount -->
+			<property name="Repair_amount" value="350"/>
+			<property name="Upgrade_hit_offset" value="-2"/>
+			<property name="Sound_start" value="repair_block"/>
+			<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers"/>
+		</property>
+		<effect_group name="Base Effects"> <!-- meleeToolAuger -->
+			<passive_effect name="MaxRange" operation="base_set" value="2.35"/>
+			<passive_effect name="BlockRange" operation="base_set" value="7"/>
+			<passive_effect name="SphereCastRadius" operation="base_set" value="0.1"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="100"/>
+
+			<passive_effect name="EntityDamage" operation="base_set" value="3.5"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="22"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="wood"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="earth"/>
+
+			<passive_effect name="RoundsPerMinute" operation="base_set" value="300"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
+
+			<passive_effect name="MagazineSize" operation="base_set" value="500"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> <!-- 3.5s -->
+			<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+			<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
+
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.5"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.5"/>
+
+			<passive_effect name="KickDegreesVertical" operation="base_set" value="-0.35,0.35"/>
+			<passive_effect name="KickDegreesHorizontal" operation="base_set" value="-0.35,0.35"/>
+			<display_value name="dRecoil" value="1" />
+			<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1"/>
+			<passive_effect name="WeaponHandling" operation="base_set" value="5"/>
+
+			<passive_effect name="DegradationMax" operation="base_set" value="3000,6000" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="3"/>
+		</effect_group>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="ActionSkillGroup" value="Construction Tools"/>
+		<property name="CraftingSkillGroup" value="craftSkillTools"/>
+		<property name="RepairExpMultiplier" value="5.5"/>
+	</item>
+
+	<item name="mayicDrillBattery">
+			<!-- scrap material -->
+			<property name="HoldType" value="45"/>
+			<property name="DescriptionKey" value="mayicDrillBatteryDesc"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="CustomIcon" value="drillbat"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mlead"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<!-- STK resource -->
+			<property name="EconomicValue" value="200"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Tools/Traps,Resources"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+	</item>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~IMPACT WRENCH~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~by Elucidus~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+	<item name="Impact Wrench">
+		<property name="Tags" value="blunt,melee,light,tool,perkStayDown,perkSalvageOperations"/>
+		<property name="CustomIcon" value="impactWrench"/>
+		<property name="DisplayType" value="meleeRepairTool"/>
+		<property name="HoldType" value="37"/>
+		<property name="Meshfile" value="Items/Tools/nailgunPrefab"/>
+		<property name="TintColor" value="0,80,140"/>
+		<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="weapon_jam"/>
+		<property name="CrosshairUpAfterShot" value="true"/>
+		<property name="SoundDestroy" value="metaldestroy1"/>
+		<property class="Action0">
+			<property name="Class" value="Ranged"/>
+			<property name="Hitmask_override" value="Melee"/>
+			<property name="UseMeleeCrosshair" value="true"/>
+			<property name="Magazine_items" value="ammoGasCan"/>
+			<property name="Bullet_material" value="metal"/>
+			<property name="Reload_time" value="4.1"/>
+			<property name="Single_magazine_usage" value="true"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Sound_start" value="impactWrench"/>
+			<property name="Sound_empty" value="auger_empty"/>
+			<property name="Sound_reload" value="auger_reload"/>
+			<property name="DamageBonus.wood" value="-0.99"/>
+			<property name="DamageBonus.earth" value="-0.99"/>
+			<property name="DamageBonus.cloth" value="-0.99"/>
+			<property name="DamageBonus.stone" value="-0.99"/>
+			<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+			<property name="SupportHarvesting" value="true"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Repair"/>
+			<property name="Delay" value="0.73"/> <!-- Repair actions still need the delay amount -->
+			<property name="Repair_amount" value="200"/>
+			<property name="Upgrade_hit_offset" value="-3"/>
+			<property name="Repair_action_sound" value="impactWrench"/>
+			<property name="Upgrade_action_sound" value="impactWrench"/>
+			<property name="Allowed_upgrade_items" value="resourceScrapIron,resourceForgedIron,resourceForgedSteel"/>
+		</property>
+		<effect_group name="Base Effects">
+			<passive_effect name="RoundsPerMinute" operation="base_set" value="130"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2"/>
+			<passive_effect name="BlockRange" operation="base_set" value="5"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="12.5"/> <!-- meleeToolWrench -->
+			<passive_effect name="BlockDamage" operation="base_set" value="25"/>
+<!-- Drconfused added Entity Damage and BlockDamage perc_add -->
+			<passive_effect name="EntityDamage" operation="perc_add" value="0,1" tier="1,6"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="0,2" tier="1,6"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="200"/> <!-- A16 1.1 -->
+			<passive_effect name="HarvestCount" operation="base_set" value="1.5" tags="salvageHarvest"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="6.2" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="2500,6000" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="5" tier="1,6"/>
+			<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+		</effect_group>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="ActionSkillGroup" value="Construction Tools"/>
+		<property name="CraftingSkillGroup" value="craftSkillScience"/>
+		<property name="RepairExpMultiplier" value="10.8"/>
+		<property name="EconomicValue" value="1000"/>
+	</item>
+
+</append>
+</Drs_GoldenRealm>
